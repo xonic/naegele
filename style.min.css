@@ -44,7 +44,7 @@ template{display:none}
 [hidden]{display:none}
 *{box-sizing:border-box}
 html{font-size:62.5%}
-body{font-family:"ff-dagny-web-pro","Helvetica Neue","Helvetica","Arial",sans-serif;font-size:1.6rem;line-height:1.25}
+body{font-family:"ff-dagny-web-pro","Helvetica Neue","Helvetica","Arial",sans-serif;font-size:1.5rem;line-height:1.25}
 img,video,object{max-width:100%}
 h1,h2,h3,h4,h5,h6,hgroup,ul,ol,dd,p,figure,pre,table,fieldset,hr{margin:0;margin-bottom:2.4rem}
 h1,h2,h3,h4,h5,.h1,.h2,.h3,.h4,.h5{font-weight:700}
@@ -54,10 +54,20 @@ h3,.h3{font-size:144%}
 h4,.h4{font-size:120%}
 h5,.h5{font-size:100%;text-transform:uppercase}
 .nav-main{background:rgba(0,0,0,0.2)}
-.logo{max-width:12rem;margin:0 auto}
+.logo{display:block;max-width:12rem;margin:0 auto}
 .main,.footer{max-width:1280px;margin:0 auto;padding:0 .8rem}
-@media(min-width:37.5em){.main,.footer{padding:0 4.8rem}
-}@media(min-width:64em){body{font-size:1.8rem}
+@media(min-width:37.5em){body{font-size:1.6rem}
+h1,.h1{font-size:244.1%}
+h2,.h2{font-size:195.3%}
+h3,.h3{font-size:156.3%}
+h4,.h4{font-size:125%}
+.main,.footer{padding:0 4.8rem}
+}@media(min-width:64em){body{font-size:1.7rem}
+h1,.h1{font-size:315.7%}
+h2,.h2{font-size:236.9%}
+h3,.h3{font-size:177.7%}
+h4,.h4{font-size:133.3%}
+}@media(min-width:90em){body{font-size:1.8rem}
 h1,.h1{font-size:399.8%}
 h2,.h2{font-size:282.7%}
 h3,.h3{font-size:199.9%}
