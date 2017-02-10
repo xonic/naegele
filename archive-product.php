@@ -6,7 +6,7 @@ get_header() ?>
       Produkte
     </h1>
     <h2 class="h2">
-      Frisch. Fruchtig. Lecker.
+      <? echo "archive-product.php"; ?>
     </h2>
   </section>
   <section class="products">
@@ -26,7 +26,6 @@ get_header() ?>
             <img src="<? echo $img['url']; ?>" alt="<? echo $img['alt']; ?>" />
             <? endif; ?>
             <h3 class="product__name"><? echo $post->post_title; ?></h3>
-            <p class="product__"
           </article>
     <?
         endwhile;
@@ -38,6 +37,20 @@ get_header() ?>
         echo "No products found";
 
       endif;
+    ?>
+  </section>
+  <section class="categories">
+    <?php
+      $args=array(
+        'taxonomy' => 'product_category'
+      );
+      $output = 'objects'; // or names
+      $categories=wp_list_categories($args,$output);
+      if  ($categories) {
+        foreach ($categories  as $category ) {
+          echo '<p>' . $category->name . '</p>';
+        }
+      }
     ?>
   </section>
 <? get_footer() ?>

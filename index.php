@@ -4,7 +4,7 @@
       Mein Getränkemarkt
     </h1>
     <h2 class="h2">
-      Frisch. Fruchtig. Lecker.
+      <? echo "index.php"; ?>
     </h2>
   </section>
   <section class="news">
@@ -46,7 +46,7 @@
         endwhile;
 
       else :
-        echo "Page content is missing.";
+        echo "Page content is missing";
       endif;
     ?>
   </section>

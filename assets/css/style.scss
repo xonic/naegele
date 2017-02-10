@@ -5,3 +5,10 @@
   Author: Thomas Nägele
   Author URI: http://xon1c.com
 */
+
+@import 'base/variables';
+@import "base/normalize";
+@import "base/typography.scss";
+@import "modules/nav.scss";
+@import "modules/header.scss";
+@import "modules/page.scss";

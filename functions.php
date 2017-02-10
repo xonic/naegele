@@ -1,5 +1,10 @@
 <?php
 
+function naegele_styles() {
+    wp_enqueue_style( 'style', get_stylesheet_uri() );
+}
+add_action( 'wp_enqueue_scripts', 'naegele_styles' );
+
 function register_main_nav() {
   register_nav_menu('main-nav',__( 'Main navigation' ));
 }

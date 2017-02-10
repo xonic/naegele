@@ -8,7 +8,7 @@
     Mein Getränkemarkt
   </h1>
   <h2 class="h2">
-    Frisch. Fruchtig. Lecker.
+    <? echo "home.php"; ?>
   </h2>
 </header>
 <main class="main">

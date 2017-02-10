@@ -1,0 +1,96 @@
+//  ----------------------------------------------------------------------------
+//
+//  TYPOGRAPHY
+//
+//	Headings, body text, lists, code, and more
+//	for a versatile and durable typography system.
+//
+//	It is IMPORTANT to only apply margins on LEFT and BOTTOM of elements.
+//	The method of single direction margins helps keeping modules
+//	location-independent.
+//
+//  ----------------------------------------------------------------------------
+
+/*
+BOX SIZING
+------------------------------------------------------------------------------*/
+* {
+	box-sizing: border-box;
+}
+
+/*
+BASE SETUP
+------------------------------------------------------------------------------*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $base-font;
+  font-size: 1.6rem;
+  line-height: 1.25;
+
+  @media (min-width: $laptop) {
+    font-size: 1.8rem;
+  }
+}
+
+img, video, object {
+  max-width: 100%;
+}
+
+/*
+VERTICAL RHYTHM
+------------------------------------------------------------------------------*/
+h1,h2,h3,h4,h5,h6,hgroup,
+ul,ol,dd,
+p,figure,
+pre,table,fieldset,hr {
+	margin:0;
+	margin-bottom: $space30;
+}
+
+/*
+HEADINGS
+------------------------------------------------------------------------------*/
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+  font-weight: $bold-font-weight;
+}
+
+h1, .h1 {
+  font-size: 207.4%;
+
+  @media (min-width: $laptop) {
+    font-size: 399.8%;
+  }
+}
+
+h2, .h2 {
+  font-size: 172.8%;
+
+  @media (min-width: $laptop) {
+    font-size: 282.7%;
+  }
+}
+
+h3, .h3 {
+  font-size: 144%;
+
+  @media (min-width: $laptop) {
+    font-size: 199.9%;
+  }
+}
+
+h4, .h4 {
+  font-size: 120%;
+
+  @media (min-width: $laptop) {
+    font-size: 141.4%;
+  }
+}
+
+h5, .h5 {
+  font-size: 100%;
+  text-transform: uppercase;
+}
