@@ -4,8 +4,23 @@
 //
 //  ----------------------------------------------------------------------------
 
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 900;
+}
+
 .logo {
   display: block;
-  max-width: 12rem;
-  margin: 0 auto;
+  max-width: 14rem;
+  margin: $space35 auto 0;
+
+  @media (min-width: $tablet) {
+    max-width: 18rem;
+    margin: $space45 auto 0;
+  }
+
+  @media (max-height: 375px) {
+    margin: $space10 auto;
+  }
 }

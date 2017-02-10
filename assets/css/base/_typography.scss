@@ -27,19 +27,19 @@ html {
 
 body {
   font-family: $base-font;
-  font-size: 1.5rem;
-  line-height: 1.25;
+  font-size: 1.8rem;
+  line-height: 1.5;
 
   @media (min-width: $tablet) {
-    font-size: 1.6rem;
+    font-size: 1.9rem;
   }
 
   @media (min-width: $laptop) {
-    font-size: 1.7rem;
+    font-size: 2rem;
   }
 
   @media (min-width: $desktop) {
-    font-size: 1.8rem;
+    font-size: 2.1rem;
   }
 }
 
@@ -56,6 +56,47 @@ p,figure,
 pre,table,fieldset,hr {
 	margin:0;
 	margin-bottom: $space30;
+}
+
+/*
+LINKS
+------------------------------------------------------------------------------*/
+a {
+  display: inline-block;
+  position: relative;
+  color: $blue40;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+  &:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    right: -2px;
+    bottom: -1px;
+    left: -2px;
+    height: 4px;
+    background: $orange40;
+    opacity: .8;
+    transform: scaleX(0);
+    // transform: scaleY(0) translateY(40px);
+    transform-origin: center;
+    transition: transform .1s ease-in;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    &:after {
+      transform: scaleX(1);
+      // transform: scaleY(1) translateY(0);
+      transition: transform .1s ease-out;
+    }
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
 }
 
 /*

@@ -1,0 +1,68 @@
+//  ----------------------------------------------------------------------------
+//
+//  CAROUSEL
+//
+//  ----------------------------------------------------------------------------
+
+.carousel {
+  position: relative;
+  background: lightblue;
+}
+
+.carousel__slides {
+  display: flex;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel__slide {
+  display: block;
+  flex: 0 0 100%;
+  height: 75vh;
+  background: url('assets/img/raw/1L-Jambo-Vital-Orange-Karotte-mit-Frucht.jpg') top left no-repeat;
+  background-size: cover;
+  background-position: 35% 0;
+
+  @media (min-width: $tablet) {
+    background-position: center;
+  }
+
+  @media (min-width: $laptop) {
+    height: 80vh;
+  }
+
+  @media (min-width: $desktop) {
+    height: 85vh;
+  }
+}
+
+.carousel__overlay {
+  position: absolute;
+  top: 45%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.carousel__wrapper {
+  @extend .main;
+}
+
+.carousel__h1,
+.carousel__h2 {
+  color: $white;
+  text-shadow: 0 0 25px rgba(0,0,0,0.90);
+}
+
+.carousel__h1 {
+  margin-bottom: -10px;
+}
+
+.carousel__h2 {
+  @extend .h3;
+  font-weight: $normal-font-weight;
+}

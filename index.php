@@ -1,12 +1,5 @@
 <? get_header() ?>
-  <section class="hero">
-    <h1 class="h1">
-      Mein Getränkemarkt
-    </h1>
-    <h2 class="h2">
-      <? echo "index.php"; ?>
-    </h2>
-  </section>
+  
   <section class="news">
     <?
       query_posts('posts_per_page=2');

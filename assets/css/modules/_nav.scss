@@ -1,5 +1,48 @@
 
 
 .nav-main {
-  background: rgba($black, .2);  
+  background: rgba($black, .2);
+}
+
+.menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.menu-item {
+  flex: 1 0 auto;
+  text-align: center;
+
+  a {
+    display: block;
+    line-height: 4.4rem;
+    color: rgba($white, .8);
+    text-shadow: 1px 1px 1px rgba($black, .2);
+
+    &:after {
+      bottom: 0;
+      background: rgba($white, .8);
+      transition: background-color .1s linear, transform .1s ease-out;
+    }
+
+    &:hover {
+      color: $white;
+
+      &:after {
+        background: $white;
+      }
+    }
+  }
+}
+
+.current-menu-item {
+  a {
+    color: $white;
+
+    &:after {
+      background: $white;
+    }
+  }
 }

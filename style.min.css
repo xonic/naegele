@@ -44,32 +44,57 @@ template{display:none}
 [hidden]{display:none}
 *{box-sizing:border-box}
 html{font-size:62.5%}
-body{font-family:"ff-dagny-web-pro","Helvetica Neue","Helvetica","Arial",sans-serif;font-size:1.5rem;line-height:1.25}
+body{font-family:"ff-dagny-web-pro","Helvetica Neue","Helvetica","Arial",sans-serif;font-size:1.8rem;line-height:1.5}
 img,video,object{max-width:100%}
 h1,h2,h3,h4,h5,h6,hgroup,ul,ol,dd,p,figure,pre,table,fieldset,hr{margin:0;margin-bottom:2.4rem}
-h1,h2,h3,h4,h5,.h1,.h2,.h3,.h4,.h5{font-weight:700}
+a{display:inline-block;position:relative;color:#0067c2;text-decoration:none;-webkit-tap-highlight-color:transparent}
+a:after{content:" ";display:block;position:absolute;right:-2px;bottom:-1px;left:-2px;height:4px;background:#ff8b03;opacity:.8;-webkit-transform:scaleX(0);-ms-transform:scaleX(0);transform:scaleX(0);-webkit-transform-origin:center;-ms-transform-origin:center;transform-origin:center;-webkit-transition:-webkit-transform .1s ease-in;transition:-webkit-transform .1s ease-in;transition:transform .1s ease-in;transition:transform .1s ease-in,-webkit-transform .1s ease-in}
+a:hover:after,a:focus:after,a:active:after{-webkit-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1);-webkit-transition:-webkit-transform .1s ease-out;transition:-webkit-transform .1s ease-out;transition:transform .1s ease-out;transition:transform .1s ease-out,-webkit-transform .1s ease-out}
+a:active{-webkit-transform:translateY(2px);-ms-transform:translateY(2px);transform:translateY(2px)}
+h1,h2,h3,h4,h5,.h1,.h2,.h3,.carousel__h2,.h4,.h5{font-weight:700}
 h1,.h1{font-size:207.4%}
 h2,.h2{font-size:172.8%}
-h3,.h3{font-size:144%}
+h3,.h3,.carousel__h2{font-size:144%}
 h4,.h4{font-size:120%}
 h5,.h5{font-size:100%;text-transform:uppercase}
 .nav-main{background:rgba(0,0,0,0.2)}
-.logo{display:block;max-width:12rem;margin:0 auto}
-.main,.footer{max-width:1280px;margin:0 auto;padding:0 .8rem}
-@media(min-width:37.5em){body{font-size:1.6rem}
+.menu{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin:0;padding:0;list-style-type:none}
+.menu-item{-webkit-box-flex:1;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto;text-align:center}
+.menu-item a{display:block;line-height:4.4rem;color:rgba(255,255,255,0.8);text-shadow:1px 1px 1px rgba(0,0,0,0.2)}
+.menu-item a:after{bottom:0;background:rgba(255,255,255,0.8);-webkit-transition:background-color .1s linear,-webkit-transform .1s ease-out;transition:background-color .1s linear,-webkit-transform .1s ease-out;transition:background-color .1s linear,transform .1s ease-out;transition:background-color .1s linear,transform .1s ease-out,-webkit-transform .1s ease-out}
+.menu-item a:hover{color:#fff}
+.menu-item a:hover:after{background:#fff}
+.current-menu-item a{color:#fff}
+.current-menu-item a:after{background:#fff}
+.header{position:absolute;width:100%;z-index:900}
+.logo{display:block;max-width:14rem;margin:3.2rem auto 0}
+.main,.carousel__wrapper,.footer{max-width:128rem;margin:0 auto;padding:0 .8rem}
+.carousel{position:relative;background:lightblue}
+.carousel__slides{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch;margin:0;padding:0;list-style-type:none;overflow-x:scroll;-webkit-overflow-scrolling:touch}
+.carousel__slide{display:block;-webkit-box-flex:0;-webkit-flex:0 0 100%;-ms-flex:0 0 100%;flex:0 0 100%;height:75vh;background:url("assets/img/raw/1L-Jambo-Vital-Orange-Karotte-mit-Frucht.jpg") top left no-repeat;background-size:cover;background-position:35% 0}
+.carousel__overlay{position:absolute;top:45%;right:0;bottom:0;left:0}
+.carousel__h1,.carousel__h2{color:#fff;text-shadow:0 0 25px rgba(0,0,0,0.9)}
+.carousel__h1{margin-bottom:-10px}
+.carousel__h2{font-weight:400}
+@media(min-width:37.5em){body{font-size:1.9rem}
 h1,.h1{font-size:244.1%}
 h2,.h2{font-size:195.3%}
-h3,.h3{font-size:156.3%}
+h3,.h3,.carousel__h2{font-size:156.3%}
 h4,.h4{font-size:125%}
-.main,.footer{padding:0 4.8rem}
-}@media(min-width:64em){body{font-size:1.7rem}
+.logo{max-width:18rem;margin:6.4rem auto 0}
+.main,.carousel__wrapper,.footer{padding:0 4.8rem}
+.carousel__slide{background-position:center}
+}@media(min-width:64em){body{font-size:2rem}
 h1,.h1{font-size:315.7%}
 h2,.h2{font-size:236.9%}
-h3,.h3{font-size:177.7%}
+h3,.h3,.carousel__h2{font-size:177.7%}
 h4,.h4{font-size:133.3%}
-}@media(min-width:90em){body{font-size:1.8rem}
+.carousel__slide{height:80vh}
+}@media(min-width:90em){body{font-size:2.1rem}
 h1,.h1{font-size:399.8%}
 h2,.h2{font-size:282.7%}
-h3,.h3{font-size:199.9%}
+h3,.h3,.carousel__h2{font-size:199.9%}
 h4,.h4{font-size:141.4%}
+.carousel__slide{height:85vh}
+}@media(max-height:375px){.logo{margin:.4rem auto}
 }

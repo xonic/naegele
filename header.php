@@ -6,6 +6,11 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <script src="https://use.typekit.net/jsn0xvo.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script>
+      // Add this event listener to prevent mobile safari
+      // from disabling the ::active pseudo class
+      document.addEventListener("touchstart", function(e) {});
+    </script>
     <? wp_head(); ?>
   </head>
   <body <? body_class(); ?>>
@@ -18,4 +23,25 @@
         <img class="logo__img" src="<? bloginfo('template_directory'); ?>/assets/img/logo.svg" alt="Nägele Logo">
       </a>
     </header>
+    <? if(is_front_page()) { ?>
+      <section class="carousel">
+        <ul class="carousel__slides">
+          <li class="carousel__slide"></li>
+          <li class="carousel__slide"></li>
+          <li class="carousel__slide"></li>
+          <li class="carousel__slide"></li>
+        </ul>
+        <div class="carousel__overlay">
+          <div class="carousel__wrapper">
+            <h1 class="carousel__h1">
+              Mein Getränkemarkt
+            </h1>
+            <h2 class="carousel__h2">
+              Fruchtig. Gesund. Lecker.
+              <!-- <? echo "index.php"; ?> -->
+            </h2>
+          </div>
+        </div>
+      </section>
+    <? } ?>
     <main class="main">
