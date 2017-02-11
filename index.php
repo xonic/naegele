@@ -1,30 +1,34 @@
 <? get_header() ?>
-  
+
   <section class="news">
-    <?
-      query_posts('posts_per_page=2');
+    <div class="news__inner">
+      <?
+        query_posts('posts_per_page=2');
 
-      if (have_posts()) :
+        if (have_posts()) :
 
-        // Start the loop
-        while (have_posts()) : the_post(); ?>
+          // Start the loop
+          while (have_posts()) : the_post(); ?>
 
-          <article class="">
-            <? the_content(); ?>
-          </article>
-    <?
-        endwhile;
+            <article class="news__item">
+              <h3 class="news__title"><? the_title(); ?></h3>
+              <? the_content(); ?>
+            </article>
+      <?
+          endwhile;
 
-        wp_reset_query();
-    ?>
-      <a href="">Weitere Neuigkeiten anzeigen</a>
-    <?
-      else :
+          wp_reset_query();
+      ?>
+      </div>
+      <a class="btn" href="">Weitere Neuigkeiten anzeigen</a>
+      <?
+        else :
 
-        echo "No posts found";
+          echo "No posts found";
+          echo "</div>";
 
-      endif;
-    ?>
+        endif;
+      ?>
   </section>
   <section class="page-content">
     <?

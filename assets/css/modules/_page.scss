@@ -14,3 +14,19 @@
     padding: 0 $space40;
   }
 }
+
+.main {
+  padding-top: $space30;
+
+  @media (min-width: $tablet) {
+    padding: $space40;
+  }
+
+  @media (min-width: $laptop) {
+    padding: $space45;
+  }
+
+  @media (min-width: $desktop) {
+    padding: $space50;
+  }
+}

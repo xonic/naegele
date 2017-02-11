@@ -1,0 +1,65 @@
+//  ----------------------------------------------------------------------------
+//
+//  MAIN PAGE NEWS SECTION
+//
+//  ----------------------------------------------------------------------------
+
+.news,
+.news__item {
+  margin-bottom: $space30;
+
+  @media (min-width: $tablet) {
+    margin-bottom: $space40;
+  }
+
+  @media (min-width: $laptop) {
+    margin-bottom: $space45;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: $space50;
+  }
+}
+
+.news {
+  padding-bottom: $space30;
+
+  @media (min-width: $tablet) {
+    padding-bottom: $space40;
+  }
+
+  @media (min-width: $laptop) {
+    padding-bottom: $space45;
+  }
+
+  @media (min-width: $desktop) {
+    padding-bottom: $space50;
+  }
+}
+
+@media (min-width: $tablet) {
+  .news__inner {
+    display: flex;
+  }
+
+  .news__item {
+    flex: 1 1 100%;
+    margin-left: $space40;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (min-width: $laptop) {
+  .news__item {
+    margin-left: $space45;
+  }
+}
+
+@media (min-width: $desktop) {
+  .news__item {
+    margin-left: $space50;
+  }
+}

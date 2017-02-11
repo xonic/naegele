@@ -32,11 +32,11 @@
   }
 
   @media (min-width: $laptop) {
-    height: 80vh;
+    height: 85vh;
   }
 
   @media (min-width: $desktop) {
-    height: 85vh;
+    height: 98vh;
   }
 }
 
@@ -50,6 +50,7 @@
 
 .carousel__wrapper {
   @extend .main;
+  padding-top: 0;
 }
 
 .carousel__h1,
