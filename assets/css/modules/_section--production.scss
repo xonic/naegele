@@ -4,6 +4,16 @@
 //
 //  ----------------------------------------------------------------------------
 
+.production {
+  .section__titles {
+    color: $white;
+
+    @media (min-width: $laptop) {
+      color: $black;
+    }
+  }
+}
+
 .production__img {
   @media (min-width: $laptop) {
     flex: 6 0 0;

@@ -76,6 +76,7 @@ h5,.h5{font-size:100%;text-transform:uppercase}
 .section__title{margin-bottom:-0.8rem}
 .section__subtitle{font-weight:400}
 .section__img{margin:-4.8rem -0.8rem 2.4rem}
+.production .section__titles{color:#fff}
 .carousel{position:relative;background:lightblue}
 .carousel__slides{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch;margin:0;padding:0;list-style-type:none;overflow-x:scroll;-webkit-overflow-scrolling:touch}
 .carousel__slide{display:block;-webkit-box-flex:0;-webkit-flex:0 0 100%;-ms-flex:0 0 100%;flex:0 0 100%;height:75vh;background:url("assets/img/raw/1L-Jambo-Vital-Orange-Karotte-mit-Frucht.jpg") top left no-repeat;background-size:cover;background-position:35% 0}
@@ -85,10 +86,9 @@ h5,.h5{font-size:100%;text-transform:uppercase}
 .carousel__h2{font-weight:400}
 .news,.news__item{margin-bottom:2.4rem}
 .news{padding-bottom:2.4rem}
-.btn{padding:1.2rem 1.6rem;color:#fff}
-.btn:before,.btn:after{content:" ";display:block;position:absolute;top:0;right:0;bottom:0;left:0;z-index:-1;background:#0067c2}
-.btn:after{height:auto;background:#0082f5;-webkit-transform:scaleX(0);-ms-transform:scaleX(0);transform:scaleX(0);-webkit-transform-origin:center;-ms-transform-origin:center;transform-origin:center;-webkit-transition:-webkit-transform .1s ease-in;transition:-webkit-transform .1s ease-in;transition:transform .1s ease-in;transition:transform .1s ease-in,-webkit-transform .1s ease-in}
-.btn:hover:after,.btn:focus:after,.btn:active:after{-webkit-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1);-webkit-transition:-webkit-transform .1s ease-out;transition:-webkit-transform .1s ease-out;transition:transform .1s ease-out;transition:transform .1s ease-out,-webkit-transform .1s ease-out}
+.btn{padding:1.2rem 1.6rem;background:#0067c2;color:#fff;-webkit-transition:background .1s linear;transition:background .1s linear}
+.btn:after{content:none}
+.btn:hover,.btn:focus,.btn:active{background:#0082f5}
 @media(min-width:23em){.section__titles{margin-top:12.8rem}
 }@media(min-width:30em){.section__titles{margin-top:19.2rem}
 }@media(min-width:37.5em){body{font-size:1.9rem}
@@ -122,6 +122,7 @@ h4,.h4{font-size:133.3%}
 .section__grid{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}
 .section__img{margin:0;-webkit-box-flex:7;-webkit-flex:7 0 0;-ms-flex:7 0 0;flex:7 0 0}
 .section__content{-webkit-box-flex:5;-webkit-flex:5 0 0;-ms-flex:5 0 0;flex:5 0 0;margin-left:2.4rem}
+.production .section__titles{color:#000}
 .production__img{-webkit-box-flex:6;-webkit-flex:6 0 0;-ms-flex:6 0 0;flex:6 0 0;-webkit-box-ordinal-group:3;-webkit-order:2;-ms-flex-order:2;order:2}
 .production__content{-webkit-box-flex:6;-webkit-flex:6 0 0;-ms-flex:6 0 0;flex:6 0 0;margin-right:2.4rem;margin-left:0;-webkit-box-ordinal-group:2;-webkit-order:1;-ms-flex-order:1;order:1}
 .recycling__img{-webkit-box-flex:8;-webkit-flex:8 0 0;-ms-flex:8 0 0;flex:8 0 0;-webkit-box-ordinal-group:3;-webkit-order:2;-ms-flex-order:2;order:2}

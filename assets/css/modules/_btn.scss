@@ -6,35 +6,17 @@
 
 .btn {
   padding: $space20 $space25;
+  background: $blue40;
   color: $white;
-
-  &:before,
-  &:after {
-    content: " ";
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    background: $blue40;
-  }
+  transition: background .1s linear;
 
   &:after {
-    height: auto;
-    background: lighten($blue40, 10%);
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform .1s ease-in;
+    content: none;
   }
 
   &:hover,
   &:focus,
   &:active {
-    &:after {
-      transform: scaleX(1);
-      transition: transform .1s ease-out;
-    }
+    background: lighten($blue40, 10%);
   }
 }
