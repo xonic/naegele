@@ -32,7 +32,7 @@
           <li class="carousel__slide"></li>
         </ul>
         <div class="carousel__overlay">
-          <div class="carousel__wrapper">
+          <div class="wrapper">
             <h1 class="carousel__h1">
               Mein Getränkemarkt
             </h1>

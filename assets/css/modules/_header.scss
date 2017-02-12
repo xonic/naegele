@@ -14,10 +14,20 @@
   display: block;
   max-width: 14rem;
   margin: $space35 auto 0;
+  filter: drop-shadow( 0 0 5px rgba($black, .4));
 
   @media (min-width: $tablet) {
     max-width: 18rem;
     margin: $space45 auto 0;
+  }
+
+  @media (min-width: $laptop) {
+    max-width: 21rem;
+    margin: $space50 auto 0;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 26rem;
   }
 
   @media (max-height: 375px) {

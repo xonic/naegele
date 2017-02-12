@@ -1,3 +1,4 @@
+.is-hidden{display:none}
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
 body{margin:0}
 article,aside,footer,header,nav,section{display:block}
@@ -67,14 +68,19 @@ h5,.h5{font-size:100%;text-transform:uppercase}
 .current-menu-item a{color:#fff}
 .current-menu-item a:after{background:#fff}
 .header{position:absolute;width:100%;z-index:900}
-.logo{display:block;max-width:14rem;margin:3.2rem auto 0}
-.main,.carousel__wrapper,.footer{max-width:128rem;margin:0 auto;padding:0 .8rem}
-.main,.carousel__wrapper{padding-top:2.4rem}
+.logo{display:block;max-width:14rem;margin:3.2rem auto 0;-webkit-filter:drop-shadow(0 0 5px rgba(0,0,0,0.4));filter:drop-shadow(0 0 5px rgba(0,0,0,0.4))}
+.wrapper{max-width:128rem;margin:0 auto;padding:0 .8rem}
+.section{margin:0 -0.8rem;padding:4.8rem .8rem}
+.section--alt{background:#333;color:#fff}
+.section__titles{position:absolute;margin-top:9.6rem;text-shadow:0 0 25px rgba(0,0,0,0.9)}
+.section__title{margin-bottom:-0.8rem}
+.section__subtitle{font-weight:400}
+.section__img{margin:-4.8rem -0.8rem 2.4rem}
+.shop__img{margin:-4.8rem -0.8rem 2.4rem}
 .carousel{position:relative;background:lightblue}
 .carousel__slides{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch;margin:0;padding:0;list-style-type:none;overflow-x:scroll;-webkit-overflow-scrolling:touch}
 .carousel__slide{display:block;-webkit-box-flex:0;-webkit-flex:0 0 100%;-ms-flex:0 0 100%;flex:0 0 100%;height:75vh;background:url("assets/img/raw/1L-Jambo-Vital-Orange-Karotte-mit-Frucht.jpg") top left no-repeat;background-size:cover;background-position:35% 0}
 .carousel__overlay{position:absolute;top:45%;right:0;bottom:0;left:0}
-.carousel__wrapper{padding-top:0}
 .carousel__h1,.carousel__h2{color:#fff;text-shadow:0 0 25px rgba(0,0,0,0.9)}
 .carousel__h1{margin-bottom:-10px}
 .carousel__h2{font-weight:400}
@@ -84,26 +90,41 @@ h5,.h5{font-size:100%;text-transform:uppercase}
 .btn:before,.btn:after{content:" ";display:block;position:absolute;top:0;right:0;bottom:0;left:0;z-index:-1;background:#0067c2}
 .btn:after{height:auto;background:#0082f5;-webkit-transform:scaleX(0);-ms-transform:scaleX(0);transform:scaleX(0);-webkit-transform-origin:center;-ms-transform-origin:center;transform-origin:center;-webkit-transition:-webkit-transform .1s ease-in;transition:-webkit-transform .1s ease-in;transition:transform .1s ease-in;transition:transform .1s ease-in,-webkit-transform .1s ease-in}
 .btn:hover:after,.btn:focus:after,.btn:active:after{-webkit-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1);-webkit-transition:-webkit-transform .1s ease-out;transition:-webkit-transform .1s ease-out;transition:transform .1s ease-out;transition:transform .1s ease-out,-webkit-transform .1s ease-out}
-@media(min-width:37.5em){body{font-size:1.9rem}
+@media(min-width:23em){.section__titles{margin-top:12.8rem}
+}@media(min-width:30em){.section__titles{margin-top:19.2rem}
+}@media(min-width:37.5em){body{font-size:1.9rem}
 h1,.h1{font-size:244.1%}
 h2,.h2{font-size:195.3%}
 h3,.h3,.carousel__h2{font-size:156.3%}
 h4,.h4{font-size:125%}
 .logo{max-width:18rem;margin:6.4rem auto 0}
-.main,.carousel__wrapper,.footer{padding:0 4.8rem}
-.main,.carousel__wrapper{padding:4.8rem}
+.wrapper{padding:0 4.8rem}
+.section{margin:0 -4.8rem;padding:4.8rem}
+.section__titles{margin-top:28.8rem}
+.section__img{margin:-4.8rem -4.8rem 2.4rem}
+.shop__img{margin:-4.8rem -4.8rem 2.4rem}
 .carousel__slide{background-position:center}
 .news,.news__item{margin-bottom:4.8rem}
 .news{padding-bottom:4.8rem}
-.news__inner{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+.news__grid{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 .news__item{-webkit-box-flex:1;-webkit-flex:1 1 100%;-ms-flex:1 1 100%;flex:1 1 100%;margin-left:4.8rem}
 .news__item:first-child{margin-left:0}
+}@media(min-width:50em){.section__titles{margin-top:38.4rem}
 }@media(min-width:64em){body{font-size:2rem}
 h1,.h1{font-size:315.7%}
 h2,.h2{font-size:236.9%}
 h3,.h3,.carousel__h2{font-size:177.7%}
 h4,.h4{font-size:133.3%}
-.main,.carousel__wrapper{padding:6.4rem}
+.logo{max-width:21rem;margin:9.6rem auto 0}
+.wrapper{padding:0 6.4rem}
+.section{margin:0 -6.4rem;padding:6.4rem}
+.section__titles{position:static;margin:0;text-shadow:none}
+.section__title{text-align:center}
+.section__subtitle{margin-bottom:3.2rem;text-align:center}
+.section__img{margin:0;-webkit-box-flex:7;-webkit-flex:7 0 0;-ms-flex:7 0 0;flex:7 0 0}
+.shop__grid{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}
+.shop__img{margin:0;-webkit-box-flex:7;-webkit-flex:7 0 0;-ms-flex:7 0 0;flex:7 0 0}
+.shop__content{-webkit-box-flex:5;-webkit-flex:5 0 0;-ms-flex:5 0 0;flex:5 0 0;margin-left:2.4rem}
 .carousel__slide{height:85vh}
 .news,.news__item{margin-bottom:6.4rem}
 .news{padding-bottom:6.4rem}
@@ -113,7 +134,13 @@ h1,.h1{font-size:399.8%}
 h2,.h2{font-size:282.7%}
 h3,.h3,.carousel__h2{font-size:199.9%}
 h4,.h4{font-size:141.4%}
-.main,.carousel__wrapper{padding:9.6rem}
+.logo{max-width:26rem}
+.wrapper{padding:0 9.6rem}
+.section{margin:0 -9.6rem;padding:9.6rem}
+.section__subtitle{margin-bottom:6.4rem}
+.section__img{-webkit-box-flex:8;-webkit-flex:8 0 0;-ms-flex:8 0 0;flex:8 0 0}
+.shop__img{-webkit-box-flex:8;-webkit-flex:8 0 0;-ms-flex:8 0 0;flex:8 0 0}
+.shop__content{-webkit-box-flex:4;-webkit-flex:4 0 0;-ms-flex:4 0 0;flex:4 0 0;margin-left:4.8rem}
 .carousel__slide{height:98vh}
 .news,.news__item{margin-bottom:9.6rem}
 .news{padding-bottom:9.6rem}
