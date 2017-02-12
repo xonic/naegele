@@ -1,0 +1,31 @@
+//  ----------------------------------------------------------------------------
+//
+//  MAIN PAGE SHOP SECTION
+//
+//  ----------------------------------------------------------------------------
+
+.recycling__img {
+  @media (min-width: $laptop) {
+    flex: 8 0 0;
+    order: 2;
+  }
+
+  @media (min-width: $desktop) {
+    flex: 7 0 0;
+  }
+}
+
+.recycling__content {
+  @media (min-width: $laptop) {
+    flex: 3 0 0;
+    margin-right: $space30;
+    margin-left: 0;
+    order: 1;
+  }
+
+  @media (min-width: $desktop) {
+    flex: 4 0 0;
+    margin-right: $space40;
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,31 @@
+//  ----------------------------------------------------------------------------
+//
+//  MAIN PAGE SHOP SECTION
+//
+//  ----------------------------------------------------------------------------
+
+.production__img {
+  @media (min-width: $laptop) {
+    flex: 6 0 0;
+    order: 2;
+  }
+
+  @media (min-width: $desktop) {
+    flex: 7 0 0;
+  }
+}
+
+.production__content {
+  @media (min-width: $laptop) {
+    flex: 6 0 0;
+    margin-right: $space30;
+    margin-left: 0;
+    order: 1;
+  }
+
+  @media (min-width: $desktop) {
+    flex: 5 0 0;
+    margin-right: $space40;
+    margin-left: 0;
+  }
+}

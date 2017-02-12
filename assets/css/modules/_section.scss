@@ -78,6 +78,13 @@
   }
 }
 
+.section__grid {
+  @media (min-width: $laptop) {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+
 .section__img {
   margin: -$space40 #{-$space15} $space30;
 
@@ -92,5 +99,17 @@
 
   @media (min-width: $desktop) {
     flex: 8 0 0;
+  }
+}
+
+.section__content {
+  @media (min-width: $laptop) {
+    flex: 5 0 0;
+    margin-left: $space30;
+  }
+
+  @media (min-width: $desktop) {
+    flex: 4 0 0;
+    margin-left: $space40;
   }
 }

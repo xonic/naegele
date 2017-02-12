@@ -43,11 +43,11 @@ get_header() ?>
         <h2 class="section__title">Der Getränkemarkt</h2>
         <h3 class="section__subtitle">In neuem Licht.</h3>
       </div>
-      <div class="shop__grid">
+      <div class="shop__grid section__grid">
         <div class="shop__img section__img">
           <img src="<? bloginfo('template_directory'); ?>/assets/img/shop.jpg" alt="Der Nägele Getränkemarkt">
         </div>
-        <div class="shop__content">
+        <div class="shop__content section__content">
           <ul>
             <li>Moderne Architektur</li>
             <li>500m² Verkaufsfläche</li>
@@ -69,13 +69,15 @@ get_header() ?>
         <h2 class="section__title">Herstellung</h2>
         <h3 class="section__subtitle">Tradition neu erleben.</h3>
       </div>
+      <div class="section__grid production__grid">
         <div class="production__img section__img">
           <img src="<? bloginfo('template_directory'); ?>/assets/img/bottles.jpg" alt="Nägele Flaschen auf dem Fließband">
         </div>
-      <div class="production__content">
-        <p>In 100 Jahren Entwicklungsprozess, Innovation und Automatisierung ist ein Grundgedanke immer unser Leitfaden geblieben: Getränke von höchster Qualität herzustellen, die den Wünschen unserer Kunden entsprechen.</p>
+        <div class="production__content section__content">
+          <p>In 100 Jahren Entwicklungsprozess, Innovation und Automatisierung ist ein Grundgedanke immer unser Leitfaden geblieben: Getränke von höchster Qualität herzustellen, die den Wünschen unserer Kunden entsprechen.</p>
 
-        <p>Was hier abgefüllt wird, ist ein reines Geschmackserlebnis. Mit neuen, eigenen Produkten garantiert Firma Nägele höchste Qualität unter ausschließlicher Verwendung auserlesener Rohstoffe. Durch die sorgfältige und schonende Verarbeitung bleiben die natürlichen Aromen und der volle Geschmack der sonnengereiften Früchte erhalten.</p>
+          <p>Was hier abgefüllt wird, ist ein reines Geschmackserlebnis. Mit neuen, eigenen Produkten garantiert Firma Nägele höchste Qualität unter ausschließlicher Verwendung auserlesener Rohstoffe. Durch die sorgfältige und schonende Verarbeitung bleiben die natürlichen Aromen und der volle Geschmack der sonnengereiften Früchte erhalten.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -85,11 +87,13 @@ get_header() ?>
         <h2 class="section__title">Mehrweg</h2>
         <h3 class="section__subtitle">Der Umwelt zuliebe.</h3>
       </div>
+      <div class="section__grid recycling__grid">
         <div class="recycling__img section__img">
           <img src="<? bloginfo('template_directory'); ?>/assets/img/case.jpg" alt="Eine Nägele Kiste">
         </div>
-      <div class="recycling__content">
-        <p>Wer über ein Jahrhundert lang den Durst löscht, legt Wert auf den gewissen Unterschied, um höchsten Ansprüchen mehr als gerecht zu werden. Mit wachsamen Augen, Flasche für Flasche.</p>
+        <div class="recycling__content section__content">
+          <p>Wer über ein Jahrhundert lang den Durst löscht, legt Wert auf den gewissen Unterschied, um höchsten Ansprüchen mehr als gerecht zu werden. Mit wachsamen Augen, Flasche für Flasche.</p>
+        </div>
       </div>
     </div>
   </section>
