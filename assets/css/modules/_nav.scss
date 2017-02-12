@@ -30,8 +30,12 @@
     &:hover {
       color: $white;
 
-      &:after {
-        background: $white;
+      &:hover,
+      &:focus,
+      &:active {
+        &:after {
+          background: $orange40;
+        }
       }
     }
   }
@@ -42,7 +46,10 @@
     color: $white;
 
     &:after {
+      right: 0;
+      left: 0;
       background: $white;
+      transform: scaleX(1);
     }
   }
 }
