@@ -3,10 +3,10 @@
 get_header() ?>
   <section class="hero">
     <div class="wrapper">
-      <h1 class="h1">
+      <h1 class="hero__h1">
         Die besten Produkte
       </h1>
-      <h2 class="h2">
+      <h2 class="hero__h2">
         Aus traditioneller Herstellung.
       </h2>
     </div>
