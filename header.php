@@ -34,11 +34,10 @@
         <div class="carousel__overlay">
           <div class="wrapper">
             <h1 class="carousel__h1">
-              Mein Getränkemarkt
+              <? echo __('Mein Getränkemarkt'); ?>
             </h1>
             <h2 class="carousel__h2">
-              Fruchtig. Gesund. Lecker.
-              <!-- <? echo "index.php"; ?> -->
+              <? echo __('Fruchtig. Gesund. Lecker.'); ?>
             </h2>
           </div>
         </div>

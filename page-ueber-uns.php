@@ -26,7 +26,7 @@ get_header() ?>
           wp_reset_query();
       ?>
       </div>
-      <a class="btn" href="">Weitere Neuigkeiten anzeigen</a>
+      <a class="btn" href="<?php echo get_post_type_archive_link( 'post' ); ?>">Weitere Neuigkeiten anzeigen</a>
       <?
         else :
 

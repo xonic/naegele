@@ -13,8 +13,8 @@ add_action( 'init', 'register_main_nav' );
 class product {
 
 	function product() {
+    add_action('init',array($this,'create_taxonomies'));
 		add_action('init',array($this,'create_post_type'));
-		add_action('init',array($this,'create_taxonomies'));
 		// add_action('manage_product_posts_columns',array($this,'columns'),10,2);
 		// add_action('manage_product_posts_custom_column',array($this,'column_data'),11,2);
 		// add_filter('posts_join',array($this,'join'),10,1);
@@ -23,20 +23,20 @@ class product {
 
 	function create_post_type() {
 		$labels = array(
-			'name'               => 'Products',
-			'singular_name'      => 'Product',
-			'menu_name'          => 'Products',
-			'name_admin_bar'     => 'Product',
-			'add_new'            => 'Add New',
-			'add_new_item'       => 'Add New Product',
-			'new_item'           => 'New Product',
-			'edit_item'          => 'Edit Product',
-			'view_item'          => 'View Product',
-			'all_items'          => 'All Products',
-			'search_items'       => 'Search Products',
-			'parent_item_colon'  => 'Parent Product',
-			'not_found'          => 'No Products Found',
-			'not_found_in_trash' => 'No Products Found in Trash'
+			'name'               => __('Products'),
+			'singular_name'      => __('Product'),
+			'menu_name'          => __('Products'),
+			'name_admin_bar'     => __('Product'),
+			'add_new'            => __('Add New'),
+			'add_new_item'       => __('Add New Product'),
+			'new_item'           => __('New Product'),
+			'edit_item'          => __('Edit Product'),
+			'view_item'          => __('View Product'),
+			'all_items'          => __('All Products'),
+			'search_items'       => __('Search Products'),
+			'parent_item_colon'  => __('Parent Product'),
+			'not_found'          => __('No Products Found'),
+			'not_found_in_trash' => __('No Products Found in Trash')
 		);
 
 		$args = array(
@@ -54,7 +54,7 @@ class product {
 			'hierarchical'        => false,
 			'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'custom-fields' ),
 			'has_archive'         => true,
-			'rewrite'             => array( 'slug' => 'products' ),
+			'rewrite'             => array( 'slug' => __('product') ),
 			'query_var'           => true
 		);
 
@@ -84,10 +84,10 @@ class product {
 			'show_ui'           => true,
 			'show_admin_column' => true,
 			'query_var'         => true,
-			'rewrite'           => array( 'slug' => 'category' ),
+			'rewrite'           => false //array( 'slug' => __('product/category')   , 'with_front' => false ),
 		);
 
-		register_taxonomy('product_category',array('product'),$args);
+		register_taxonomy('product_category', array('product'),$args);
 
 		// Add new taxonomy, NOT hierarchical (like tags)
 		$labels = array(
@@ -116,10 +116,10 @@ class product {
 			'show_admin_column'     => true,
 			'update_count_callback' => '_update_post_term_count',
 			'query_var'             => true,
-			'rewrite'               => array( 'slug' => 'tag' ),
+			'rewrite'               => false //array( 'slug' => __('product/tag'), 'with_front' => false ),
 		);
 
-		register_taxonomy('product_attribute','product',$args);
+		register_taxonomy('product_tag', array('product'),$args);
 	}
 
 	function columns($columns) {

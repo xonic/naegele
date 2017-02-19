@@ -3,11 +3,28 @@
 get_header() ?>
   <section class="hero">
     <h1 class="h1">
-      Produkte
+      Die besten Produkte
     </h1>
     <h2 class="h2">
-      <? echo "archive-product.php"; ?>
+      Aus traditioneller Herstellung.
     </h2>
+    <p>
+      <? echo "archive-product.php"; ?>
+    </p>
+  </section>
+  <section class="categories">
+    <?php
+      $args=array(
+        'taxonomy' => 'product_category'
+      );
+      $output = 'objects'; // or names
+      $categories=wp_list_categories($args,$output);
+      if  ($categories) {
+        foreach ($categories  as $category ) {
+          echo '<p>' . $category->name . '</p>';
+        }
+      }
+    ?>
   </section>
   <section class="products">
     <?
@@ -37,20 +54,6 @@ get_header() ?>
         echo "No products found";
 
       endif;
-    ?>
-  </section>
-  <section class="categories">
-    <?php
-      $args=array(
-        'taxonomy' => 'product_category'
-      );
-      $output = 'objects'; // or names
-      $categories=wp_list_categories($args,$output);
-      if  ($categories) {
-        foreach ($categories  as $category ) {
-          echo '<p>' . $category->name . '</p>';
-        }
-      }
     ?>
   </section>
 <? get_footer() ?>

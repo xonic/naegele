@@ -1,6 +1,7 @@
 <? get_header() ?>
 
   <section class="news">
+    <p>index.php</p>
     <div class="news__inner">
       <?
         query_posts('posts_per_page=2');

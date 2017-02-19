@@ -5,9 +5,17 @@
 //  ----------------------------------------------------------------------------
 
 .header {
-  position: absolute;
-  width: 100%;
-  z-index: 900;
+
+  .home & {
+    position: absolute;
+    width: 100%;
+    z-index: 900;
+  }
+
+  .archive & {
+    background: url('assets/img/bottles.jpg') top left no-repeat;
+    background-size: cover;
+  }
 }
 
 .logo {
@@ -48,4 +56,8 @@
   @media (max-height: 375px) {
     margin: $space10 auto;
   }
+}
+
+.home .logo {
+  margin: $space35 auto 0;
 }
