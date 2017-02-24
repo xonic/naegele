@@ -1,7 +1,16 @@
-
+//  ----------------------------------------------------------------------------
+//
+//  MAIN NAVIGATION
+//
+//  ----------------------------------------------------------------------------
 
 .nav-main {
   background: rgba($black, .2);
+  font-size: 70.7%;
+
+  @media (min-width: $tablet) {
+    font-size: inherit;
+  }
 }
 
 .menu {
@@ -52,4 +61,36 @@
       transform: scaleX(1);
     }
   }
+}
+
+
+//  ----------------------------------------------------------------------------
+//
+//  PRODUCT NAVIGATION
+//
+//  ----------------------------------------------------------------------------
+
+.nav-prod {
+  display: flex;
+}
+
+.nav-prod__col {
+  flex: 1 0 50%;
+  margin-left: $space30;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.nav-prod__title {
+  @extend .h3;
+  margin-bottom: $space20;
+}
+
+.nav-prod__items,
+.children {
+  margin: 0 0 $space30;
+  padding: 0;
+  list-style-type: none;
 }

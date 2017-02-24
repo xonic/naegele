@@ -46,19 +46,20 @@ template{display:none}
 *{box-sizing:border-box}
 html{font-size:62.5%}
 body{font-family:"ff-dagny-web-pro","Helvetica Neue","Helvetica","Arial",sans-serif;font-size:1.8rem;line-height:1.5}
+.main{overflow-x:hidden}
 img,video,object{max-width:100%}
 h1,h2,h3,h4,h5,h6,hgroup,ul,ol,dd,p,figure,pre,table,fieldset,hr{margin:0;margin-bottom:2.4rem}
 a{display:inline-block;position:relative;color:#0067c2;text-decoration:none;-webkit-tap-highlight-color:transparent}
 a:after{content:" ";display:block;position:absolute;right:-2px;bottom:-1px;left:-2px;height:4px;background:#ff8b03;opacity:.8;-webkit-transform:scaleX(0);-ms-transform:scaleX(0);transform:scaleX(0);-webkit-transform-origin:center;-ms-transform-origin:center;transform-origin:center;-webkit-transition:-webkit-transform .1s ease-in;transition:-webkit-transform .1s ease-in;transition:transform .1s ease-in;transition:transform .1s ease-in,-webkit-transform .1s ease-in}
 a:hover:after,a:focus:after,a:active:after{-webkit-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1);-webkit-transition:-webkit-transform .1s ease-out;transition:-webkit-transform .1s ease-out;transition:transform .1s ease-out;transition:transform .1s ease-out,-webkit-transform .1s ease-out}
 a:active{-webkit-transform:translateY(2px);-ms-transform:translateY(2px);transform:translateY(2px)}
-h1,h2,h3,h4,h5,.h1,.h2,.hero__h1,.h3,.carousel__h2,.h4,.hero__h2,.h5{font-weight:700}
+h1,h2,h3,h4,h5,.h1,.h2,.hero__h1,.h3,.nav-prod__title,.carousel__h2,.h4,.hero__h2,.h5,.product__name{font-weight:700}
 h1,.h1{font-size:207.4%}
 h2,.h2,.hero__h1{font-size:172.8%}
-h3,.h3,.carousel__h2{font-size:144%}
+h3,.h3,.nav-prod__title,.carousel__h2{font-size:144%}
 h4,.h4,.hero__h2{font-size:120%}
-h5,.h5{font-size:100%;text-transform:uppercase}
-.nav-main{background:rgba(0,0,0,0.2)}
+h5,.h5,.product__name{font-size:100%;text-transform:uppercase}
+.nav-main{background:rgba(0,0,0,0.2);font-size:70.7%}
 .menu{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin:0;padding:0;list-style-type:none}
 .menu-item{-webkit-box-flex:1;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto;text-align:center}
 .menu-item a{display:block;line-height:4.4rem;color:rgba(255,255,255,0.8);text-shadow:1px 1px 1px rgba(0,0,0,0.2)}
@@ -67,6 +68,11 @@ h5,.h5{font-size:100%;text-transform:uppercase}
 .menu-item a:hover:hover:after,.menu-item a:hover:focus:after,.menu-item a:hover:active:after{background:#ff8b03}
 .current-menu-item a{color:#fff}
 .current-menu-item a:after{right:0;left:0;background:#fff;-webkit-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1)}
+.nav-prod{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+.nav-prod__col{-webkit-box-flex:1;-webkit-flex:1 0 50%;-ms-flex:1 0 50%;flex:1 0 50%;margin-left:2.4rem}
+.nav-prod__col:first-child{margin-left:0}
+.nav-prod__title{margin-bottom:1.2rem}
+.nav-prod__items,.children{margin:0 0 2.4rem;padding:0;list-style-type:none}
 .header{position:absolute;width:100%;height:45vh;z-index:100}
 .archive .header{background:url("assets/img/bottles.jpg") top left no-repeat;background-size:cover}
 .logo{display:block;max-width:14rem;margin:3vh auto 0;-webkit-filter:drop-shadow(0 0 5px rgba(0,0,0,0.4));filter:drop-shadow(0 0 5px rgba(0,0,0,0.4));-webkit-transition:-webkit-transform .1s ease-out;transition:-webkit-transform .1s ease-out;transition:transform .1s ease-out;transition:transform .1s ease-out,-webkit-transform .1s ease-out}
@@ -98,13 +104,18 @@ h5,.h5{font-size:100%;text-transform:uppercase}
 .btn{padding:1.2rem 1.6rem;background:#0067c2;color:#fff;-webkit-transition:background .1s linear;transition:background .1s linear}
 .btn:after{content:none}
 .btn:hover,.btn:focus,.btn:active{background:#0082f5}
+.products{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+.product{-webkit-box-flex:1;-webkit-flex:1 0 50%;-ms-flex:1 0 50%;flex:1 0 50%;margin-left:1.2rem}
+.product:first-child{margin-left:0}
+.product__name{text-transform:none;color:#000;font-weight:400}
 @media(min-width:23em){.section__titles{margin-top:12.8rem}
 }@media(min-width:30em){.section__titles{margin-top:19.2rem}
 }@media(min-width:37.5em){body{font-size:1.9rem}
 h1,.h1{font-size:244.1%}
 h2,.h2,.hero__h1{font-size:195.3%}
-h3,.h3,.carousel__h2{font-size:156.3%}
+h3,.h3,.nav-prod__title,.carousel__h2{font-size:156.3%}
 h4,.h4,.hero__h2{font-size:125%}
+.nav-main{font-size:inherit}
 .logo{max-width:18rem;margin:6.4rem auto 0}
 .wrapper{padding:0 4.8rem}
 .section{margin:0 -4.8rem;padding:4.8rem}
@@ -120,7 +131,7 @@ h4,.h4,.hero__h2{font-size:125%}
 }@media(min-width:64em){body{font-size:2rem}
 h1,.h1{font-size:315.7%}
 h2,.h2,.hero__h1{font-size:236.9%}
-h3,.h3,.carousel__h2{font-size:177.7%}
+h3,.h3,.nav-prod__title,.carousel__h2{font-size:177.7%}
 h4,.h4,.hero__h2{font-size:133.3%}
 .logo{max-width:21rem;margin:9.6rem auto 0}
 .wrapper{padding:0 6.4rem}
@@ -143,7 +154,7 @@ h4,.h4,.hero__h2{font-size:133.3%}
 }@media(min-width:90em){body{font-size:2.1rem}
 h1,.h1{font-size:399.8%}
 h2,.h2,.hero__h1{font-size:282.7%}
-h3,.h3,.carousel__h2{font-size:199.9%}
+h3,.h3,.nav-prod__title,.carousel__h2{font-size:199.9%}
 h4,.h4,.hero__h2{font-size:141.4%}
 .logo{max-width:26rem}
 .wrapper{padding:0 9.6rem}

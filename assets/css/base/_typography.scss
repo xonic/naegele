@@ -43,6 +43,10 @@ body {
   }
 }
 
+.main {
+	overflow-x: hidden;
+}
+
 img, video, object {
   max-width: 100%;
 }
