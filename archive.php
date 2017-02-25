@@ -14,12 +14,16 @@ get_header() ?>
   <div class="wrapper">
     <nav class="nav-prod">
       <div class="nav-prod__col">
-        <h2 class="nav-prod__title"><? echo __('Unsere Marken'); ?></h2>
+        <h2 class="nav-prod__title"><? echo __('Unsere Produkte'); ?></h2>
         <ul class="nav-prod__items">
           <?php
+
+            $term = get_term_by('slug', 'eigenmarken', 'product_category');
             $args=array(
               'taxonomy' => 'product_category',
-              'title_li' => ''
+              'title_li' => '',
+              'child_of' => $term->term_id,
+              'hide_empty' => false
             );
             $output = 'objects'; // or names
             $categories=wp_list_categories($args,$output);
@@ -37,9 +41,13 @@ get_header() ?>
         <h2 class="nav-prod__title"><? echo __('Gesamtes Sortiment'); ?></h2>
         <ul class="nav-prod__items">
           <?php
+
+            $term = get_term_by('slug', 'fremdmarken', 'product_category');
             $args=array(
-              'taxonomy' => 'product_tag',
-              'title_li' => ''
+              'taxonomy' => 'product_category',
+              'title_li' => '',
+              'child_of' => $term->term_id,
+              'hide_empty' => false
             );
             $output = 'objects'; // or names
             $categories=wp_list_categories($args,$output);
