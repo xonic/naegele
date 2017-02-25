@@ -49,6 +49,7 @@ body {
 
 img, video, object {
   max-width: 100%;
+	height: auto;
 }
 
 /*
@@ -194,4 +195,8 @@ h4, .h4 {
 h5, .h5 {
   font-size: 100%;
   text-transform: uppercase;
+}
+
+.text--small {
+	font-size: 70.7%;
 }

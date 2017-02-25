@@ -72,25 +72,37 @@
 
 .nav-prod {
   display: flex;
-}
+  margin-left: -$space20;
 
-.nav-prod__col {
-  flex: 1 0 50%;
-  margin-left: $space30;
+  .current-cat a:after {
+    transform: scaleX(1);
+  }
 
-  &:first-child {
+  @media (min-width: $laptop) {
+    display: block;
+    flex: 1;
     margin-left: 0;
   }
 }
 
+.nav-prod__col {
+  flex: 1 0 1;
+  width: 50%;
+  padding-left: $space20;
+
+  @media (min-width: $laptop) {
+    padding-left: 0;
+  }
+}
+
 .nav-prod__title {
-  @extend .h3;
+  @extend .h4;
   margin-bottom: $space20;
 }
 
 .nav-prod__items,
 .children {
-  margin: 0 0 $space30;
+  margin: 0 0 $space40;
   padding: 0;
   list-style-type: none;
 }

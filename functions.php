@@ -1,5 +1,14 @@
 <?php
 
+// Add support for product thumbnails
+add_theme_support( 'post-thumbnails' );
+
+// Add custom size for product thumbnails
+function add_custom_sizes() {
+    add_image_size( 'product-thumb', 240, 320, true );
+}
+add_action('after_setup_theme','add_custom_sizes');
+
 function naegele_styles() {
     wp_enqueue_style( 'style', get_stylesheet_uri() );
 }
