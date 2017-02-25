@@ -1,5 +1,5 @@
 <? get_header() ?>
-    <h2 class="h2" style="margin-bottom:500px;">
+    <h2 class="h2">
       single-product.php
     </h2>
     <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
