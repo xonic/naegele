@@ -7,9 +7,13 @@
 .header {
 
     height: 16rem;
-    background: url('assets/img/bottles.jpg') top left no-repeat;
+    background-image: url('assets/img/bottles.jpg');
     background-size: cover;
     background-position: center;
+
+    .page-template-page-gastronomie-php & {
+      background-image: url('assets/img/case.jpg');
+    }
 
     @media (min-width: $tablet) {
       height: 20rem;
