@@ -23,24 +23,4 @@
         <img class="logo__img" src="<? bloginfo('template_directory'); ?>/assets/img/logo.svg" alt="Nägele Logo">
       </a>
     </header>
-    <? if(is_front_page()) { ?>
-      <section class="carousel">
-        <ul class="carousel__slides">
-          <li class="carousel__slide"></li>
-          <li class="carousel__slide"></li>
-          <li class="carousel__slide"></li>
-          <li class="carousel__slide"></li>
-        </ul>
-        <div class="carousel__overlay">
-          <div class="wrapper">
-            <h1 class="carousel__h1">
-              <? echo __('Mein Getränkemarkt'); ?>
-            </h1>
-            <h2 class="carousel__h2">
-              <? echo __('Fruchtig. Gesund. Lecker.'); ?>
-            </h2>
-          </div>
-        </div>
-      </section>
-    <? } ?>
     <main class="main">

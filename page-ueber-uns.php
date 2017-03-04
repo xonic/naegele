@@ -3,6 +3,25 @@
 
 get_header() ?>
 
+  <section class="carousel">
+    <ul class="carousel__slides">
+      <li class="carousel__slide"></li>
+      <li class="carousel__slide"></li>
+      <li class="carousel__slide"></li>
+      <li class="carousel__slide"></li>
+    </ul>
+    <div class="carousel__overlay">
+      <div class="wrapper">
+        <h1 class="carousel__h1">
+          <? echo get_field("hero_title"); ?>
+        </h1>
+        <h2 class="carousel__h2">
+          <? echo get_field("hero_subtitle"); ?>
+        </h2>
+      </div>
+    </div>
+  </section>
+
   <section class="section news">
     <div class="wrapper">
       <?
