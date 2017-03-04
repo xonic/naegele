@@ -2,7 +2,6 @@
 
 get_header() ?>
   <section class="hero">
-    Archive für News
     <div class="wrapper">
       <h1 class="hero__h1">
         Die besten Produkte
