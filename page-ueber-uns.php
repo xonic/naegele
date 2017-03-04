@@ -18,11 +18,21 @@ get_header() ?>
         <h2 class="carousel__h2">
           <? echo get_field("hero_subtitle"); ?>
         </h2>
+        <a href="#news" class="scroll-wrapper">
+          <div class="i--container">
+            <div class="i--scroll-down">
+              <div class="i--scroll-down__chevron"></div>
+              <div class="i--scroll-down__chevron"></div>
+              <div class="i--scroll-down__chevron"></div>
+            </div>
+          </div>
+          <div class="i--label text--small"><? echo __("Weiter"); ?></div>
+        </a>
       </div>
     </div>
   </section>
 
-  <section class="section news">
+  <section id="news" class="section news">
     <div class="wrapper">
       <?
         query_posts('posts_per_page=2');

@@ -4,60 +4,119 @@
 //
 //  ----------------------------------------------------------------------------
 
-.header {
-
-  .home & {
-    position: absolute;
-    width: 100%;
-    z-index: 900;
-  }
-
-  .archive & {
-    background: url('assets/img/bottles.jpg') top left no-repeat;
-    background-size: cover;
-  }
-}
-
-.logo {
-  display: block;
-  max-width: 14rem;
-  margin: $space35 auto 0;
-  filter: drop-shadow( 0 0 5px rgba($black, .4));
-  transition: transform .1s ease-out;
-
-  &:after {
-    content: none;
-  }
-
-  &:hover {
-    transform: translateY(-4px);
-    transition: transform .1s ease-in;
-  }
-
-  &:active {
-    transform: translateY(0);
-    transition: transform .1s ease-out;
-  }
-
-  @media (min-width: $tablet) {
-    max-width: 18rem;
-    margin: $space45 auto 0;
-  }
-
-  @media (min-width: $laptop) {
-    max-width: 21rem;
-    margin: $space50 auto 0;
-  }
-
-  @media (min-width: $desktop) {
-    max-width: 26rem;
-  }
-
-  @media (max-height: 375px) {
-    margin: $space10 auto;
-  }
-}
+// .header {
+//
+//   .home & {
+//     position: absolute;
+//     width: 100%;
+//     z-index: 900;
+//   }
+//
+//   .archive & {
+//     background: url('assets/img/bottles.jpg') top left no-repeat;
+//     background-size: cover;
+//   }
+// }
+//
+// .logo {
+//   display: block;
+//   max-width: 14rem;
+//   margin: $space35 auto 0;
+//   filter: drop-shadow( 0 0 5px rgba($black, .4));
+//   transition: transform .1s ease-out;
+//
+//   &:after {
+//     content: none;
+//   }
+//
+//   &:hover {
+//     transform: translateY(-4px);
+//     transition: transform .1s ease-in;
+//   }
+//
+//   &:active {
+//     transform: translateY(0);
+//     transition: transform .1s ease-out;
+//   }
+//
+//   @media (min-width: $tablet) {
+//     max-width: 18rem;
+//     margin: $space45 auto 0;
+//   }
+//
+//   @media (min-width: $laptop) {
+//     max-width: 21rem;
+//     margin: $space50 auto 0;
+//   }
+//
+//   @media (min-width: $desktop) {
+//     max-width: 26rem;
+//   }
+//
+//   @media (max-height: 375px) {
+//     margin: $space10 auto;
+//   }
+// }
 
 .home .logo {
   margin: $space35 auto 0;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero__h1 {
+  @extend .h2;
+  margin-top: $space35;
+  margin-bottom: -$space15;
+
+  @media (min-width: $tablet) {
+    margin-top: $space40;
+  }
+
+  @media (min-width: $laptop) {
+    margin-top: $space45;
+  }
+}
+
+.hero__h2 {
+  @extend .h4;
+  padding-bottom: $space35;
+  border-bottom: $space10 solid $orange40;
+  font-weight: $normal-font-weight;
+
+  @media (min-width: $tablet) {
+    margin-bottom: $space45;
+    padding-bottom: $space40;
+  }
+
+  @media (min-width: $laptop) {
+    margin-bottom: $space50;
+    padding-bottom: $space45;
+  }
+}
+
+.hero {
+  position: relative;
+  top: 28vh;
+  z-index: 200;
+  margin-bottom: 38vh;
+}
+
+.hero__h1,
+.hero__h2 {
+  color: $white;
+  text-shadow: 0 0 25px rgba(0,0,0,0.90);
+}
+
+.hero__h1 {
+  @extend .h2;
+  margin-bottom: -10px;
+}
+
+.hero__h2 {
+  @extend .h4;
+  font-weight: $normal-font-weight;
+}
 }
