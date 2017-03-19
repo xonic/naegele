@@ -53,11 +53,11 @@ a{display:inline-block;position:relative;color:#0067c2;text-decoration:none;-web
 a:after{content:" ";display:block;position:absolute;right:-2px;bottom:-1px;left:-2px;height:4px;background:#ff8b03;opacity:.8;-webkit-transform:scaleX(0);-ms-transform:scaleX(0);transform:scaleX(0);-webkit-transform-origin:center;-ms-transform-origin:center;transform-origin:center;-webkit-transition:-webkit-transform .1s ease-in;transition:-webkit-transform .1s ease-in;transition:transform .1s ease-in;transition:transform .1s ease-in,-webkit-transform .1s ease-in}
 a:hover:after,a:focus:after,a:active:after{-webkit-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1);-webkit-transition:-webkit-transform .1s ease-out;transition:-webkit-transform .1s ease-out;transition:transform .1s ease-out;transition:transform .1s ease-out,-webkit-transform .1s ease-out}
 a:active{-webkit-transform:translateY(2px);-ms-transform:translateY(2px);transform:translateY(2px)}
-h1,h2,h3,h4,h5,.h1,.h2,.h3,.carousel__h2,.h4,.nav-prod__title,.h5,.product__category,.product__name{font-weight:700}
+h1,h2,h3,h4,h5,.h1,.h2,.carousel__h1,.h3,.h4,.nav-prod__title,.carousel__h2,.h5,.product__category,.product__name{font-weight:700}
 h1,.h1{font-size:207.4%}
-h2,.h2{font-size:172.8%}
-h3,.h3,.carousel__h2{font-size:144%}
-h4,.h4,.nav-prod__title{font-size:120%}
+h2,.h2,.carousel__h1{font-size:172.8%}
+h3,.h3{font-size:144%}
+h4,.h4,.nav-prod__title,.carousel__h2{font-size:120%}
 h5,.h5,.product__category,.product__name{font-size:100%;text-transform:uppercase}
 .text--small{font-size:70.7%}
 .nav-main{background:rgba(0,0,0,0.2);font-size:70.7%}
@@ -94,15 +94,14 @@ h5,.h5,.product__category,.product__name{font-size:100%;text-transform:uppercase
 .section__subtitle{font-weight:400}
 .section__img{margin:-4.8rem -0.8rem 2.4rem}
 .production .section__titles{color:#fff}
-.carousel{position:relative;background:lightblue}
-.carousel__slides{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch;margin:0;padding:0;list-style-type:none;-webkit-transition:-webkit-transform .3s ease-out;transition:-webkit-transform .3s ease-out;transition:transform .3s ease-out;transition:transform .3s ease-out,-webkit-transform .3s ease-out}
+.carousel{position:relative}
+.carousel__slides{display:block;margin:0 0 0 -40vw;padding:0;width:180vw;max-height:100vh;list-style-type:none;overflow:hidden}
 .carousel__slides img{display:block}
-.carousel__slide{display:block;-webkit-box-flex:0;-webkit-flex:0 0 100%;-ms-flex:0 0 100%;flex:0 0 100%;height:75vh;background:url("assets/img/1L-Jambo-Vital-Orange-Karotte-mit-Frucht.jpg") top left no-repeat;background-size:cover;background-position:35% 0}
-.carousel__overlay{position:absolute;top:45%;right:0;bottom:0;left:0}
+.carousel__overlay{position:absolute;top:45%;right:0;bottom:0;left:0;pointer-events:none}
 .carousel__h1,.carousel__h2{color:#fff;text-shadow:0 0 25px rgba(0,0,0,0.9)}
 .carousel__h1{margin-bottom:-10px}
 .carousel__h2{font-weight:400}
-.scroll-wrapper{position:absolute;right:0;bottom:0;left:0;padding-bottom:2.4rem;background:-webkit-linear-gradient(transparent,rgba(0,0,0,0.4));background:linear-gradient(transparent,rgba(0,0,0,0.4))}
+.scroll-wrapper{display:none;position:absolute;right:0;bottom:0;left:0;padding-bottom:2.4rem;background:-webkit-linear-gradient(transparent,rgba(0,0,0,0.4));background:linear-gradient(transparent,rgba(0,0,0,0.4));cursor:pointer}
 .scroll-wrapper:hover:after{content:none}
 .scroll-wrapper:hover .i--label{opacity:1}
 .i--container{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
@@ -114,7 +113,12 @@ h5,.h5,.product__category,.product__name{font-size:100%;text-transform:uppercase
 .i--scroll-down__chevron:before{left:0;-webkit-transform:skew(0,30deg);-ms-transform:skew(0,30deg);transform:skew(0,30deg)}
 .i--scroll-down__chevron:after{right:0;width:50%;-webkit-transform:skew(0,-30deg);-ms-transform:skew(0,-30deg);transform:skew(0,-30deg)}
 .i--label{margin-top:60px;color:#fff;font-weight:700;text-align:center;text-transform:uppercase;text-shadow:0 1px 1px rgba(0,0,0,0.5);white-space:nowrap;opacity:.5;-webkit-animation:pulse 2s linear alternate infinite;animation:pulse 2s linear alternate infinite}
-.carousel__controls{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;position:absolute;top:50%;right:0;left:0}
+.slick-arrow{display:none !important;position:absolute;top:50%;left:2.4rem;width:8px;height:28px;opacity:.2;-webkit-transition:opacity .2s ease-out;transition:opacity .2s ease-out;cursor:pointer;z-index:1}
+.slick-arrow:hover{opacity:1}
+.slick-arrow:before,.slick-arrow:after{content:" ";position:absolute;top:0;height:50%;width:100%;background:#fff}
+.slick-arrow:before{-webkit-transform:skew(-30deg,0);-ms-transform:skew(-30deg,0);transform:skew(-30deg,0)}
+.slick-arrow:after{top:50%;-webkit-transform:skew(30deg,0);-ms-transform:skew(30deg,0);transform:skew(30deg,0)}
+.slick-next{right:2.4rem;left:auto;-webkit-transform:rotateZ(180deg);-ms-transform:rotate(180deg);transform:rotateZ(180deg)}
 .news,.news__item{margin-bottom:2.4rem}
 .news{padding-bottom:2.4rem}
 .btn{padding:1.2rem 1.6rem;background:#0067c2;color:#fff;-webkit-transition:background .1s linear;transition:background .1s linear}
@@ -129,13 +133,14 @@ h5,.h5,.product__category,.product__name{font-size:100%;text-transform:uppercase
 .product__category .text--small{font-weight:700}
 .product__name,.product__quantity{font-weight:400}
 .product__name{padding-bottom:.8rem}
-@media(min-width:23em){.section__titles{margin-top:12.8rem}
+@media(orientation:landscape){.scroll-wrapper{display:block}
+}@media(min-width:23em){.section__titles{margin-top:12.8rem}
 }@media(min-width:30em){.section__titles{margin-top:19.2rem}
 }@media(min-width:37.5em){body{font-size:1.9rem}
 h1,.h1{font-size:244.1%}
-h2,.h2{font-size:195.3%}
-h3,.h3,.carousel__h2{font-size:156.3%}
-h4,.h4,.nav-prod__title{font-size:125%}
+h2,.h2,.carousel__h1{font-size:195.3%}
+h3,.h3{font-size:156.3%}
+h4,.h4,.nav-prod__title,.carousel__h2{font-size:125%}
 .nav-main{font-size:inherit}
 .header{height:20rem}
 .logo{max-width:18rem;margin:3.2rem auto 0}
@@ -144,7 +149,9 @@ h4,.h4,.nav-prod__title{font-size:125%}
 .section{margin:0 -4.8rem;padding:4.8rem}
 .section__titles{margin-top:28.8rem}
 .section__img{margin:-4.8rem -4.8rem 2.4rem}
-.carousel__slide{background-position:center}
+.carousel__slides{width:100%;margin:0}
+.carousel__h1{font-size:244.1%}
+.carousel__h2{font-size:156.3%}
 .news,.news__item{margin-bottom:4.8rem}
 .news{padding-bottom:4.8rem}
 .news__grid{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
@@ -155,9 +162,9 @@ h4,.h4,.nav-prod__title{font-size:125%}
 }@media(min-width:50em){.section__titles{margin-top:38.4rem}
 }@media(min-width:64em){body{font-size:2rem}
 h1,.h1{font-size:315.7%}
-h2,.h2{font-size:236.9%}
-h3,.h3,.carousel__h2{font-size:177.7%}
-h4,.h4,.nav-prod__title{font-size:133.3%}
+h2,.h2,.carousel__h1{font-size:236.9%}
+h3,.h3{font-size:177.7%}
+h4,.h4,.nav-prod__title,.carousel__h2{font-size:133.3%}
 .nav-prod{display:block;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;margin-left:0}
 .nav-prod__col{padding-left:0}
 .header{height:24rem}
@@ -176,7 +183,11 @@ h4,.h4,.nav-prod__title{font-size:133.3%}
 .production__content{-webkit-box-flex:6;-webkit-flex:6 0 0;-ms-flex:6 0 0;flex:6 0 0;margin-right:2.4rem;margin-left:0;-webkit-box-ordinal-group:2;-webkit-order:1;-ms-flex-order:1;order:1}
 .recycling__img{-webkit-box-flex:8;-webkit-flex:8 0 0;-ms-flex:8 0 0;flex:8 0 0;-webkit-box-ordinal-group:3;-webkit-order:2;-ms-flex-order:2;order:2}
 .recycling__content{-webkit-box-flex:3;-webkit-flex:3 0 0;-ms-flex:3 0 0;flex:3 0 0;margin-right:2.4rem;margin-left:0;-webkit-box-ordinal-group:2;-webkit-order:1;-ms-flex-order:1;order:1}
-.carousel__slide{height:85vh}
+.carousel__slide{margin-top:-10vh}
+.carousel__h1{font-size:315.7%}
+.carousel__h2{font-size:177.7%}
+.scroll-wrapper{display:block}
+.slick-arrow{display:block !important}
 .news,.news__item{margin-bottom:6.4rem}
 .news{padding-bottom:6.4rem}
 .news__item{margin-left:6.4rem}
@@ -184,9 +195,9 @@ h4,.h4,.nav-prod__title{font-size:133.3%}
 .products{-webkit-box-flex:3;-webkit-flex:3;-ms-flex:3;flex:3}
 }@media(min-width:90em){body{font-size:2.1rem}
 h1,.h1{font-size:399.8%}
-h2,.h2{font-size:282.7%}
-h3,.h3,.carousel__h2{font-size:199.9%}
-h4,.h4,.nav-prod__title{font-size:141.4%}
+h2,.h2,.carousel__h1{font-size:282.7%}
+h3,.h3{font-size:199.9%}
+h4,.h4,.nav-prod__title,.carousel__h2{font-size:141.4%}
 .home .logo{max-width:26rem}
 .wrapper{padding:0 9.6rem}
 .section{margin:0 -9.6rem;padding:9.6rem}
@@ -197,7 +208,8 @@ h4,.h4,.nav-prod__title{font-size:141.4%}
 .production__content{-webkit-box-flex:5;-webkit-flex:5 0 0;-ms-flex:5 0 0;flex:5 0 0;margin-right:4.8rem;margin-left:0}
 .recycling__img{-webkit-box-flex:7;-webkit-flex:7 0 0;-ms-flex:7 0 0;flex:7 0 0}
 .recycling__content{-webkit-box-flex:4;-webkit-flex:4 0 0;-ms-flex:4 0 0;flex:4 0 0;margin-right:4.8rem;margin-left:0}
-.carousel__slide{height:98vh}
+.carousel__h1{font-size:399.8%}
+.carousel__h2{font-size:199.9%}
 .news,.news__item{margin-bottom:9.6rem}
 .news{padding-bottom:9.6rem}
 .news__item{margin-left:9.6rem}

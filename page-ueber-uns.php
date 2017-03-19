@@ -9,10 +9,10 @@ get_header() ?>
 
       if($slides) {
 
-        echo '<ul id="slides" class="carousel__slides">';
+        echo '<ul id="js-slides" class="carousel__slides">';
 
         foreach($slides as $slide) {
-          echo '<li class="carousel__slide" style="background-image:url(' . $slide["slideshow_image"] . ')"></li>';
+          echo '<li class="carousel__slide"><img src="' . $slide["slideshow_image"] . '"></li>';
         }
 
         echo '</ul>';
@@ -26,22 +26,18 @@ get_header() ?>
         <h2 class="carousel__h2">
           <? echo get_field("hero_subtitle"); ?>
         </h2>
-        <a href="#news" class="scroll-wrapper">
-          <div class="i--container">
-            <div class="i--scroll-down">
-              <div class="i--scroll-down__chevron"></div>
-              <div class="i--scroll-down__chevron"></div>
-              <div class="i--scroll-down__chevron"></div>
-            </div>
-          </div>
-          <div class="i--label text--small"><? echo __("Weiter"); ?></div>
-        </a>
       </div>
     </div>
-    <div class="carousel__controls">
-      <div class="carousel__prev">Prev</div>
-      <div class="carousel__next">Next</div>
-    </div>
+    <a href="#news" id="js-scroll" class="scroll-wrapper">
+      <div class="i--container">
+        <div class="i--scroll-down">
+          <div class="i--scroll-down__chevron"></div>
+          <div class="i--scroll-down__chevron"></div>
+          <div class="i--scroll-down__chevron"></div>
+        </div>
+      </div>
+      <div class="i--label text--small"><? echo __("Weiter"); ?></div>
+    </a>
   </section>
 
   <section id="news" class="section news">

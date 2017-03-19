@@ -1,13 +1,23 @@
+$(document).ready(function(){
 
-var slides = document.querySelector('#slides'),
-    i = 0,
-    count = slides.querySelectorAll('li').length;
+  var $body = $("html, body"),
+      $news = $("#news");
 
-    console.log(count);
+  $('#js-slides').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    touchMove: true,
+    prevArrow: '<div class="slick-prev"></div>',
+    nextArrow: '<div class="slick-next"></div>',
+  });
 
-function slideNext() {
-  TweenMax.to(slides, .5
-    , { css: { "-webkit-transform": "translateX(-" + i++%count * 100 + "%)" } } );
-}
+  $("#js-scroll").on("click", function(e) {
+    console.log("hoi");
+    e.preventDefault();
 
-// var autoSlide = setInterval(slideNext, 5000);
+    $body.animate({
+      scrollTop: $news.offset().top
+    }, 300);
+  });
+
+});
