@@ -95,13 +95,14 @@ h5,.h5,.product__category,.product__name{font-size:100%;text-transform:uppercase
 .section__img{margin:-4.8rem -0.8rem 2.4rem}
 .production .section__titles{color:#fff}
 .carousel{position:relative;background:lightblue}
-.carousel__slides{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch;margin:0;padding:0;list-style-type:none;overflow-x:scroll;-webkit-overflow-scrolling:touch}
+.carousel__slides{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:stretch;-webkit-align-items:stretch;-ms-flex-align:stretch;align-items:stretch;margin:0;padding:0;list-style-type:none;-webkit-transition:-webkit-transform .3s ease-out;transition:-webkit-transform .3s ease-out;transition:transform .3s ease-out;transition:transform .3s ease-out,-webkit-transform .3s ease-out}
+.carousel__slides img{display:block}
 .carousel__slide{display:block;-webkit-box-flex:0;-webkit-flex:0 0 100%;-ms-flex:0 0 100%;flex:0 0 100%;height:75vh;background:url("assets/img/1L-Jambo-Vital-Orange-Karotte-mit-Frucht.jpg") top left no-repeat;background-size:cover;background-position:35% 0}
 .carousel__overlay{position:absolute;top:45%;right:0;bottom:0;left:0}
 .carousel__h1,.carousel__h2{color:#fff;text-shadow:0 0 25px rgba(0,0,0,0.9)}
 .carousel__h1{margin-bottom:-10px}
 .carousel__h2{font-weight:400}
-.scroll-wrapper{position:absolute;right:0;bottom:0;left:0;padding-bottom:2.4rem}
+.scroll-wrapper{position:absolute;right:0;bottom:0;left:0;padding-bottom:2.4rem;background:-webkit-linear-gradient(transparent,rgba(0,0,0,0.4));background:linear-gradient(transparent,rgba(0,0,0,0.4))}
 .scroll-wrapper:hover:after{content:none}
 .scroll-wrapper:hover .i--label{opacity:1}
 .i--container{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
@@ -113,6 +114,7 @@ h5,.h5,.product__category,.product__name{font-size:100%;text-transform:uppercase
 .i--scroll-down__chevron:before{left:0;-webkit-transform:skew(0,30deg);-ms-transform:skew(0,30deg);transform:skew(0,30deg)}
 .i--scroll-down__chevron:after{right:0;width:50%;-webkit-transform:skew(0,-30deg);-ms-transform:skew(0,-30deg);transform:skew(0,-30deg)}
 .i--label{margin-top:60px;color:#fff;font-weight:700;text-align:center;text-transform:uppercase;text-shadow:0 1px 1px rgba(0,0,0,0.5);white-space:nowrap;opacity:.5;-webkit-animation:pulse 2s linear alternate infinite;animation:pulse 2s linear alternate infinite}
+.carousel__controls{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;position:absolute;top:50%;right:0;left:0}
 .news,.news__item{margin-bottom:2.4rem}
 .news{padding-bottom:2.4rem}
 .btn{padding:1.2rem 1.6rem;background:#0067c2;color:#fff;-webkit-transition:background .1s linear;transition:background .1s linear}

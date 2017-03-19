@@ -4,12 +4,20 @@
 get_header() ?>
 
   <section class="carousel">
-    <ul class="carousel__slides">
-      <li class="carousel__slide"></li>
-      <li class="carousel__slide"></li>
-      <li class="carousel__slide"></li>
-      <li class="carousel__slide"></li>
-    </ul>
+      <?
+      $slides = get_field('slideshow');
+
+      if($slides) {
+
+        echo '<ul id="slides" class="carousel__slides">';
+
+        foreach($slides as $slide) {
+          echo '<li class="carousel__slide" style="background-image:url(' . $slide["slideshow_image"] . ')"></li>';
+        }
+
+        echo '</ul>';
+      }
+      ?>
     <div class="carousel__overlay">
       <div class="wrapper">
         <h1 class="carousel__h1">
@@ -29,6 +37,10 @@ get_header() ?>
           <div class="i--label text--small"><? echo __("Weiter"); ?></div>
         </a>
       </div>
+    </div>
+    <div class="carousel__controls">
+      <div class="carousel__prev">Prev</div>
+      <div class="carousel__next">Next</div>
     </div>
   </section>
 
