@@ -97,19 +97,6 @@
   }
 }
 
-.hero {
-  position: relative;
-  top: 28vh;
-  z-index: 200;
-  margin-bottom: 38vh;
-}
-
-.hero__h1,
-.hero__h2 {
-  color: $white;
-  text-shadow: 0 0 25px rgba(0,0,0,0.90);
-}
-
 .hero__h1 {
   @extend .h2;
   margin-bottom: -10px;
@@ -118,5 +105,4 @@
 .hero__h2 {
   @extend .h4;
   font-weight: $normal-font-weight;
-}
 }
