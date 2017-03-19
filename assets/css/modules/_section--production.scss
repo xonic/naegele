@@ -43,6 +43,13 @@
   }
 }
 
+.production__img {
+
+  @media (min-width: $laptop) {
+    display: none;
+  }
+}
+
 .dim {
   transition: opacity .2s ease-out;
   opacity: 0;
@@ -58,13 +65,10 @@
 }
 
 .production__vid-wrapper {
-  margin: -$space40 #{-$space15} $space30;
-
-  @media (min-width: $tablet) {
-    margin: -$space40 #{-$space40} $space30;
-  }
+  display: none;
 
   @media (min-width: $laptop) {
+    display: block;
     position: absolute;
     top: -0%;
     left: -0%;
@@ -75,12 +79,6 @@
 }
 
 .production__vid {
-  margin: -$space40 #{-$space15} $space30;
-
-  @media (min-width: $tablet) {
-    margin: -$space40 #{-$space40} $space30;
-  }
-  max-width: 150%;
 
   @media (min-width: $laptop) {
     max-width: none;
