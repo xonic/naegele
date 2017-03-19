@@ -1,41 +1,104 @@
 //  ----------------------------------------------------------------------------
 //
-//  MAIN PAGE SHOP SECTION
+//  MAIN PAGE PRODUCTION SECTION
 //
 //  ----------------------------------------------------------------------------
 
 .production {
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: $laptop) {
+    &:hover {
+      .dim,
+      .production__content {
+        opacity: 1;
+      }
+
+      .section__titles {
+        transform: translateY(0);
+        transition: transform .3s ease-out 0s;
+      }
+    }
+  }
+
+  .wrapper {
+    @media (min-width: $laptop) {
+      color: $white;
+    }
+  }
+
   .section__titles {
     color: $white;
 
     @media (min-width: $laptop) {
-      color: $black;
+      position: relative;
+      z-index: 500;
+      pointer-events: none;
+      text-shadow: 0 0 10px rgba($black, .5),
+                   0 0 4px rgba($black, .5);
+      transition: transform .3s ease-out .4s;
+      transform: translateY(150px);
     }
   }
 }
 
-.production__img {
+.dim {
+  transition: opacity .2s ease-out;
+  opacity: 0;
+
   @media (min-width: $laptop) {
-    flex: 6 0 0;
-    order: 2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba($black, .7);
+  }
+}
+
+.production__vid-wrapper {
+  margin: -$space40 #{-$space15} $space30;
+
+  @media (min-width: $tablet) {
+    margin: -$space40 #{-$space40} $space30;
   }
 
-  @media (min-width: $desktop) {
-    flex: 7 0 0;
+  @media (min-width: $laptop) {
+    position: absolute;
+    top: -0%;
+    left: -0%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+}
+
+.production__vid {
+  margin: -$space40 #{-$space15} $space30;
+
+  @media (min-width: $tablet) {
+    margin: -$space40 #{-$space40} $space30;
+  }
+  max-width: 150%;
+
+  @media (min-width: $laptop) {
+    max-width: none;
+    min-width: 100%;
+    min-height: 100%;
   }
 }
 
 .production__content {
-  @media (min-width: $laptop) {
-    flex: 6 0 0;
-    margin-right: $space30;
-    margin-left: 0;
-    order: 1;
-  }
+  position: relative;
+  z-index: 500;
+  transition: opacity .2s ease-out;
+  transition-delay: .3s;
 
-  @media (min-width: $desktop) {
-    flex: 5 0 0;
-    margin-right: $space40;
-    margin-left: 0;
+  @media (min-width: $laptop) {
+    margin: 0 auto;
+    max-width: 600px;
+    opacity: 0;
+    pointer-events: none;
   }
 }

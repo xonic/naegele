@@ -108,9 +108,12 @@ get_header() ?>
         </h3>
       </div>
       <div class="section__grid production__grid">
-        <div class="production__img section__img">
-          <img src="<? the_field('section_4_image'); ?>">
+        <div class="production__vid-wrapper">
+          <video class="production__vid" src="<? bloginfo('template_directory'); ?>/assets/vid/Naegele_generico_slowmo.mp4" autoplay loop muted>
+            Sorry, your browser doesn't support videos.
+          </video>
         </div>
+        <div class="dim"></div>
         <div class="production__content section__content">
             <? echo get_field("section_4_content"); ?>
         </div>
