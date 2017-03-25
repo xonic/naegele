@@ -62,7 +62,7 @@ class product {
 			'capability_type'     => 'post',
 			'hierarchical'        => false,
 			'supports'            => array( 'title', 'editor', 'author', 'thumbnail', 'custom-fields' ),
-			'has_archive'         => true,
+			'has_archive'         => __('produkte'),
 			'rewrite'             => array( 'slug' => __('product') ),
 			'query_var'           => true
 		);
