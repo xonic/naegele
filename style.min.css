@@ -105,6 +105,7 @@ h5,.h5,.product__category,.product__name{font-size:100%;text-transform:uppercase
 .dim{-webkit-transition:opacity .2s ease-out;transition:opacity .2s ease-out;opacity:0}
 .production__vid-wrapper{display:none}
 .production__content{position:relative;z-index:500;-webkit-transition:opacity .2s ease-out;transition:opacity .2s ease-out;-webkit-transition-delay:.3s;transition-delay:.3s}
+.schankanlagen{padding-top:0}
 .carousel{position:relative}
 .carousel__slides{display:block;margin:0 0 0 -40vw;padding:0;width:180vw;max-height:100vh;list-style-type:none;overflow:hidden}
 .carousel__slides img{display:block}

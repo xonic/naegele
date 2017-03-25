@@ -4,26 +4,30 @@
 */
 
 get_header() ?>
-<section class="hero">
-  <div class="wrapper">
-    <h1 class="hero__h1">
-      <? echo get_field('page_title'); ?>
-    </h1>
-    <h2 class="hero__h2">
-      <? echo get_field('page_subtitle'); ?>
-    </h2>
-  </div>
-</section>
+<? if( get_field('page_title') && get_field('page_subtitle')) : ?>
+  <section class="hero">
+    <div class="wrapper">
+      <h1 class="hero__h1">
+        <? echo get_field('page_title'); ?>
+      </h1>
+      <h2 class="hero__h2">
+        <? echo get_field('page_subtitle'); ?>
+      </h2>
+    </div>
+  </section>
+<? endif ?>
 <section class="schankanlagen section">
   <div class="wrapper">
-    <div class="section__titles">
-      <h2 class="section__title">
-        <? echo get_field('section_1_title'); ?>
-      </h2>
-      <h3 class="section__subtitle">
-        <? echo get_field('section_1_subtitle'); ?>
-      </h3>
-    </div>
+    <? if( get_field('section_1_title') && get_field('section_1_subtitle')) : ?>
+      <div class="section__titles">
+        <h2 class="section__title">
+          <? echo get_field('section_1_title'); ?>
+        </h2>
+        <h3 class="section__subtitle">
+          <? echo get_field('section_1_subtitle'); ?>
+        </h3>
+      </div>
+    <? endif ?>
     <div class="section__grid schankanlagen__grid">
       <div class="schankanlagen__img section__img">
         <img src="<? the_field('section_1_image'); ?>">
