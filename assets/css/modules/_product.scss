@@ -111,6 +111,29 @@
   .hero__h1 {
     margin-top: $space25;
   }
+
+  .products {
+    max-height: 246px * 2;
+    overflow: hidden;
+
+    @media (min-width: $tablet) {
+      max-height: 246px;
+    }
+
+    @media (min-width: $desktop) {
+      margin-left: -$space35;
+    }
+  }
+
+  .product {
+    margin-bottom: $space30;
+    max-width: 150px;
+    font-size: 75%;
+  }
+}
+
+.section--single-prod {
+  padding-top: 0;
 }
 
 .grid--single-prod {
