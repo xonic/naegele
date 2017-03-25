@@ -93,6 +93,7 @@ h5,.h5,.product__category,.product__name{font-size:100%;text-transform:uppercase
 .hero__h2{padding-bottom:3.2rem;border-bottom:.4rem solid #ff8b03;font-weight:400}
 .hero__h1{margin-bottom:-10px}
 .hero__h2{font-weight:400}
+.breadcrumbs{margin:1.2rem 0;font-size:70%;line-height:2.4rem}
 .wrapper{max-width:144rem;margin:0 auto;padding:0 .8rem}
 .section{margin:0 -0.8rem;padding:4.8rem .8rem}
 .section--alt{background:#333;color:#fff}
@@ -148,6 +149,8 @@ h5,.h5,.product__category,.product__name{font-size:100%;text-transform:uppercase
 .product__category .text--small{font-weight:700}
 .product__name,.product__quantity{font-weight:400}
 .product__name{padding-bottom:.8rem}
+.single-product .hero__h1{margin-top:1.6rem}
+.product__image{margin-bottom:2.4rem}
 @media(orientation:landscape){.scroll-wrapper{display:block}
 }@media(min-width:23em){.section__titles{margin-top:12.8rem}
 }@media(min-width:30em){.section__titles{margin-top:19.2rem}
@@ -178,6 +181,8 @@ h4,.h4,.nav-prod__title,.hero__h2,.carousel__h2{font-size:125%}
 .news__wrapper .news__item{margin-left:0}
 .products{margin-left:-2.4rem}
 .product{width:33.33%;margin-bottom:6.4rem;padding-left:2.4rem}
+.grid--single-prod{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+.grid--single-prod .product__content{margin-left:2.4rem}
 }@media(min-width:50em){.section__titles{margin-top:38.4rem}
 }@media(min-width:64em){body{font-size:2rem}
 h1,.h1{font-size:315.7%}

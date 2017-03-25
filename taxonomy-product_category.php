@@ -100,7 +100,6 @@ get_header() ?>
             // Start the loop
             while (have_posts()) : the_post();
 
-              $img = get_field('product_image');
               $quantity = get_field('product_quantity');
               $categories = get_the_terms($post->ID, 'product_category');
               $child_cats = array();
@@ -111,9 +110,6 @@ get_header() ?>
                   $child_cats[] = $cat->name;
                 }
               }
-
-              // print_r($child_cats);
-              // print_r($categories);
             ?>
 
               <article class="product <? echo $post->ID; ?>">

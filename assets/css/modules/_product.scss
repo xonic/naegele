@@ -100,3 +100,29 @@
 .product__name {
   padding-bottom: $space15;
 }
+
+//  ----------------------------------------------------------------------------
+//
+//  SINGLE PRODUCT PAGE
+//
+//  ----------------------------------------------------------------------------
+
+.single-product {
+  .hero__h1 {
+    margin-top: $space25;
+  }
+}
+
+.grid--single-prod {
+  @media (min-width: $tablet) {
+    display: flex;
+
+    .product__content {
+      margin-left: $space30;
+    }
+  }
+}
+
+.product__image {
+  margin-bottom: $space30;
+}
