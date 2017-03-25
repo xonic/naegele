@@ -11,6 +11,13 @@
   }
 }
 
+.tax-product_category .grid--prod {
+  @media (max-width: $laptop - .0625em) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
 .products {
   display: flex;
   flex-wrap: wrap;
@@ -53,7 +60,12 @@
 
   @media (min-width: $tablet) {
     width: 33.33%;
+    margin-bottom: $space45;
     padding-left: $space30;
+  }
+
+  @media (min-width: $laptop) {
+    margin-bottom: $space50;
   }
 
   @media (min-width: $desktop) {

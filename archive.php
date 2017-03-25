@@ -4,16 +4,16 @@ get_header() ?>
   <section class="hero">
     Archive für News
     <div class="wrapper">
-      <h1 class="hero__h1">
+      <!-- <h1 class="hero__h1">
         Die besten Produkte
       </h1>
       <h2 class="hero__h2">
         Aus traditioneller Herstellung.
-      </h2>
+      </h2> -->
     </div>
   </section>
   <div class="grid--prod wrapper">
-    <nav class="nav-prod">
+    <!-- <nav class="nav-prod">
       <div class="nav-prod__col">
         <h2 class="nav-prod__title"><? echo __('Unsere Produkte'); ?></h2>
         <ul class="nav-prod__items">
@@ -141,7 +141,7 @@ get_header() ?>
           echo "No products found";
 
         endif;
-      ?>
+      ?> -->
     </section>
   </div>
 <? get_footer() ?>

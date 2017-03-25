@@ -97,6 +97,13 @@
   }
 }
 
+.tax-product_category .hero__h2 {
+  @media (min-width: $laptop) {
+    margin-bottom: $space40;
+    padding-bottom: $space45;
+  }
+}
+
 .hero__h1 {
   @extend .h2;
   margin-bottom: -10px;

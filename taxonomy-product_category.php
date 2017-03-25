@@ -1,18 +1,22 @@
 <?
 
 get_header() ?>
-<div style="text-align:center;">archive-product.php</div>
+<div style="text-align:center;">taxonomy-product-category.php</div>
   <section class="hero">
     <div class="wrapper">
       <h1 class="hero__h1">
-        Die besten Produkte
+        <?php
+          $queried_object = get_queried_object();
+          echo $queried_object->name;;
+          ?>
       </h1>
       <h2 class="hero__h2">
-        Aus traditioneller Herstellung.
+
       </h2>
     </div>
   </section>
   <div class="wrapper">
+    <a class="nav-prod__show-all" href="<? echo esc_url(get_post_type_archive_link('product')); ?>">&lt; <? echo __('Alle Produkte'); ?></a>
     <div class="grid--prod">
       <nav class="nav-prod">
         <div class="nav-prod__col">
@@ -143,6 +147,7 @@ get_header() ?>
 
           endif;
         ?>
+        
       </section>
     </div>
   </div>

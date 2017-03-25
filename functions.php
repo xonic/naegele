@@ -93,7 +93,7 @@ class product {
 			'show_ui'           => true,
 			'show_admin_column' => true,
 			'query_var'         => true,
-			'rewrite'           => false //array( 'slug' => __('product/category')   , 'with_front' => false ),
+			'rewrite'           => array( 'slug' => __('produkt-kategorie')   , 'with_front' => false ),
 		);
 
 		register_taxonomy('product_category', array('product'),$args);
@@ -128,7 +128,7 @@ class product {
 			'rewrite'               => false //array( 'slug' => __('product/tag'), 'with_front' => false ),
 		);
 
-		register_taxonomy('product_tag', array('product'),$args);
+		// register_taxonomy('product_tag', array('product'),$args);
 	}
 
 	function columns($columns) {

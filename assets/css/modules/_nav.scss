@@ -95,6 +95,16 @@
   }
 }
 
+.nav-prod__show-all {
+  display: inline-block;
+  margin-bottom: $space30;
+  font-size: 80%;
+
+  @media (min-width: $laptop) {
+  margin-bottom: $space40;
+  }
+}
+
 .nav-prod__title {
   @extend .h4;
   margin-bottom: $space20;
