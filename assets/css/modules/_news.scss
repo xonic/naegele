@@ -37,6 +37,27 @@
   }
 }
 
+.news__wrapper {
+  margin: 0 auto;
+  max-width: 600px;
+
+  .news__item {
+    margin-bottom: $space30;
+    padding-bottom: $space30;
+    border-bottom: $space10 solid $orange40;
+
+    @media (min-width: $tablet) {
+      margin-bottom: $space45;
+      padding-bottom: $space45;
+    }
+
+    @media (min-width: $laptop) {
+      margin-bottom: $space50;
+      padding-bottom: $space50;
+    }
+  }
+}
+
 @media (min-width: $tablet) {
   .news__grid {
     display: flex;
@@ -47,6 +68,10 @@
     margin-left: $space40;
 
     &:first-child {
+      margin-left: 0;
+    }
+
+    .news__wrapper & {
       margin-left: 0;
     }
   }

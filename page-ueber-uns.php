@@ -66,7 +66,7 @@ get_header() ?>
           wp_reset_query();
       ?>
       </div>
-      <a class="btn" href="<?php echo get_post_type_archive_link( 'post' ); ?>"><? echo __('Weitere Neuigkeiten anzeigen'); ?></a>
+      <a class="btn" href="<?php echo get_permalink( get_page_by_path( 'neuigkeiten' ) ); ?>"><? echo __('Weitere Neuigkeiten anzeigen'); ?></a>
       <?
         else :
 

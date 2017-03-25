@@ -10,9 +10,7 @@ get_header() ?>
           echo $queried_object->name;;
           ?>
       </h1>
-      <h2 class="hero__h2">
-
-      </h2>
+      <h2 class="hero__h2"><!--don't delete this h2--></h2>
     </div>
   </section>
   <div class="wrapper">
@@ -147,7 +145,7 @@ get_header() ?>
 
           endif;
         ?>
-        
+
       </section>
     </div>
   </div>
