@@ -1,0 +1,58 @@
+//  ----------------------------------------------------------------------------
+//
+//  FOOTER
+//
+//  ----------------------------------------------------------------------------
+
+.footer {
+
+  background: whitesmoke;
+  overflow-x: hidden;
+
+  @media (min-width: $laptop) {
+
+    .wrapper {
+      display: flex;
+    }
+
+    .contact,
+    .newsletter {
+      flex: 0 1 50%;
+    }
+
+    .newsletter {
+      margin-left: $space40;
+    }
+
+    .section__title,
+    .section__subtitle {
+      text-align: left;
+    }
+
+    .section__subtitle {
+      line-height: 1.3;
+    }
+  }
+}
+
+.social {
+  display: flex;
+}
+
+.social__link {
+  display: block;
+  width: $space40;
+  height: $space40;
+}
+
+.social__link {
+  margin-left: $space30;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:after {
+    content: none!important;
+  }
+}

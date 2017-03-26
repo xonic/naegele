@@ -27,6 +27,12 @@
 .section--alt {
   background: $gray10;
   color: $white;
+
+  .product__name,
+  .product__category,
+  .product__quantity {
+    color: $white;
+  }
 }
 
 .section__titles {

@@ -1,4 +1,4 @@
-<? get_header(); ?>
+  <? get_header(); ?>
 
 <? if( 'product' === get_post_type() && is_single()) : ?>
   <div class="wrapper">
@@ -35,7 +35,7 @@
         </div>
       </div>
     </section>
-    <section class="related">
+    <section class="section section--alt">
       <h4 class="related__title"><? echo __('Weitere Produkte'); ?></h4>
       <div class="products">
         <?

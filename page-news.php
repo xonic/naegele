@@ -1,7 +1,7 @@
 <?
 /* Template Name: News */
 
-get_header() ?>
+get_header(); ?>
 
 <section class="hero">
   <div class="wrapper">
@@ -32,7 +32,6 @@ get_header() ?>
       <?
           endwhile;
 
-          wp_reset_post_data();
       ?>
       </div>
       <?
@@ -45,4 +44,4 @@ get_header() ?>
       ?>
     </div>
   </section>
-<? get_footer() ?>
+<? get_footer(); ?>

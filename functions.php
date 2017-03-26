@@ -70,6 +70,16 @@ function get_related_posts( $taxonomy = '', $args = [] )
     return $q;
 }
 
+// Edit footer text in WP admin section
+function remove_footer_admin () {
+
+echo 'Designed by <a href="http://xon1c.com" target="_blank">xon1c &middot; Tom Nägele</a>';
+
+}
+
+add_filter('admin_footer_text', 'remove_footer_admin');
+
+
 // Add support for product thumbnails
 add_theme_support( 'post-thumbnails' );
 

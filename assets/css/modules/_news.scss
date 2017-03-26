@@ -46,6 +46,10 @@
     padding-bottom: $space30;
     border-bottom: $space10 solid $orange40;
 
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     @media (min-width: $tablet) {
       margin-bottom: $space45;
       padding-bottom: $space45;
