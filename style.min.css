@@ -104,6 +104,7 @@ h5,.h5,.product__category,.product__name{font-size:100%;text-transform:uppercase
 .section__title{margin-bottom:-0.8rem}
 .section__subtitle{font-weight:400}
 .section__img{margin:-4.8rem -0.8rem 2.4rem}
+.section--privacy{padding-top:0}
 .production{position:relative;overflow:hidden}
 .production .section__titles{color:#fff}
 .dim{-webkit-transition:opacity .2s ease-out;transition:opacity .2s ease-out;opacity:0}
