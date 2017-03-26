@@ -44,8 +44,10 @@ canvas{display:inline-block}
 template{display:none}
 [hidden]{display:none}
 *{box-sizing:border-box}
-html{font-size:62.5%}
+html{height:100%;font-size:62.5%}
 body{font-family:"ff-dagny-web-pro","Helvetica Neue","Helvetica","Arial",sans-serif;font-size:1.8rem;line-height:1.5}
+.page-template-page-360-grad{position:relative;height:100%}
+.page-template-page-360-grad .header{position:relative;z-index:3;background:0}
 .main{overflow-x:hidden}
 img,object{max-width:100%;height:auto}
 h1,h2,h3,h4,h5,h6,hgroup,ul,ol,dd,p,figure,pre,table,fieldset,hr{margin:0;margin-bottom:2.4rem}

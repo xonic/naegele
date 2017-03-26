@@ -22,6 +22,7 @@ BOX SIZING
 BASE SETUP
 ------------------------------------------------------------------------------*/
 html {
+	height: 100%;
   font-size: 62.5%;
 }
 
@@ -41,6 +42,17 @@ body {
   @media (min-width: $desktop) {
     font-size: 2.1rem;
   }
+}
+
+.page-template-page-360-grad {
+	position: relative;
+	height: 100%;
+
+	.header {
+		position: relative;
+		z-index: 3;
+		background: none;
+	}
 }
 
 .main {

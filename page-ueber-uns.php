@@ -93,6 +93,7 @@ get_header() ?>
         </div>
         <div class="shop__content section__content">
             <? echo get_field("section_3_content"); ?>
+            <a class="btn" href="<?php echo get_permalink( get_page_by_path( '360-tour' ) ); ?>"><? echo __('360° virtuellen Rundgang starten'); ?></a>
         </div>
       </div>
     </div>
