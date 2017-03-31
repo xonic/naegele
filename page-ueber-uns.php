@@ -66,7 +66,7 @@ get_header() ?>
           wp_reset_query();
       ?>
       </div>
-      <a class="btn" href="<?php echo get_permalink( get_page_by_path( 'neuigkeiten' ) ); ?>"><? echo __('Weitere Neuigkeiten anzeigen'); ?></a>
+      <a class="btn" href="<?php echo get_permalink( get_page_by_path( 'neuigkeiten' ) ); ?>"><? echo __('Weitere Neuigkeiten anzeigen', 'naegele'); ?></a>
       <?
         else :
 
@@ -93,7 +93,7 @@ get_header() ?>
         </div>
         <div class="shop__content section__content">
             <? echo get_field("section_3_content"); ?>
-            <a class="btn" href="<?php echo get_permalink( get_page_by_path( '360-tour' ) ); ?>"><? echo __('360° virtuellen Rundgang starten'); ?></a>
+            <a class="btn" href="<?php echo get_permalink( get_page_by_path( '360-tour' ) ); ?>"><? echo __('360° virtuellen Rundgang starten', 'naegele'); ?></a>
         </div>
       </div>
     </div>

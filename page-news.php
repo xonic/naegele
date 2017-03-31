@@ -6,7 +6,7 @@ get_header(); ?>
 <section class="hero">
   <div class="wrapper">
     <h1 class="hero__h1">
-      <? echo __('Neuigkeiten'); ?>
+      <? echo __('Neuigkeiten', 'naegele'); ?>
     </h1>
     <h2 class="hero__h2"></h2>
   </div>

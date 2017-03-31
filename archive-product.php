@@ -16,7 +16,7 @@ get_header() ?>
     <div class="grid--prod">
       <nav class="nav-prod">
         <div class="nav-prod__col">
-          <h2 class="nav-prod__title"><? echo __('Unsere Produkte'); ?></h2>
+          <h2 class="nav-prod__title"><? echo __('Unsere Produkte', 'naegele'); ?></h2>
           <ul class="nav-prod__items">
             <?php
 
@@ -40,7 +40,7 @@ get_header() ?>
           </ul>
         </div>
         <div class="nav-prod__col">
-          <h2 class="nav-prod__title"><? echo __('Gesamtes Sortiment'); ?></h2>
+          <h2 class="nav-prod__title"><? echo __('Gesamtes Sortiment', 'naegele'); ?></h2>
           <ul class="nav-prod__items">
             <?php
 
@@ -118,7 +118,7 @@ get_header() ?>
             ?>
 
               <article class="product <? echo $post->ID; ?>">
-                <a href="<? echo get_permalink(); ?>" class="product__link" title="<? echo __('Produkt anzeigen'); ?>">
+                <a href="<? echo get_permalink(); ?>" class="product__link" title="<? echo __('Produkt anzeigen', 'naegele'); ?>">
                   <?
                     if ( has_post_thumbnail() ) {
                       the_post_thumbnail('product-thumb');

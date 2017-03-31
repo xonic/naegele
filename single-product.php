@@ -31,12 +31,12 @@
         </div>
         <div class="product__content">
           <p><? the_field('product_description') ?></p>
-          <p><? the_field('product_quantity') ?> <? echo __('Liter Flasche'); ?></p>
+          <p><? the_field('product_quantity') ?> <? echo __('Liter Flasche', 'naegele'); ?></p>
         </div>
       </div>
     </section>
     <section class="section section--alt">
-      <h4 class="related__title"><? echo __('Weitere Produkte'); ?></h4>
+      <h4 class="related__title"><? echo __('Weitere Produkte', 'naegele'); ?></h4>
       <div class="products">
         <?
         if ( function_exists( 'get_related_posts' ) ) {
@@ -47,7 +47,7 @@
                     ?>
 
                     <article class="product <? echo $post->ID; ?>">
-                      <a href="<? echo get_permalink(); ?>" class="product__link" title="<? echo __('Produkt anzeigen'); ?>">
+                      <a href="<? echo get_permalink(); ?>" class="product__link" title="<? echo __('Produkt anzeigen', 'naegele'); ?>">
                         <?
                           if ( has_post_thumbnail() ) {
                             the_post_thumbnail('product-thumb');

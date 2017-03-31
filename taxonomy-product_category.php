@@ -14,11 +14,11 @@ get_header() ?>
     </div>
   </section>
   <div class="wrapper">
-    <a class="nav-prod__show-all" href="<? echo esc_url(get_post_type_archive_link('product')); ?>">&lt; <? echo __('Alle Produkte'); ?></a>
+    <a class="nav-prod__show-all" href="<? echo esc_url(get_post_type_archive_link('product')); ?>">&lt; <? echo __('Alle Produkte', 'naegele'); ?></a>
     <div class="grid--prod">
       <nav class="nav-prod">
         <div class="nav-prod__col">
-          <h2 class="nav-prod__title"><? echo __('Unsere Produkte'); ?></h2>
+          <h2 class="nav-prod__title"><? echo __('Unsere Produkte', 'naegele'); ?></h2>
           <ul class="nav-prod__items">
             <?php
 
@@ -42,7 +42,7 @@ get_header() ?>
           </ul>
         </div>
         <div class="nav-prod__col">
-          <h2 class="nav-prod__title"><? echo __('Gesamtes Sortiment'); ?></h2>
+          <h2 class="nav-prod__title"><? echo __('Gesamtes Sortiment', 'naegele'); ?></h2>
           <ul class="nav-prod__items">
             <?php
 
@@ -113,7 +113,7 @@ get_header() ?>
             ?>
 
               <article class="product <? echo $post->ID; ?>">
-                <a href="<? echo get_permalink(); ?>" class="product__link" title="<? echo __('Produkt anzeigen'); ?>">
+                <a href="<? echo get_permalink(); ?>" class="product__link" title="<? echo __('Produkt anzeigen', 'naegele'); ?>">
                   <?
                     if ( has_post_thumbnail() ) {
                       the_post_thumbnail('product-thumb');

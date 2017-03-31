@@ -99,17 +99,17 @@ add_action( 'init', 'register_main_nav' );
 function product_category_init() {
   // Add new taxonomy, make it hierarchical (like categories)
   $labels = array(
-    'name'              => __('Produktkategorien'),
-    'singular_name'     => __('Produktkategorie'),
-    'search_items'      => __('Suche Produktkategorie'),
-    'all_items'         => __('Alle Produktkategorien'),
-    'parent_item'       => __('Übergeordnete Produktkategorie'),
-    'parent_item_colon' => __('Übergeordnete Produktkategorie:'),
-    'edit_item'         => __('Produktkategorie editieren'),
-    'update_item'       => __('Produktkategorie aktualisieren'),
-    'add_new_item'      => __('Neue Produktkategorie hinzufügen'),
-    'new_item_name'     => __('Neuer Produktkategoriename'),
-    'menu_name'         => __('Produktkategorien'),
+    'name'              => __('Produktkategorien', 'naegele'),
+    'singular_name'     => __('Produktkategorie', 'naegele'),
+    'search_items'      => __('Suche Produktkategorie', 'naegele'),
+    'all_items'         => __('Alle Produktkategorien', 'naegele'),
+    'parent_item'       => __('Übergeordnete Produktkategorie', 'naegele'),
+    'parent_item_colon' => __('Übergeordnete Produktkategorie:', 'naegele'),
+    'edit_item'         => __('Produktkategorie editieren', 'naegele'),
+    'update_item'       => __('Produktkategorie aktualisieren', 'naegele'),
+    'add_new_item'      => __('Neue Produktkategorie hinzufügen', 'naegele'),
+    'new_item_name'     => __('Neuer Produktkategoriename', 'naegele'),
+    'menu_name'         => __('Produktkategorien', 'naegele'),
   );
 
   $args = array(
@@ -118,7 +118,7 @@ function product_category_init() {
     'show_ui'           => true,
     'show_admin_column' => true,
     'query_var'         => true,
-    'rewrite'           => array( 'slug' => __('produkt-kategorie')   , 'with_front' => false ),
+    'rewrite'           => array( 'slug' => __('produkt-kategorie', 'naegele')   , 'with_front' => false ),
   );
 
   register_taxonomy('product_category', array('product'),$args);
@@ -127,20 +127,20 @@ add_action( 'init', 'product_category_init');
 
 function product_init() {
   $labels = array(
-    'name'               => __('Produkte'),
-    'singular_name'      => __('Produkt'),
-    'menu_name'          => __('Produkte'),
-    'name_admin_bar'     => __('Produkt'),
-    'add_new'            => __('Neu hinzufügen'),
-    'add_new_item'       => __('Neues Produkt hinzufügen'),
-    'new_item'           => __('Neues Produkt'),
-    'edit_item'          => __('Produkt editieren'),
-    'view_item'          => __('Produkt anzeigen'),
-    'all_items'          => __('Alle Produkte'),
-    'search_items'       => __('Produkte suchen'),
-    'parent_item_colon'  => __('Übergeordnetes Produkt'),
-    'not_found'          => __('Keine Produkte gefunden'),
-    'not_found_in_trash' => __('Keine Produkte im Papierkorb gefunden')
+    'name'               => __('Produkte', 'naegele'),
+    'singular_name'      => __('Produkt', 'naegele'),
+    'menu_name'          => __('Produkte', 'naegele'),
+    'name_admin_bar'     => __('Produkt', 'naegele'),
+    'add_new'            => __('Neu hinzufügen', 'naegele'),
+    'add_new_item'       => __('Neues Produkt hinzufügen', 'naegele'),
+    'new_item'           => __('Neues Produkt', 'naegele'),
+    'edit_item'          => __('Produkt editieren', 'naegele'),
+    'view_item'          => __('Produkt anzeigen', 'naegele'),
+    'all_items'          => __('Alle Produkte', 'naegele'),
+    'search_items'       => __('Produkte suchen', 'naegele'),
+    'parent_item_colon'  => __('Übergeordnetes Produkt', 'naegele'),
+    'not_found'          => __('Keine Produkte gefunden', 'naegele'),
+    'not_found_in_trash' => __('Keine Produkte im Papierkorb gefunden', 'naegele')
   );
 
   $args = array(
@@ -157,8 +157,8 @@ function product_init() {
     'capability_type'     => 'post',
     'hierarchical'        => false,
     'supports'            => array( 'title', 'thumbnail' ),
-    'has_archive'         => __('produkte'),
-    'rewrite'             => array( 'slug' => __('produkt') ),
+    'has_archive'         => __('produkte', 'naegele'),
+    'rewrite'             => array( 'slug' => __('produkt', 'naegele') ),
     'query_var'           => true
   );
 
@@ -168,20 +168,20 @@ add_action( 'init', 'product_init');
 
 function employee_init() {
   $labels = array(
-    'name'               => __('Mitarbeiter'),
-    'singular_name'      => __('Mitarbeiter'),
-    'menu_name'          => __('Mitarbeiter'),
-    'name_admin_bar'     => __('Mitarbeiter'),
-    'add_new'            => __('Neu hinzufügen'),
-    'add_new_item'       => __('Neuen Mitarbeiter hinzufügen'),
-    'new_item'           => __('Neuer Mitarbeiter'),
-    'edit_item'          => __('Mitarbeiter editieren'),
-    'view_item'          => __('Mitarbeiter anzeigen'),
-    'all_items'          => __('Alle Mitarbeiter'),
-    'search_items'       => __('Mitarbeiter suchen'),
-    'parent_item_colon'  => __('Übergeordneter Mitarbeiter'),
-    'not_found'          => __('Kein Mitarbeiter gefunden'),
-    'not_found_in_trash' => __('Kein Mitarbeiter im Papierkorb gefunden')
+    'name'               => __('Mitarbeiter', 'naegele'),
+    'singular_name'      => __('Mitarbeiter', 'naegele'),
+    'menu_name'          => __('Mitarbeiter', 'naegele'),
+    'name_admin_bar'     => __('Mitarbeiter', 'naegele'),
+    'add_new'            => __('Neu hinzufügen', 'naegele'),
+    'add_new_item'       => __('Neuen Mitarbeiter hinzufügen', 'naegele'),
+    'new_item'           => __('Neuer Mitarbeiter', 'naegele'),
+    'edit_item'          => __('Mitarbeiter editieren', 'naegele'),
+    'view_item'          => __('Mitarbeiter anzeigen', 'naegele'),
+    'all_items'          => __('Alle Mitarbeiter', 'naegele'),
+    'search_items'       => __('Mitarbeiter suchen', 'naegele'),
+    'parent_item_colon'  => __('Übergeordneter Mitarbeiter', 'naegele'),
+    'not_found'          => __('Kein Mitarbeiter gefunden', 'naegele'),
+    'not_found_in_trash' => __('Kein Mitarbeiter im Papierkorb gefunden', 'naegele')
   );
 
   $args = array(
@@ -210,10 +210,10 @@ add_action( 'init', 'employee_init');
 function add_employee_columns($columns) {
   return array_merge($columns,
             array(
-              'function' => __('Funktion'),
-              'description' => __('Beschreibung'),
-              'date' => __('Datum'),
-              'author' => __('Autor')
+              'function' => __('Funktion', 'naegele'),
+              'description' => __('Beschreibung', 'naegele'),
+              'date' => __('Datum', 'naegele'),
+              'author' => __('Autor', 'naegele')
             ));
 }
 add_filter('manage_employee_posts_columns', 'add_employee_columns');
@@ -242,7 +242,7 @@ function employee_change_title_text( $title ){
      $screen = get_current_screen();
 
      if  ( 'employee' == $screen->post_type ) {
-          $title = __('Name des Mitarbeiters');
+          $title = __('Name des Mitarbeiters', 'naegele');
      }
 
      return $title;
