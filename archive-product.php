@@ -75,14 +75,17 @@ get_header() ?>
                     );;
 
         // if product category is queried, setup filter for custom post query
-        if( $queried_object->slug != '') {
-          $tax_query = array(
-                          array(
-                              'taxonomy' => 'product_category', //or tag or custom taxonomy
-                              'field' => 'slug',
-                              'terms' => $queried_object->slug
-                          )
-                      );
+        if( isset($queried_object->slug)){
+
+          if($queried_object->slug != '') {
+            $tax_query = array(
+                            array(
+                                'taxonomy' => 'product_category', //or tag or custom taxonomy
+                                'field' => 'slug',
+                                'terms' => $queried_object->slug
+                            )
+                        );
+          }
         }
 
         // Custom post query for products

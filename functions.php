@@ -1,7 +1,6 @@
 <?php
 
-function get_related_posts( $taxonomy = '', $args = [] )
-{
+function get_related_posts( $taxonomy = '', $args = [] ) {
     /*
      * Before we do anything and waste unnecessary time and resources, first check if we are on a single post page
      * If not, bail early and return false
@@ -78,7 +77,6 @@ function remove_footer_admin () {
 
 add_filter('admin_footer_text', 'remove_footer_admin');
 
-
 // Add support for product thumbnails
 add_theme_support( 'post-thumbnails' );
 
@@ -101,17 +99,17 @@ add_action( 'init', 'register_main_nav' );
 function product_category_init() {
   // Add new taxonomy, make it hierarchical (like categories)
   $labels = array(
-    'name'              => __('Product Categories'),
-    'singular_name'     => __('Product Category'),
-    'search_items'      => __('Search Product Categories'),
-    'all_items'         => __('All Product Categories'),
-    'parent_item'       => __('Parent Product Category'),
-    'parent_item_colon' => __('Parent Product Category:'),
-    'edit_item'         => __('Edit Product Category'),
-    'update_item'       => __('Update Product Category'),
-    'add_new_item'      => __('Add New Product Category'),
-    'new_item_name'     => __('New Product Category Name'),
-    'menu_name'         => __('Product Categories'),
+    'name'              => __('Produktkategorien'),
+    'singular_name'     => __('Produktkategorie'),
+    'search_items'      => __('Suche Produktkategorie'),
+    'all_items'         => __('Alle Produktkategorien'),
+    'parent_item'       => __('Übergeordnete Produktkategorie'),
+    'parent_item_colon' => __('Übergeordnete Produktkategorie:'),
+    'edit_item'         => __('Produktkategorie editieren'),
+    'update_item'       => __('Produktkategorie aktualisieren'),
+    'add_new_item'      => __('Neue Produktkategorie hinzufügen'),
+    'new_item_name'     => __('Neuer Produktkategoriename'),
+    'menu_name'         => __('Produktkategorien'),
   );
 
   $args = array(
@@ -129,20 +127,20 @@ add_action( 'init', 'product_category_init');
 
 function product_init() {
   $labels = array(
-    'name'               => __('Products'),
-    'singular_name'      => __('Product'),
-    'menu_name'          => __('Products'),
-    'name_admin_bar'     => __('Product'),
-    'add_new'            => __('Add New'),
-    'add_new_item'       => __('Add New Product'),
-    'new_item'           => __('New Product'),
-    'edit_item'          => __('Edit Product'),
-    'view_item'          => __('View Product'),
-    'all_items'          => __('All Products'),
-    'search_items'       => __('Search Products'),
-    'parent_item_colon'  => __('Parent Product'),
-    'not_found'          => __('No Products Found'),
-    'not_found_in_trash' => __('No Products Found in Trash')
+    'name'               => __('Produkte'),
+    'singular_name'      => __('Produkt'),
+    'menu_name'          => __('Produkte'),
+    'name_admin_bar'     => __('Produkt'),
+    'add_new'            => __('Neu hinzufügen'),
+    'add_new_item'       => __('Neues Produkt hinzufügen'),
+    'new_item'           => __('Neues Produkt'),
+    'edit_item'          => __('Produkt editieren'),
+    'view_item'          => __('Produkt anzeigen'),
+    'all_items'          => __('Alle Produkte'),
+    'search_items'       => __('Produkte suchen'),
+    'parent_item_colon'  => __('Übergeordnetes Produkt'),
+    'not_found'          => __('Keine Produkte gefunden'),
+    'not_found_in_trash' => __('Keine Produkte im Papierkorb gefunden')
   );
 
   $args = array(
@@ -160,7 +158,7 @@ function product_init() {
     'hierarchical'        => false,
     'supports'            => array( 'title', 'thumbnail' ),
     'has_archive'         => __('produkte'),
-    'rewrite'             => array( 'slug' => __('product') ),
+    'rewrite'             => array( 'slug' => __('produkt') ),
     'query_var'           => true
   );
 
@@ -170,20 +168,20 @@ add_action( 'init', 'product_init');
 
 function employee_init() {
   $labels = array(
-    'name'               => __('Employees'),
-    'singular_name'      => __('Employee'),
-    'menu_name'          => __('Employees'),
-    'name_admin_bar'     => __('Employee'),
-    'add_new'            => __('Add New'),
-    'add_new_item'       => __('Add New Employee'),
-    'new_item'           => __('New Employee'),
-    'edit_item'          => __('Edit Employee'),
-    'view_item'          => __('View Employee'),
-    'all_items'          => __('All Employees'),
-    'search_items'       => __('Search Employees'),
-    'parent_item_colon'  => __('Parent Employee'),
-    'not_found'          => __('No Employees Found'),
-    'not_found_in_trash' => __('No Employees Found in Trash')
+    'name'               => __('Mitarbeiter'),
+    'singular_name'      => __('Mitarbeiter'),
+    'menu_name'          => __('Mitarbeiter'),
+    'name_admin_bar'     => __('Mitarbeiter'),
+    'add_new'            => __('Neu hinzufügen'),
+    'add_new_item'       => __('Neuen Mitarbeiter hinzufügen'),
+    'new_item'           => __('Neuer Mitarbeiter'),
+    'edit_item'          => __('Mitarbeiter editieren'),
+    'view_item'          => __('Mitarbeiter anzeigen'),
+    'all_items'          => __('Alle Mitarbeiter'),
+    'search_items'       => __('Mitarbeiter suchen'),
+    'parent_item_colon'  => __('Übergeordneter Mitarbeiter'),
+    'not_found'          => __('Kein Mitarbeiter gefunden'),
+    'not_found_in_trash' => __('Kein Mitarbeiter im Papierkorb gefunden')
   );
 
   $args = array(
@@ -201,7 +199,7 @@ function employee_init() {
     'hierarchical'        => false,
     'supports'            => array( 'title', 'thumbnail' ),
     'has_archive'         => false,
-    'rewrite'             => array( 'slug' => __('employee') ),
+    'rewrite'             => false,
     'query_var'           => true
   );
 
@@ -212,10 +210,10 @@ add_action( 'init', 'employee_init');
 function add_employee_columns($columns) {
   return array_merge($columns,
             array(
-              'function' => __('Function'),
-              'description' => __('Description'),
-              'date' => __('Date'),
-              'author' => __('Author')
+              'function' => __('Funktion'),
+              'description' => __('Beschreibung'),
+              'date' => __('Datum'),
+              'author' => __('Autor')
             ));
 }
 add_filter('manage_employee_posts_columns', 'add_employee_columns');
@@ -244,7 +242,7 @@ function employee_change_title_text( $title ){
      $screen = get_current_screen();
 
      if  ( 'employee' == $screen->post_type ) {
-          $title = __('Enter employee name');
+          $title = __('Name des Mitarbeiters');
      }
 
      return $title;
