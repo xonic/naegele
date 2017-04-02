@@ -157,8 +157,7 @@ function product_init() {
     'capability_type'     => 'post',
     'hierarchical'        => false,
     'supports'            => array( 'title', 'thumbnail' ),
-    'has_archive'         => __('produkte', 'naegele'),
-    'rewrite'             => array( 'slug' => __('produkt', 'naegele') ),
+    'has_archive'         => true,
     'query_var'           => true
   );
 

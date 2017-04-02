@@ -35,7 +35,9 @@
         </div>
       </div>
     </section>
-    <section class="section section--alt">
+  </div>
+  <section class="section section--alt">
+    <div class="wrapper">
       <h4 class="related__title"><? echo __('Weitere Produkte', 'naegele'); ?></h4>
       <div class="products">
         <?
@@ -71,8 +73,8 @@
         }
         ?>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 
 <? endif; ?>
 
