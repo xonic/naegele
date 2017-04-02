@@ -9,7 +9,7 @@
   background: whitesmoke;
   overflow-x: hidden;
 
-  @media (min-width: $laptop) {
+  @media (min-width: $tablet) {
 
     .wrapper {
       display: flex;
@@ -31,6 +31,18 @@
 
     .section__subtitle {
       line-height: 1.3;
+    }
+  }
+
+  @media (min-width: $laptop) {
+    .newsletter {
+      margin-left: $space50;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    .newsletter {
+      margin-left: $space60;
     }
   }
 }

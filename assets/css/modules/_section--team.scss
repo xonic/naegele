@@ -20,6 +20,22 @@
       width: 50%;
     }
   }
+
+  @media (min-width: $laptop) {
+    margin-left: -$space50;
+
+    > li {
+      padding-left: $space50;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    margin-left: -$space60;
+
+    > li {
+      padding-left: $space60;
+    }
+  }
 }
 
 .employee {
