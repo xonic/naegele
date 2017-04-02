@@ -3,172 +3,223 @@
 
 get_header() ?>
 
-  <section class="carousel">
-      <?
-      $slides = get_field('slideshow');
+<section class="carousel">
+    <?
+    $slides = get_field('slideshow');
 
-      if($slides) {
+    if($slides) {
 
-        echo '<ul id="js-slides" class="carousel__slides">';
+      echo '<ul id="js-slides" class="carousel__slides">';
 
-        foreach($slides as $slide) {
-          echo '<li class="carousel__slide"><img src="' . $slide["slideshow_image"] . '"></li>';
-        }
-
-        echo '</ul>';
+      foreach($slides as $slide) {
+        echo '<li class="carousel__slide"><img src="' . $slide["slideshow_image"] . '"></li>';
       }
-      ?>
-    <div class="carousel__overlay">
-      <div class="wrapper">
-        <h1 class="carousel__h1">
-          <? echo get_field("hero_title"); ?>
-        </h1>
-        <h2 class="carousel__h2">
-          <? echo get_field("hero_subtitle"); ?>
-        </h2>
-      </div>
-    </div>
-    <a href="#news" id="js-scroll" class="scroll-wrapper">
-      <div class="i--container">
-        <div class="i--scroll-down">
-          <div class="i--scroll-down__chevron"></div>
-          <div class="i--scroll-down__chevron"></div>
-          <div class="i--scroll-down__chevron"></div>
-        </div>
-      </div>
-      <div class="i--label text--small"><? echo __("Weiter"); ?></div>
-    </a>
-  </section>
 
-  <section id="news" class="section news">
+      echo '</ul>';
+    }
+    ?>
+  <div class="carousel__overlay">
     <div class="wrapper">
-      <?
-        query_posts('posts_per_page=2');
-
-        if (have_posts()) : ?>
-
-        <h2 class="section__title is-hidden">
-          <? echo get_field("section_2_title"); ?>
-        </h2>
-
-        <div class="news__grid">
-
-      <?  // Start the loop
-          while (have_posts()) : the_post(); ?>
-
-            <article class="news__item">
-              <h3 class="news__title"><? the_title(); ?></h3>
-              <? the_content(); ?>
-            </article>
-      <?
-          endwhile;
-
-          wp_reset_query();
-      ?>
-      </div>
-      <a class="btn" href="<?php echo get_permalink( get_page_by_path( 'neuigkeiten' ) ); ?>"><? echo __('Weitere Neuigkeiten anzeigen', 'naegele'); ?></a>
-      <?
-        else :
-
-          echo "No posts found";
-          echo "</div>";
-
-        endif;
-      ?>
+      <h1 class="carousel__h1">
+        <? echo get_field("hero_title"); ?>
+      </h1>
+      <h2 class="carousel__h2">
+        <? echo get_field("hero_subtitle"); ?>
+      </h2>
     </div>
-  </section>
-  <section class="shop section section--alt">
-    <div class="wrapper">
-      <div class="section__titles">
-        <h2 class="section__title">
-            <? echo get_field("section_3_title"); ?>
-        </h2>
-        <h3 class="section__subtitle">
-            <? echo get_field("section_3_subtitle"); ?>
-        </h3>
-      </div>
-      <div class="shop__grid section__grid">
-        <div class="shop__img section__img">
-          <img src="<? the_field('section_3_image'); ?>">
-        </div>
-        <div class="shop__content section__content">
-            <? echo get_field("section_3_content"); ?>
-            <a class="btn" href="<?php echo get_permalink( get_page_by_path( '360-tour' ) ); ?>"><? echo __('360° virtuellen Rundgang starten', 'naegele'); ?></a>
-        </div>
+  </div>
+  <a href="#news" id="js-scroll" class="scroll-wrapper">
+    <div class="i--container">
+      <div class="i--scroll-down">
+        <div class="i--scroll-down__chevron"></div>
+        <div class="i--scroll-down__chevron"></div>
+        <div class="i--scroll-down__chevron"></div>
       </div>
     </div>
-  </section>
-  <section class="production section">
-    <div class="wrapper">
-      <div class="section__titles">
-        <h2 class="section__title">
-            <? echo get_field("section_4_title"); ?>
-        </h2>
-        <h3 class="section__subtitle">
-            <? echo get_field("section_4_subtitle"); ?>
-        </h3>
+    <div class="i--label text--small"><? echo __("Weiter"); ?></div>
+  </a>
+</section>
+
+<section id="news" class="section news">
+  <div class="wrapper">
+    <?
+      query_posts('posts_per_page=2');
+
+      if (have_posts()) : ?>
+
+      <h2 class="section__title is-hidden">
+        <? echo get_field("section_2_title"); ?>
+      </h2>
+
+      <div class="news__grid">
+
+    <?  // Start the loop
+        while (have_posts()) : the_post(); ?>
+
+          <article class="news__item">
+            <h3 class="news__title"><? the_title(); ?></h3>
+            <? the_content(); ?>
+          </article>
+    <?
+        endwhile;
+
+        wp_reset_query();
+    ?>
+    </div>
+    <a class="btn" href="<?php echo get_permalink( get_page_by_path( 'neuigkeiten' ) ); ?>"><? echo __('Weitere Neuigkeiten anzeigen', 'naegele'); ?></a>
+    <?
+      else :
+
+        echo "No posts found";
+        echo "</div>";
+
+      endif;
+    ?>
+  </div>
+</section>
+<section class="shop section section--alt">
+  <div class="wrapper">
+    <div class="section__titles">
+      <h2 class="section__title">
+          <? echo get_field("section_3_title"); ?>
+      </h2>
+      <h3 class="section__subtitle">
+          <? echo get_field("section_3_subtitle"); ?>
+      </h3>
+    </div>
+    <div class="shop__grid section__grid">
+      <div class="shop__img section__img">
+        <img src="<? the_field('section_3_image'); ?>">
       </div>
-      <div class="section__grid production__grid">
-        <div class="production__img section__img">
-          <img src="<? the_field('section_4_image'); ?>">
-        </div>
-        <div class="production__vid-wrapper">
-          <video class="production__vid" src="<? bloginfo('template_directory'); ?>/assets/vid/Naegele_generico_slowmo.mp4" autoplay loop muted>
-            Sorry, your browser doesn't support videos.
-          </video>
-        </div>
-        <div class="dim"></div>
-        <div class="production__content section__content">
-            <? echo get_field("section_4_content"); ?>
-        </div>
+      <div class="shop__content section__content">
+          <? echo get_field("section_3_content"); ?>
+          <a class="btn" href="<?php echo get_permalink( get_page_by_path( '360-tour' ) ); ?>"><? echo __('360° virtuellen Rundgang starten', 'naegele'); ?></a>
       </div>
     </div>
-  </section>
-  <section class="section section--alt recycling">
-    <div class="wrapper">
-      <div class="section__titles">
-        <h2 class="section__title">
-            <? echo get_field("section_5_title"); ?>
-        </h2>
-        <h3 class="section__subtitle">
-            <? echo get_field("section_5_subtitle"); ?>
-        </h3>
+  </div>
+</section>
+<section class="production section">
+  <div class="wrapper">
+    <div class="section__titles">
+      <h2 class="section__title">
+          <? echo get_field("section_4_title"); ?>
+      </h2>
+      <h3 class="section__subtitle">
+          <? echo get_field("section_4_subtitle"); ?>
+      </h3>
+    </div>
+    <div class="section__grid production__grid">
+      <div class="production__img section__img">
+        <img src="<? the_field('section_4_image'); ?>">
       </div>
-      <div class="section__grid recycling__grid">
-        <div class="recycling__img section__img">
-          <img src="<? the_field('section_5_image'); ?>">
-        </div>
-        <div class="recycling__content section__content">
-            <? echo get_field("section_5_content"); ?>
-        </div>
+      <div class="production__vid-wrapper">
+        <video class="production__vid" src="<? bloginfo('template_directory'); ?>/assets/vid/Naegele_generico_slowmo.mp4" autoplay loop muted>
+          Sorry, your browser doesn't support videos.
+        </video>
+      </div>
+      <div class="dim"></div>
+      <div class="production__content section__content">
+          <? echo get_field("section_4_content"); ?>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+<section class="section section--alt recycling">
+  <div class="wrapper">
+    <div class="section__titles">
+      <h2 class="section__title">
+          <? echo get_field("section_5_title"); ?>
+      </h2>
+      <h3 class="section__subtitle">
+          <? echo get_field("section_5_subtitle"); ?>
+      </h3>
+    </div>
+    <div class="section__grid recycling__grid">
+      <div class="recycling__img section__img">
+        <img src="<? the_field('section_5_image'); ?>">
+      </div>
+      <div class="recycling__content section__content">
+          <? echo get_field("section_5_content"); ?>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<?
+$args = array(
+  'post_type' => 'partner'
+);
+$loop = new WP_Query($args);
+
+if ($loop->have_posts()) : ?>
   <section class="section partner">
     <div class="wrapper">
       <h2 class="section__title">
-          <? echo get_field("section_6_title"); ?>
+        <? echo get_field("section_6_title"); ?>
       </h2>
       <h3 class="section__subtitle">
-          <? echo get_field("section_6_subtitle"); ?>
+        <? echo get_field("section_6_subtitle"); ?>
       </h3>
       <div class="partner__content">
-          <? echo get_field("section_6_content"); ?>
+        <ul class="partners">
+          <? while ($loop->have_posts()) : $loop->the_post(); ?>
+
+            <li class="partner">
+
+              <h3 class="partner__name"></h3>
+              <div class="partner__function"></div>
+              <div class="partner__description"></div>
+
+            </li>
+
+          <? endwhile; ?>
+        </ul>
       </div>
     </div>
   </section>
-  <section class="section section--alt team">
+<? endif; ?>
+
+<?
+$args = array(
+  'post_type' => 'employee'
+);
+$loop = new WP_Query($args);
+
+if ($loop->have_posts()) : ?>
+  <section class="section section team">
     <div class="wrapper">
       <h2 class="section__title">
-          <? echo get_field("section_7_title"); ?>
+        <? echo get_field("section_7_title"); ?>
       </h2>
       <h3 class="section__subtitle">
-          <? echo get_field("section_7_subtitle"); ?>
+        <? echo get_field("section_7_subtitle"); ?>
       </h3>
       <div class="team__content">
-          <? echo get_field("section_7_content"); ?>
-      </ul>
+        <ul class="employees">
+          <? while ($loop->have_posts()) : $loop->the_post(); ?>
+
+            <li class="employee">
+
+              <? if ( has_post_thumbnail() ) {
+                the_post_thumbnail('product-thumb');
+              } ?>
+
+              <div class="team__content">
+
+                <h3 class="employee__name"><? the_title(); ?></h3>
+                <div class="employee__function"><? the_field('employee_function'); ?></div>
+                <div class="employee__description"><? the_field('employee_description'); ?></div>
+
+              </div>
+
+            </li>
+
+          <? endwhile; ?>
+        </ul>
       </div>
     </div>
   </section>
+<? endif; ?>
+
 <? get_footer() ?>

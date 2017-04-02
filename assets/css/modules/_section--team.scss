@@ -1,0 +1,68 @@
+//  ----------------------------------------------------------------------------
+//
+//  MAIN PAGE SHOP TEAM
+//
+//  ----------------------------------------------------------------------------
+
+.employees {
+  margin: 0;
+  padding: $space30 0;
+  list-style-type: none;
+
+  @media (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -$space40;
+
+    > li {
+      flex: 1 0 auto;
+      padding-left: $space40;
+      width: 50%;
+    }
+  }
+}
+
+.employee {
+
+  img {
+    float: left;
+    margin-right: $space30;
+  }
+
+  @media (min-width: $tablet) {
+
+    margin-bottom: $space40;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    img {
+      float: none;
+      margin-right: 0;
+    }
+  }
+  @media (min-width: $laptop) {
+    img {
+      float: left;
+      margin-right: $space30;
+    }
+  }
+}
+
+// .team__content {
+//   @media (min-width: $laptop) {
+//     padding-left: $space30;
+//   }
+// }
+
+.employee__name {
+  @extend .h4;
+  margin-bottom: 0;
+}
+
+.employee__function {
+  @extend .text--small;
+  text-transform: uppercase;
+  color: rgba($black, .4);
+}
