@@ -166,6 +166,17 @@ function product_init() {
 }
 add_action( 'init', 'product_init');
 
+function product_change_title_text( $title ){
+     $screen = get_current_screen();
+
+     if  ( 'product' == $screen->post_type ) {
+          $title = __('Produktname', 'naegele');
+     }
+
+     return $title;
+}
+add_filter( 'enter_title_here', 'product_change_title_text' );
+
 function employee_init() {
   $labels = array(
     'name'               => __('Mitarbeiter', 'naegele'),

@@ -22,12 +22,16 @@ get_header() ?>
           <ul class="nav-prod__items">
             <?php
 
-              $term = get_term_by('slug', 'eigenmarken', 'product_category');
+              $term = get_term_by('slug', 'unsere-produkte', 'product_category');
+              $child_of = 0;
+
+              if (isset($term->term_id)) {
+                $child_of = $term->term_id;
+              }
               $args=array(
                 'taxonomy' => 'product_category',
                 'title_li' => '',
-                'child_of' => $term->term_id,
-                'hide_empty' => false
+                'child_of' => $child_of
               );
               $output = 'objects'; // or names
               $categories=wp_list_categories($args,$output);
@@ -46,12 +50,16 @@ get_header() ?>
           <ul class="nav-prod__items">
             <?php
 
-              $term = get_term_by('slug', 'fremdmarken', 'product_category');
+              $term = get_term_by('slug', 'weitere-produkte', 'product_category');
+              $child_of = 0;
+
+              if (isset($term->term_id)) {
+                $child_of = $term->term_id;
+              }
               $args=array(
                 'taxonomy' => 'product_category',
                 'title_li' => '',
-                'child_of' => $term->term_id,
-                'hide_empty' => false
+                'child_of' => $child_of
               );
               $output = 'objects'; // or names
               $categories=wp_list_categories($args,$output);
