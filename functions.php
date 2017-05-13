@@ -82,7 +82,7 @@ add_theme_support( 'post-thumbnails' );
 
 // Add custom size for product thumbnails
 function add_custom_sizes() {
-    add_image_size( 'product-thumb', 300, 400, true );
+    add_image_size( 'product-thumb', 350, 400, true );
 }
 add_action('after_setup_theme','add_custom_sizes');
 
