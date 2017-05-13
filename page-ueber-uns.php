@@ -77,7 +77,8 @@ get_header() ?>
     ?>
   </div>
 </section>
-<section class="shop section section--alt">
+</section>
+<section class="production section">
   <div class="wrapper">
     <div class="section__titles">
       <h2 class="section__title">
@@ -87,18 +88,23 @@ get_header() ?>
           <? echo get_field("section_3_subtitle"); ?>
       </h3>
     </div>
-    <div class="shop__grid section__grid">
-      <div class="shop__img section__img">
+    <div class="section__grid production__grid">
+      <div class="production__img section__img">
         <img src="<? the_field('section_3_image'); ?>">
       </div>
-      <div class="shop__content section__content">
+      <div class="production__vid-wrapper">
+        <video class="production__vid" src="<? bloginfo('template_directory'); ?>/assets/vid/Naegele_generico_slowmo.mp4" autoplay loop muted>
+          Sorry, your browser doesn't support videos.
+        </video>
+      </div>
+      <div class="dim"></div>
+      <div class="production__content section__content">
           <? echo get_field("section_3_content"); ?>
-          <a class="btn" href="<?php echo get_permalink( get_page_by_path( '360-tour' ) ); ?>"><? echo __('360° virtuellen Rundgang starten', 'naegele'); ?></a>
       </div>
     </div>
   </div>
 </section>
-<section class="production section">
+<section class="section recycling">
   <div class="wrapper">
     <div class="section__titles">
       <h2 class="section__title">
@@ -108,17 +114,11 @@ get_header() ?>
           <? echo get_field("section_4_subtitle"); ?>
       </h3>
     </div>
-    <div class="section__grid production__grid">
-      <div class="production__img section__img">
+    <div class="section__grid recycling__grid">
+      <div class="recycling__img section__img">
         <img src="<? the_field('section_4_image'); ?>">
       </div>
-      <div class="production__vid-wrapper">
-        <video class="production__vid" src="<? bloginfo('template_directory'); ?>/assets/vid/Naegele_generico_slowmo.mp4" autoplay loop muted>
-          Sorry, your browser doesn't support videos.
-        </video>
-      </div>
-      <div class="dim"></div>
-      <div class="production__content section__content">
+      <div class="recycling__content section__content">
           <? echo get_field("section_4_content"); ?>
       </div>
     </div>
