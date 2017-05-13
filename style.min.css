@@ -50,6 +50,10 @@ body{font-family:"ff-dagny-web-pro","Helvetica Neue","Helvetica","Arial",sans-se
 .page-template-page-360-grad .header{position:relative;z-index:3;background:0}
 .main{overflow-x:hidden}
 img,object{max-width:100%;height:auto}
+.entry-content img,.comment-content img,.widget img{max-width:100%}
+img[class*="align"],img[class*="wp-image-"]{height:auto}
+img.size-full{max-width:100%;width:auto}
+.wp-caption{max-width:100%}
 h1,h2,h3,h4,h5,h6,hgroup,ul,ol,dd,p,figure,pre,table,fieldset,hr{margin:0;margin-bottom:2.4rem}
 a{display:inline-block;position:relative;color:#0067c2;text-decoration:none;-webkit-tap-highlight-color:transparent}
 a:after{content:" ";display:block;position:absolute;right:-2px;bottom:-1px;left:-2px;height:4px;background:#ff8b03;opacity:.8;-webkit-transform:scaleX(0);-ms-transform:scaleX(0);transform:scaleX(0);-webkit-transform-origin:center;-ms-transform-origin:center;transform-origin:center;-webkit-transition:-webkit-transform .1s ease-in;transition:-webkit-transform .1s ease-in;transition:transform .1s ease-in;transition:transform .1s ease-in,-webkit-transform .1s ease-in}
@@ -209,6 +213,7 @@ h4,.h4,.nav-prod__title,.hero__h2,.employee__name,.carousel__h2{font-size:125%}
 .product{width:33.33%;margin-bottom:6.4rem;padding-left:2.4rem}
 .single-product .products{max-height:246px}
 .grid--single-prod{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+.grid--single-prod .product__image{-webkit-box-flex:1;-webkit-flex:1 0 60%;-ms-flex:1 0 60%;flex:1 0 60%}
 .grid--single-prod .product__content{margin-left:2.4rem}
 .footer .wrapper{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 .footer .contact,.footer .newsletter{-webkit-box-flex:0;-webkit-flex:0 1 50%;-ms-flex:0 1 50%;flex:0 1 50%}
