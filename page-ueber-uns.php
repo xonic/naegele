@@ -93,7 +93,7 @@ get_header() ?>
         <img src="<? the_field('section_3_image'); ?>">
       </div>
       <div class="production__vid-wrapper">
-        <video class="production__vid" src="<? bloginfo('template_directory'); ?>/assets/vid/Naegele_generico_slowmo.mp4" autoplay loop muted>
+        <video class="js-production__vid production__vid" src="<? bloginfo('template_directory'); ?>/assets/vid/Naegele_generico_min_1.mp4" autoplay loop muted>
           Sorry, your browser doesn't support videos.
         </video>
       </div>
@@ -101,6 +101,7 @@ get_header() ?>
       <div class="production__content section__content">
           <? echo get_field("section_3_content"); ?>
       </div>
+      <div class="js-toggle-audio toggle-audio"></div>
     </div>
   </div>
 </section>

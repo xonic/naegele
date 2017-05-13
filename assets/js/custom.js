@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
   var $body = $("html, body"),
-      $news = $("#news");
+      $news = $("#news"),
+      $vid = $(".js-production__vid");;
 
   $('#js-slides').slick({
     autoplay: true,
@@ -18,6 +19,19 @@ $(document).ready(function(){
     $body.animate({
       scrollTop: $news.offset().top
     }, 300);
+  });
+
+  $(".js-toggle-audio").on("click", function(e) {
+    e.preventDefault();
+
+    if($vid.prop("muted")) {
+      $vid.prop("muted", false);
+      $body.addClass("is-unmuted");
+    }
+    else {
+      $vid.prop("muted", true);
+      $body.removeClass("is-unmuted");
+    }
   });
 
 });

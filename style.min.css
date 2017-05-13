@@ -105,11 +105,13 @@ h5,.h5,.product__category,.product__name{font-size:100%;text-transform:uppercase
 .section__subtitle{font-weight:400}
 .section__img{margin:-4.8rem -0.8rem 2.4rem}
 .section--privacy{padding-top:0}
-.production{position:relative;overflow:hidden}
+.production{position:relative;overflow:hidden;-webkit-perspective:600px;perspective:600px}
 .production .section__titles{color:#fff}
 .dim{-webkit-transition:opacity .2s ease-out;transition:opacity .2s ease-out;opacity:0}
+.toggle-audio{display:none}
+.is-unmuted .toggle-audio{background-position:-100% 0}
 .production__vid-wrapper{display:none}
-.production__content{position:relative;z-index:500;-webkit-transition:opacity .2s ease-out;transition:opacity .2s ease-out;-webkit-transition-delay:.3s;transition-delay:.3s}
+.production__content{position:relative;z-index:500;-webkit-transition:opacity .2s ease-out,-webkit-transform .3s ease-out;transition:opacity .2s ease-out,-webkit-transform .3s ease-out;transition:opacity .2s ease-out,transform .3s ease-out;transition:opacity .2s ease-out,transform .3s ease-out,-webkit-transform .3s ease-out}
 .employees{margin:0;padding:2.4rem 0;list-style-type:none}
 .employee img{float:left;margin-right:2.4rem}
 .employee__name{margin-bottom:0}
@@ -236,12 +238,15 @@ h4,.h4,.nav-prod__title,.hero__h2,.employee__name,.carousel__h2{font-size:133.3%
 .section__grid{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}
 .section__img{margin:0;-webkit-box-flex:7;-webkit-flex:7 0 0;-ms-flex:7 0 0;flex:7 0 0}
 .section__content{-webkit-box-flex:5;-webkit-flex:5 0 0;-ms-flex:5 0 0;flex:5 0 0;margin-left:2.4rem}
-.production:hover .dim,.production:hover .production__content{opacity:1}
-.production:hover .section__titles{-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);-webkit-transition:-webkit-transform .3s ease-out 0s;transition:-webkit-transform .3s ease-out 0s;transition:transform .3s ease-out 0s;transition:transform .3s ease-out 0s,-webkit-transform .3s ease-out 0s}
+.production .dim,.production .production__content{opacity:1}
+.production:hover .dim,.production:hover .production__content,.production:hover .section__titles{opacity:0}
+.production:hover .production__content,.production:hover .section__titles{-webkit-transform:translate3d(0,0,50px);transform:translate3d(0,0,50px)}
+.production:hover .toggle-audio{opacity:1;-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0)}
 .production .wrapper{color:#fff}
-.production .section__titles{position:relative;z-index:500;pointer-events:none;text-shadow:0 0 10px rgba(0,0,0,0.5),0 0 4px rgba(0,0,0,0.5);-webkit-transition:-webkit-transform .3s ease-out .4s;transition:-webkit-transform .3s ease-out .4s;transition:transform .3s ease-out .4s;transition:transform .3s ease-out .4s,-webkit-transform .3s ease-out .4s;-webkit-transform:translateY(150px);-ms-transform:translateY(150px);transform:translateY(150px)}
+.production .section__titles{position:relative;z-index:500;pointer-events:none;text-shadow:0 0 10px rgba(0,0,0,0.5),0 0 4px rgba(0,0,0,0.5);-webkit-transition:opacity .2s ease-out,-webkit-transform .3s ease-out;transition:opacity .2s ease-out,-webkit-transform .3s ease-out;transition:opacity .2s ease-out,transform .3s ease-out;transition:opacity .2s ease-out,transform .3s ease-out,-webkit-transform .3s ease-out}
 .production__img{display:none}
 .dim{position:absolute;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0.7)}
+.toggle-audio{display:block;position:absolute;right:9.6rem;bottom:2.4rem;width:44px;height:44px;background-image:url("assets/img/i--audio.svg");background-size:200% 100%;opacity:0;cursor:pointer;-webkit-transform:translateY(200px);-ms-transform:translateY(200px);transform:translateY(200px);-webkit-transition:opacity .2s ease-out,-webkit-transform .3s ease-out;transition:opacity .2s ease-out,-webkit-transform .3s ease-out;transition:opacity .2s ease-out,transform .3s ease-out;transition:opacity .2s ease-out,transform .3s ease-out,-webkit-transform .3s ease-out}
 .production__vid-wrapper{display:block;position:absolute;top:-0;left:-0;width:100%;height:100%;margin:0}
 .production__vid{max-width:none;min-width:100%;min-height:100%}
 .production__content{margin:0 auto;max-width:600px;opacity:0;pointer-events:none}

@@ -7,17 +7,30 @@
 .production {
   position: relative;
   overflow: hidden;
+  perspective: 600px;
 
   @media (min-width: $laptop) {
+
+    .dim,
+    .production__content {
+      opacity: 1;
+    }
+
     &:hover {
       .dim,
-      .production__content {
-        opacity: 1;
+      .production__content,
+      .section__titles {
+        opacity: 0;
       }
 
+      .production__content,
       .section__titles {
+        transform: translate3d(0, 0, 50px);
+      }
+
+      .toggle-audio {
+        opacity: 1;
         transform: translateY(0);
-        transition: transform .3s ease-out 0s;
       }
     }
   }
@@ -37,8 +50,7 @@
       pointer-events: none;
       text-shadow: 0 0 10px rgba($black, .5),
                    0 0 4px rgba($black, .5);
-      transition: transform .3s ease-out .4s;
-      transform: translateY(150px);
+      transition: opacity .2s ease-out, transform .3s ease-out;
     }
   }
 }
@@ -61,6 +73,29 @@
     bottom: 0;
     left: 0;
     background: rgba($black, .7);
+  }
+}
+
+.toggle-audio {
+  display: none;
+
+  .is-unmuted & {
+    background-position: -100% 0;
+  }
+
+  @media (min-width: $laptop) {
+    display: block;
+    position: absolute;
+    right: $space50;
+    bottom: $space30;
+    width: 44px;
+    height: 44px;
+    background-image: url('assets/img/i--audio.svg');
+    background-size: 200% 100%;
+    opacity: 0;
+    cursor: pointer;
+    transform: translateY(200px);
+    transition: opacity .2s ease-out, transform .3s ease-out;
   }
 }
 
@@ -90,8 +125,8 @@
 .production__content {
   position: relative;
   z-index: 500;
-  transition: opacity .2s ease-out;
-  transition-delay: .3s;
+  transition: opacity .2s ease-out, transform .3s ease-out;
+  // transition-delay: .3s;
 
   @media (min-width: $laptop) {
     margin: 0 auto;
