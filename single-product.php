@@ -30,7 +30,18 @@
           ?>
         </div>
         <div class="product__content">
-          <p><? the_field('product_description') ?></p>
+          <?
+            if(get_field('product_description') !== '') :
+          ?>
+              <p><? the_field('product_description') ?></p>
+
+          <?
+            else :
+
+              echo get_the_terms($post->ID, 'product_category')[0]->description; 
+
+            endif;
+          ?>
           <p><? the_field('product_quantity') ?> <? echo __('Liter Flasche', 'naegele'); ?></p>
         </div>
       </div>
