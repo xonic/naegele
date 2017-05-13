@@ -11,9 +11,12 @@
     background-size: cover;
     background-position: center;
 
-    .page-template-page-gastronomie-php &,
-    .page-template-page-getraenkemarkt-php & {
+    .page-template-page-gastronomie-php & {
       background-image: url('assets/img/case.jpg');
+    }
+
+    .page-template-page-getraenkemarkt-php & {
+      background-image: url('assets/img/shop.jpg');
     }
 
     @media (min-width: $tablet) {
