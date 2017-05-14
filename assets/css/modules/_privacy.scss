@@ -1,0 +1,27 @@
+//  ----------------------------------------------------------------------------
+//
+//  PRIVACY BANNER
+//
+//  ----------------------------------------------------------------------------
+
+.privacy {
+
+  display: none;
+
+  .no-cookie & {
+    display: block;
+  }
+
+  .wrapper {
+
+    @media (min-width: $tablet) {
+
+      display: flex;
+
+      > :last-child {
+        flex: 0 0 auto;
+        margin-left: $space20;
+      }
+    }
+  }
+}
