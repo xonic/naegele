@@ -12,6 +12,11 @@
   <div class="hero">
     <div class="wrapper">
       <h1 class="hero__h1"><? the_title(); ?></h1>
+      <?
+      if(get_field('product_quantity') !== '') :
+        ?>
+        <h2 class="hero__h2"><? the_field('product_quantity') ?> <? echo __('Liter Flasche', 'naegele'); ?></h2>
+      <? endif;?>
       <h2 class="hero__h2">
         <?
          $category = get_the_terms($post->ID, 'product_category')[0]->name;
@@ -23,42 +28,47 @@
   <div class="wrapper">
     <section class="section--single-prod section">
       <div class="grid--single-prod">
-        <div class="product__image">
-          <? if (has_post_thumbnail()) :
-               the_post_thumbnail('full');
-             endif;
-          ?>
-        </div>
-        <div class="product__content">
-          <?
-            if(get_field('product_description') !== '') :
-          ?>
-              <p><? the_field('product_description') ?></p>
+        <? if (has_post_thumbnail()) : ?>
+          <div class="product__image"> <?
+               the_post_thumbnail('full'); ?>
+             </div><?
+           endif;
+        ?>
+        <?
+          if(get_field('product_description') !== '' || get_the_terms($post->ID, 'product_category')[0]->description !== '') :
+        ?>
+          <div class="product__content">
+            <?
+              if(get_field('product_description') !== '') :
+            ?>
+                <p><? the_field('product_description') ?></p>
 
-          <?
-            else :
+            <?
+              else :
 
-              echo get_the_terms($post->ID, 'product_category')[0]->description; 
+                echo get_the_terms($post->ID, 'product_category')[0]->description;
 
+              endif;
             endif;
           ?>
-          <p><? the_field('product_quantity') ?> <? echo __('Liter Flasche', 'naegele'); ?></p>
         </div>
       </div>
     </section>
   </div>
-  <section class="section section--alt">
-    <div class="wrapper">
-      <h4 class="related__title"><? echo __('Weitere Produkte', 'naegele'); ?></h4>
-      <div class="products">
-        <?
-        if ( function_exists( 'get_related_posts' ) ) {
-            $related_posts = get_related_posts( 'product_category', ['posts_per_page' => 8] );
-            if ( $related_posts ) {
+  <?
+  if ( function_exists( 'get_related_posts' ) ) {
+    $related_posts = get_related_posts( 'product_category', ['posts_per_page' => 8] );
+
+    if ( $related_posts ) {
+      ?>
+        <section class="section section--alt">
+          <div class="wrapper">
+            <h4 class="related__title"><? echo __('Weitere Produkte', 'naegele'); ?></h4>
+            <div class="products">
+              <?
                 foreach ( $related_posts as $post ) {
                     setup_postdata( $post );
                     ?>
-
                     <article class="product <? echo $post->ID; ?>">
                       <a href="<? echo get_permalink(); ?>" class="product__link" title="<? echo __('Produkt anzeigen', 'naegele'); ?>">
                         <?
@@ -79,13 +89,13 @@
                     </article>
                 <?
                 }
-                wp_reset_postdata();
+                wp_reset_postdata(); ?>
+                    </div>
+                  </div>
+                </section><?
             }
         }
         ?>
-      </div>
-    </div>
-  </section>
 
 <? endif; ?>
 

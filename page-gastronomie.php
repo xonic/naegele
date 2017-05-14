@@ -34,6 +34,12 @@ get_header() ?>
       </div>
       <div class="schankanlagen__content section__content">
         <? echo get_field('section_1_text'); ?>
+        <? if(ICL_LANGUAGE_CODE == 'de') : ?>
+          <a href="<? echo get_site_url().'/produkt-kategorie/postmix-sirupe/'; ?>" class="btn">Schankprodukte anzeigen</a>
+        <? endif; ?>
+        <? if(ICL_LANGUAGE_CODE == 'it') : ?>
+          <a href="<? echo get_site_url().'/it/produkt-kategorie/sciroppi-postmix/'; ?>" class="btn">Mostra prodotti</a>
+        <? endif; ?>
       </div>
     </div>
   </div>
@@ -54,6 +60,12 @@ get_header() ?>
       </div>
       <div class="festservice__content section__content">
         <? echo get_field('section_2_text'); ?>
+        <? if(ICL_LANGUAGE_CODE == 'de') : ?>
+          <a href="mailto:info@naegele.it" class="btn">Mietanfrage senden</a>
+        <? endif; ?>
+        <? if(ICL_LANGUAGE_CODE == 'it') : ?>
+          <a href="mailto:info@naegele.it" class="btn">Manda richiesta</a>
+        <? endif; ?>
       </div>
     </div>
   </div>

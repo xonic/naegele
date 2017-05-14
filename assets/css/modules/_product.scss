@@ -112,6 +112,12 @@
     margin-top: $space25;
   }
 
+  .hero__h2:not(:last-child) {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
   .products {
     max-height: 246px * 2;
     overflow: hidden;
@@ -139,9 +145,11 @@
 .grid--single-prod {
   @media (min-width: $tablet) {
     display: flex;
+    justify-content: center;
 
     .product__image {
-      flex: 1 0 60%;
+      flex: 0 0 60%;
+      text-align: center;
     }
 
     .product__content {

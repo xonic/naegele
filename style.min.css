@@ -161,6 +161,7 @@ h5,.h5,.product__category,.product__name{font-size:100%;text-transform:uppercase
 .product__name,.product__quantity{font-weight:400}
 .product__name{padding-bottom:.8rem}
 .single-product .hero__h1{margin-top:1.6rem}
+.single-product .hero__h2:not(:last-child){margin:0;padding:0;border:0}
 .single-product .products{max-height:492px;overflow:hidden}
 .single-product .product{margin-bottom:2.4rem;max-width:150px;font-size:75%}
 .section--single-prod{padding-top:0}
@@ -204,8 +205,8 @@ h4,.h4,.nav-prod__title,.hero__h2,.carousel__h2{font-size:125%}
 .products{margin-left:-2.4rem}
 .product{width:33.33%;margin-bottom:6.4rem;padding-left:2.4rem}
 .single-product .products{max-height:246px}
-.grid--single-prod{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
-.grid--single-prod .product__image{-webkit-box-flex:1;-webkit-flex:1 0 60%;-ms-flex:1 0 60%;flex:1 0 60%}
+.grid--single-prod{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
+.grid--single-prod .product__image{-webkit-box-flex:0;-webkit-flex:0 0 60%;-ms-flex:0 0 60%;flex:0 0 60%;text-align:center}
 .grid--single-prod .product__content{margin-left:2.4rem}
 .footer .wrapper{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
 .footer .contact,.footer .newsletter{-webkit-box-flex:0;-webkit-flex:0 1 50%;-ms-flex:0 1 50%;flex:0 1 50%}

@@ -1,7 +1,6 @@
 <?
 
 get_header() ?>
-<div style="text-align:center;">archive-product.php</div>
   <section class="hero">
     <div class="wrapper">
       <h1 class="hero__h1">
