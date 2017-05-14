@@ -1,0 +1,50 @@
+//  ----------------------------------------------------------------------------
+//
+//  MAIN PAGE VIDEO SECTION
+//
+//  ----------------------------------------------------------------------------
+
+.video-container {
+  display: none;
+  overflow: hidden;
+
+  @media (min-width: $laptop) {
+    display: block;
+    position: relative;
+
+    &:hover {
+      .toggle-audio {
+        opacity: 1;
+        transform: translate(0);
+      }
+    }
+  }
+}
+
+.video {
+  display: block;
+  width: 100%;
+}
+
+.toggle-audio {
+  display: none;
+
+  .is-unmuted & {
+    background-position: -100% 0;
+  }
+
+  @media (min-width: $laptop) {
+    display: block;
+    position: absolute;
+    right: $space50;
+    bottom: $space30;
+    width: 44px;
+    height: 44px;
+    background-image: url('assets/img/i--audio.svg');
+    background-size: 200% 100%;
+    opacity: 0;
+    cursor: pointer;
+    transform: translateY(200px);
+    transition: opacity .2s ease-out, transform .3s ease-out;
+  }
+}

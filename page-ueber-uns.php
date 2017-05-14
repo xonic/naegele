@@ -66,19 +66,27 @@ get_header() ?>
         wp_reset_query();
     ?>
     </div>
-    <a class="btn" href="<?php echo get_permalink( get_page_by_path( 'neuigkeiten' ) ); ?>"><? echo __('Weitere Neuigkeiten anzeigen', 'naegele'); ?></a>
+    <? if(wp_count_posts()->publish > 2) : ?>
+        <a class="btn" href="<?php echo get_permalink( get_page_by_path( 'neuigkeiten' ) ); ?>">
+        <? echo __('Weitere Neuigkeiten anzeigen', 'naegele'); ?>
+        </a>
+    <? endif; ?>
+
     <?
-      else :
-
-        echo "No posts found";
-        echo "</div>";
-
       endif;
     ?>
   </div>
 </section>
 </section>
-<section class="production section">
+<section class="video-container">
+  <div class="video-container__wrapper">
+    <video class="js-video video" src="<? bloginfo('template_directory'); ?>/assets/vid/Naegele_generico_1.mp4" autoplay loop muted>
+      Sorry, your browser doesn't support videos.
+    </video>
+    <div class="js-toggle-audio toggle-audio"></div>
+  </div>
+</section>
+<section class="production section section--alt">
   <div class="wrapper">
     <div class="section__titles">
       <h2 class="section__title">
@@ -92,16 +100,9 @@ get_header() ?>
       <div class="production__img section__img">
         <img src="<? the_field('section_3_image'); ?>">
       </div>
-      <div class="production__vid-wrapper">
-        <video class="js-production__vid production__vid" src="<? bloginfo('template_directory'); ?>/assets/vid/Naegele_generico_min_1.mp4" autoplay loop muted>
-          Sorry, your browser doesn't support videos.
-        </video>
-      </div>
-      <div class="dim"></div>
       <div class="production__content section__content">
           <? echo get_field("section_3_content"); ?>
       </div>
-      <div class="js-toggle-audio toggle-audio"></div>
     </div>
   </div>
 </section>
@@ -125,7 +126,7 @@ get_header() ?>
     </div>
   </div>
 </section>
-<section class="section section--alt recycling">
+<section class="section section--alt tasting">
   <div class="wrapper">
     <div class="section__titles">
       <h2 class="section__title">
@@ -135,11 +136,11 @@ get_header() ?>
           <? echo get_field("section_5_subtitle"); ?>
       </h3>
     </div>
-    <div class="section__grid recycling__grid">
-      <div class="recycling__img section__img">
+    <div class="section__grid tasting__grid">
+      <div class="tasting__img section__img">
         <img src="<? the_field('section_5_image'); ?>">
       </div>
-      <div class="recycling__content section__content">
+      <div class="tasting__content section__content">
           <? echo get_field("section_5_content"); ?>
       </div>
     </div>

@@ -59,13 +59,13 @@ a{display:inline-block;position:relative;color:#0067c2;text-decoration:none;-web
 a:after{content:" ";display:block;position:absolute;right:-2px;bottom:-1px;left:-2px;height:4px;background:#ff8b03;opacity:.8;-webkit-transform:scaleX(0);-ms-transform:scaleX(0);transform:scaleX(0);-webkit-transform-origin:center;-ms-transform-origin:center;transform-origin:center;-webkit-transition:-webkit-transform .1s ease-in;transition:-webkit-transform .1s ease-in;transition:transform .1s ease-in;transition:transform .1s ease-in,-webkit-transform .1s ease-in}
 a:hover:after,a:focus:after,a:active:after{-webkit-transform:scaleX(1);-ms-transform:scaleX(1);transform:scaleX(1);-webkit-transition:-webkit-transform .1s ease-out;transition:-webkit-transform .1s ease-out;transition:transform .1s ease-out;transition:transform .1s ease-out,-webkit-transform .1s ease-out}
 a:active{-webkit-transform:translateY(2px);-ms-transform:translateY(2px);transform:translateY(2px)}
-h1,h2,h3,h4,h5,.h1,.h2,.hero__h1,.carousel__h1,.h3,.h4,.nav-prod__title,.hero__h2,.employee__name,.carousel__h2,.h5,.product__category,.product__name{font-weight:700}
+h1,h2,h3,h4,h5,.h1,.h2,.hero__h1,.carousel__h1,.h3,.h4,.nav-prod__title,.hero__h2,.carousel__h2,.h5,.product__category,.product__name{font-weight:700}
 h1,.h1{font-size:207.4%}
 h2,.h2,.hero__h1,.carousel__h1{font-size:172.8%}
 h3,.h3{font-size:144%}
-h4,.h4,.nav-prod__title,.hero__h2,.employee__name,.carousel__h2{font-size:120%}
+h4,.h4,.nav-prod__title,.hero__h2,.carousel__h2{font-size:120%}
 h5,.h5,.product__category,.product__name{font-size:100%;text-transform:uppercase}
-.text--small,.employee__function{font-size:70.7%}
+.text--small{font-size:70.7%}
 .nav-main{background:rgba(0,0,0,0.2);font-size:70.7%}
 .menu{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;margin:0;padding:0;list-style-type:none}
 .menu-item{-webkit-box-flex:1;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto;text-align:center}
@@ -110,17 +110,10 @@ h5,.h5,.product__category,.product__name{font-size:100%;text-transform:uppercase
 .section__subtitle{font-weight:400}
 .section__img{margin:-4.8rem -0.8rem 2.4rem}
 .section--privacy{padding-top:0}
-.production{position:relative;overflow:hidden;-webkit-perspective:600px;perspective:600px}
-.production .section__titles{color:#fff}
-.dim{-webkit-transition:opacity .2s ease-out;transition:opacity .2s ease-out;opacity:0}
+.video-container{display:none;overflow:hidden}
+.video{display:block;width:100%}
 .toggle-audio{display:none}
 .is-unmuted .toggle-audio{background-position:-100% 0}
-.production__vid-wrapper{display:none}
-.production__content{position:relative;z-index:500;-webkit-transition:opacity .2s ease-out,-webkit-transform .3s ease-out;transition:opacity .2s ease-out,-webkit-transform .3s ease-out;transition:opacity .2s ease-out,transform .3s ease-out;transition:opacity .2s ease-out,transform .3s ease-out,-webkit-transform .3s ease-out}
-.employees{margin:0;padding:2.4rem 0;list-style-type:none}
-.employee img{float:left;margin-right:2.4rem}
-.employee__name{margin-bottom:0}
-.employee__function{text-transform:uppercase;color:rgba(0,0,0,0.4)}
 .schankanlagen{padding-top:0}
 .getraenkemarkt{padding-top:0}
 .carousel{position:relative}
@@ -150,10 +143,11 @@ h5,.h5,.product__category,.product__name{font-size:100%;text-transform:uppercase
 .slick-arrow:after{top:50%;-webkit-transform:skew(30deg,0);-ms-transform:skew(30deg,0);transform:skew(30deg,0)}
 .slick-next{right:2.4rem;left:auto;-webkit-transform:rotateZ(180deg);-ms-transform:rotate(180deg);transform:rotateZ(180deg)}
 .news,.news__item{margin-bottom:2.4rem}
-.news{padding-bottom:2.4rem}
+.news{padding-bottom:2.4rem;margin-bottom:0}
 .news__wrapper{margin:0 auto;max-width:600px}
 .news__wrapper .news__item{margin-bottom:2.4rem;padding-bottom:2.4rem;border-bottom:.4rem solid #ff8b03}
 .news__wrapper .news__item:last-child{margin-bottom:0}
+.news__grid+.btn{margin-top:2.4rem}
 .btn{padding:1.2rem 1.6rem;background:#0067c2;color:#fff;-webkit-transition:background .1s linear;transition:background .1s linear}
 .btn:after{content:none}
 .btn:hover,.btn:focus,.btn:active{background:#0082f5}
@@ -163,7 +157,7 @@ h5,.h5,.product__category,.product__name{font-size:100%;text-transform:uppercase
 .product:hover img{-webkit-transition:-webkit-transform .1s ease-out;transition:-webkit-transform .1s ease-out;transition:transform .1s ease-out;transition:transform .1s ease-out,-webkit-transform .1s ease-out}
 .product__category,.product__name{margin-bottom:0;color:#000;text-transform:none}
 .product__category{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;margin-bottom:-0.4rem}
-.product__category .text--small,.product__category .employee__function{font-weight:700}
+.product__category .text--small{font-weight:700}
 .product__name,.product__quantity{font-weight:400}
 .product__name{padding-bottom:.8rem}
 .single-product .hero__h1{margin-top:1.6rem}
@@ -184,7 +178,7 @@ h5,.h5,.product__category,.product__name{font-size:100%;text-transform:uppercase
 h1,.h1{font-size:244.1%}
 h2,.h2,.hero__h1,.carousel__h1{font-size:195.3%}
 h3,.h3{font-size:156.3%}
-h4,.h4,.nav-prod__title,.hero__h2,.employee__name,.carousel__h2{font-size:125%}
+h4,.h4,.nav-prod__title,.hero__h2,.carousel__h2{font-size:125%}
 .nav-main{font-size:inherit}
 .header{height:20rem}
 .logo{max-width:18rem;margin:3.2rem auto 0}
@@ -195,21 +189,18 @@ h4,.h4,.nav-prod__title,.hero__h2,.employee__name,.carousel__h2{font-size:125%}
 .section{margin:0 -4.8rem;padding:4.8rem}
 .section__titles{margin-top:28.8rem}
 .section__img{margin:-4.8rem -4.8rem 2.4rem}
-.employees{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-left:-4.8rem}
-.employees>li{-webkit-box-flex:1;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto;padding-left:4.8rem;width:50%}
-.employee{margin-bottom:4.8rem}
-.employee:last-child{margin-bottom:0}
-.employee img{float:none;margin-right:0}
 .carousel__slides{width:100%;margin:0}
 .carousel__h1{font-size:244.1%}
 .carousel__h2{font-size:156.3%}
 .news,.news__item{margin-bottom:4.8rem}
 .news{padding-bottom:4.8rem}
 .news__wrapper .news__item{margin-bottom:6.4rem;padding-bottom:6.4rem}
-.news__grid{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
-.news__item{-webkit-box-flex:1;-webkit-flex:1 1 100%;-ms-flex:1 1 100%;flex:1 1 100%;margin-left:4.8rem}
+.news__grid{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
+.news__item{-webkit-box-flex:1;-webkit-flex:1 1 100%;-ms-flex:1 1 100%;flex:1 1 100%;margin-bottom:0;margin-left:4.8rem}
 .news__item:first-child{margin-left:0}
+.news__item:only-child{max-width:50%}
 .news__wrapper .news__item{margin-left:0}
+.news__grid+.btn{margin-top:4.8rem}
 .products{margin-left:-2.4rem}
 .product{width:33.33%;margin-bottom:6.4rem;padding-left:2.4rem}
 .single-product .products{max-height:246px}
@@ -226,7 +217,7 @@ h4,.h4,.nav-prod__title,.hero__h2,.employee__name,.carousel__h2{font-size:125%}
 h1,.h1{font-size:315.7%}
 h2,.h2,.hero__h1,.carousel__h1{font-size:236.9%}
 h3,.h3{font-size:177.7%}
-h4,.h4,.nav-prod__title,.hero__h2,.employee__name,.carousel__h2{font-size:133.3%}
+h4,.h4,.nav-prod__title,.hero__h2,.carousel__h2{font-size:133.3%}
 .nav-prod{display:block;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;margin-left:0}
 .nav-prod__col{padding-left:0}
 .nav-prod__show-all{margin-bottom:4.8rem}
@@ -244,23 +235,11 @@ h4,.h4,.nav-prod__title,.hero__h2,.employee__name,.carousel__h2{font-size:133.3%
 .section__grid{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start}
 .section__img{margin:0;-webkit-box-flex:7;-webkit-flex:7 0 0;-ms-flex:7 0 0;flex:7 0 0}
 .section__content{-webkit-box-flex:5;-webkit-flex:5 0 0;-ms-flex:5 0 0;flex:5 0 0;margin-left:2.4rem}
-.production .dim,.production .production__content{opacity:1}
-.production:hover .dim,.production:hover .production__content,.production:hover .section__titles{opacity:0}
-.production:hover .production__content,.production:hover .section__titles{-webkit-transform:translate3d(0,0,50px);transform:translate3d(0,0,50px)}
-.production:hover .toggle-audio{opacity:1;-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0)}
-.production .wrapper{color:#fff}
-.production .section__titles{position:relative;z-index:500;pointer-events:none;text-shadow:0 0 10px rgba(0,0,0,0.5),0 0 4px rgba(0,0,0,0.5);-webkit-transition:opacity .2s ease-out,-webkit-transform .3s ease-out;transition:opacity .2s ease-out,-webkit-transform .3s ease-out;transition:opacity .2s ease-out,transform .3s ease-out;transition:opacity .2s ease-out,transform .3s ease-out,-webkit-transform .3s ease-out}
-.production__img{display:none}
-.dim{position:absolute;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,0.7)}
+.video-container{display:block;position:relative}
+.video-container:hover .toggle-audio{opacity:1;-webkit-transform:translate(0);-ms-transform:translate(0);transform:translate(0)}
 .toggle-audio{display:block;position:absolute;right:9.6rem;bottom:2.4rem;width:44px;height:44px;background-image:url("assets/img/i--audio.svg");background-size:200% 100%;opacity:0;cursor:pointer;-webkit-transform:translateY(200px);-ms-transform:translateY(200px);transform:translateY(200px);-webkit-transition:opacity .2s ease-out,-webkit-transform .3s ease-out;transition:opacity .2s ease-out,-webkit-transform .3s ease-out;transition:opacity .2s ease-out,transform .3s ease-out;transition:opacity .2s ease-out,transform .3s ease-out,-webkit-transform .3s ease-out}
-.production__vid-wrapper{display:block;position:absolute;top:-0;left:-0;width:100%;height:100%;margin:0}
-.production__vid{max-width:none;min-width:100%;min-height:100%}
-.production__content{margin:0 auto;max-width:600px;opacity:0;pointer-events:none}
 .recycling__img{-webkit-box-flex:8;-webkit-flex:8 0 0;-ms-flex:8 0 0;flex:8 0 0;-webkit-box-ordinal-group:3;-webkit-order:2;-ms-flex-order:2;order:2}
 .recycling__content{-webkit-box-flex:3;-webkit-flex:3 0 0;-ms-flex:3 0 0;flex:3 0 0;margin-right:2.4rem;margin-left:0;-webkit-box-ordinal-group:2;-webkit-order:1;-ms-flex-order:1;order:1}
-.employees{margin-left:-9.6rem}
-.employees>li{padding-left:9.6rem}
-.employee img{float:left;margin-right:2.4rem;margin-bottom:.4rem}
 .carousel__h1{font-size:315.7%}
 .carousel__h2{font-size:177.7%}
 .scroll-wrapper{display:block}
@@ -269,6 +248,7 @@ h4,.h4,.nav-prod__title,.hero__h2,.employee__name,.carousel__h2{font-size:133.3%
 .news{padding-bottom:6.4rem}
 .news__wrapper .news__item{margin-bottom:9.6rem;padding-bottom:9.6rem}
 .news__item{margin-left:6.4rem}
+.news__grid+.btn{margin-top:6.4rem}
 .grid--prod{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}
 .products{-webkit-box-flex:3;-webkit-flex:3;-ms-flex:3;flex:3}
 .product{margin-bottom:9.6rem}
@@ -277,7 +257,7 @@ h4,.h4,.nav-prod__title,.hero__h2,.employee__name,.carousel__h2{font-size:133.3%
 h1,.h1{font-size:399.8%}
 h2,.h2,.hero__h1,.carousel__h1{font-size:282.7%}
 h3,.h3{font-size:199.9%}
-h4,.h4,.nav-prod__title,.hero__h2,.employee__name,.carousel__h2{font-size:141.4%}
+h4,.h4,.nav-prod__title,.hero__h2,.carousel__h2{font-size:141.4%}
 .home .logo{max-width:26rem}
 .wrapper{padding:0 9.6rem}
 .section{margin:0 -9.6rem;padding:9.6rem}
@@ -286,13 +266,12 @@ h4,.h4,.nav-prod__title,.hero__h2,.employee__name,.carousel__h2{font-size:141.4%
 .section__content{-webkit-box-flex:4;-webkit-flex:4 0 0;-ms-flex:4 0 0;flex:4 0 0;margin-left:4.8rem}
 .recycling__img{-webkit-box-flex:7;-webkit-flex:7 0 0;-ms-flex:7 0 0;flex:7 0 0}
 .recycling__content{-webkit-box-flex:4;-webkit-flex:4 0 0;-ms-flex:4 0 0;flex:4 0 0;margin-right:4.8rem;margin-left:0}
-.employees{margin-left:-14.4rem}
-.employees>li{padding-left:14.4rem}
 .carousel__h1{font-size:399.8%}
 .carousel__h2{font-size:199.9%}
 .news,.news__item{margin-bottom:9.6rem}
 .news{padding-bottom:9.6rem}
 .news__item{margin-left:9.6rem}
+.news__grid+.btn{margin-top:9.6rem}
 .products{-webkit-box-flex:4;-webkit-flex:4;-ms-flex:4;flex:4;padding-left:-3.2rem}
 .product{width:25%;padding-left:3.2rem}
 .single-product .products{margin-left:-3.2rem}

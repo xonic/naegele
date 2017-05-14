@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   var $body = $("html, body"),
       $news = $("#news"),
-      $vid = $(".js-production__vid");;
+      $vid = $(".js-video");;
 
   $('#js-slides').slick({
     autoplay: true,

@@ -23,6 +23,7 @@
 
 .news {
   padding-bottom: $space30;
+  margin-bottom: 0;
 
   @media (min-width: $tablet) {
     padding-bottom: $space40;
@@ -65,14 +66,20 @@
 @media (min-width: $tablet) {
   .news__grid {
     display: flex;
+    justify-content: center;
   }
 
   .news__item {
     flex: 1 1 100%;
+    margin-bottom: 0;
     margin-left: $space40;
 
     &:first-child {
       margin-left: 0;
+    }
+
+    &:only-child {
+      max-width: 50%;
     }
 
     .news__wrapper & {
@@ -90,5 +97,21 @@
 @media (min-width: $desktop) {
   .news__item {
     margin-left: $space50;
+  }
+}
+
+.news__grid + .btn {
+  margin-top: $space30;
+
+  @media (min-width: $tablet) {
+    margin-top: $space40;
+  }
+
+  @media (min-width: $laptop) {
+    margin-top: $space45;
+  }
+
+  @media (min-width: $desktop) {
+    margin-top: $space50;
   }
 }
