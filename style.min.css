@@ -211,8 +211,8 @@ h4,.h4,.nav-prod__title,.hero__h2,.carousel__h2{font-size:125%}
 .grid--single-prod .product__image{-webkit-box-flex:0;-webkit-flex:0 0 60%;-ms-flex:0 0 60%;flex:0 0 60%;text-align:center}
 .grid--single-prod .product__content{margin-left:2.4rem}
 .footer .wrapper{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
-.footer .contact,.footer .newsletter{-webkit-box-flex:0;-webkit-flex:0 1 50%;-ms-flex:0 1 50%;flex:0 1 50%}
-.footer .newsletter{margin-left:4.8rem}
+.footer .widget{-webkit-box-flex:0;-webkit-flex:0 1 50%;-ms-flex:0 1 50%;flex:0 1 50%}
+.footer .widget:last-child{margin-left:4.8rem}
 .footer .section__title,.footer .section__subtitle{text-align:left}
 .footer .section__subtitle{line-height:1.3}
 .privacy .wrapper{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
@@ -257,7 +257,7 @@ h4,.h4,.nav-prod__title,.hero__h2,.carousel__h2{font-size:133.3%}
 .grid--prod{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}
 .products{-webkit-box-flex:3;-webkit-flex:3;-ms-flex:3;flex:3}
 .product{margin-bottom:9.6rem}
-.footer .newsletter{margin-left:9.6rem}
+.footer .widget:last-child{margin-left:9.6rem}
 }@media(min-width:90em){body{font-size:2.1rem}
 h1,.h1{font-size:399.8%}
 h2,.h2,.hero__h1,.carousel__h1{font-size:282.7%}
@@ -280,7 +280,7 @@ h4,.h4,.nav-prod__title,.hero__h2,.carousel__h2{font-size:141.4%}
 .products{-webkit-box-flex:4;-webkit-flex:4;-ms-flex:4;flex:4;padding-left:-3.2rem}
 .product{width:25%;padding-left:3.2rem}
 .single-product .products{margin-left:-3.2rem}
-.footer .newsletter{margin-left:14.4rem}
+.footer .widget:last-child{margin-left:14.4rem}
 }@media(max-width:63.9375em){.tax-product_category .grid--prod{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:reverse;-webkit-flex-direction:column-reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse}
 }@media(max-height:375px){.logo{margin:.4rem auto}
 .home .logo{margin:.4rem auto}

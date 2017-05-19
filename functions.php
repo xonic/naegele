@@ -77,6 +77,26 @@ function remove_footer_admin () {
 
 add_filter('admin_footer_text', 'remove_footer_admin');
 
+// Add footer widgets
+register_sidebar( array(
+  'name' => 'Footer Sidebar 1',
+  'id' => 'footer-sidebar-1',
+  'description' => 'Appears in the footer area',
+  'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+  'after_widget' => '</aside>',
+  'before_title' => '<h2 class="section__title">',
+  'after_title' => '</h2>',
+) );
+register_sidebar( array(
+  'name' => 'Footer Sidebar 2',
+  'id' => 'footer-sidebar-2',
+  'description' => 'Appears in the footer area',
+  'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+  'after_widget' => '</aside>',
+  'before_title' => '<h2 class="section__title">',
+  'after_title' => '</h2>',
+) );
+
 // Add support for product thumbnails
 add_theme_support( 'post-thumbnails' );
 

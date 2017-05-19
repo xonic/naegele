@@ -15,12 +15,11 @@
       display: flex;
     }
 
-    .contact,
-    .newsletter {
+    .widget {
       flex: 0 1 50%;
     }
 
-    .newsletter {
+    .widget:last-child {
       margin-left: $space40;
     }
 
@@ -35,13 +34,13 @@
   }
 
   @media (min-width: $laptop) {
-    .newsletter {
+    .widget:last-child {
       margin-left: $space50;
     }
   }
 
   @media (min-width: $desktop) {
-    .newsletter {
+    .widget:last-child {
       margin-left: $space60;
     }
   }
