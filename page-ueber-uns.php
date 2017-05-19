@@ -126,7 +126,7 @@ get_header() ?>
     </div>
   </div>
 </section>
-<section class="section section--alt tasting">
+<section id="beer-tasting" class="section section--alt tasting">
   <div class="wrapper">
     <div class="section__titles">
       <h2 class="section__title">

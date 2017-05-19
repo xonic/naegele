@@ -81,6 +81,8 @@ h5,.h5,.product__category,.product__name{font-size:100%;text-transform:uppercase
 .nav-prod__show-all{display:inline-block;margin-bottom:2.4rem;font-size:80%}
 .nav-prod__title{margin-bottom:1.2rem}
 .nav-prod__items,.children{margin:0 0 4.8rem;padding:0;list-style-type:none}
+.nav-prod__items{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;width:100%}
+.nav-prod__items>li{margin-right:2.4rem;white-space:nowrap}
 .header{height:16rem;background-image:url("assets/img/bottles.jpg");background-size:cover;background-position:center}
 .page-template-page-gastronomie-php .header{background-image:url("assets/img/case.jpg")}
 .page-template-page-getraenkemarkt-php .header{background-image:url("assets/img/shop.jpg")}
@@ -153,13 +155,15 @@ h5,.h5,.product__category,.product__name{font-size:100%;text-transform:uppercase
 .btn:after{content:none}
 .btn:hover,.btn:focus,.btn:active{background:#0082f5}
 .products{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start;margin-left:-1.2rem}
+.show-all{float:right;margin-top:7px}
 .product{-webkit-box-flex:1;-webkit-flex:1 1 1;-ms-flex:1 1 1;flex:1 1 1;width:50%;margin-bottom:3.2rem;padding-left:1.2rem}
 .product img{display:block;margin-bottom:.8rem;width:100%;-webkit-transition:-webkit-transform .1s ease-in;transition:-webkit-transform .1s ease-in;transition:transform .1s ease-in;transition:transform .1s ease-in,-webkit-transform .1s ease-in}
 .product:hover img{-webkit-transition:-webkit-transform .1s ease-out;transition:-webkit-transform .1s ease-out;transition:transform .1s ease-out;transition:transform .1s ease-out,-webkit-transform .1s ease-out}
 .product__category,.product__name{margin-bottom:0;color:#000;text-transform:none}
 .product__category{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;margin-bottom:-0.4rem}
 .product__category .text--small{font-weight:700}
-.product__name,.product__quantity{font-weight:400}
+.product__name,.product__quantity{font-weight:400;line-height:1.5}
+.product__quantity{float:right}
 .product__name{padding-bottom:.8rem}
 .single-product .hero__h1{margin-top:1.6rem}
 .single-product .hero__h2:not(:last-child){margin:0;padding:0;border:0}
@@ -206,7 +210,8 @@ h4,.h4,.nav-prod__title,.hero__h2,.carousel__h2{font-size:125%}
 .news__wrapper .news__item{margin-left:0}
 .news__grid+.btn{margin-top:4.8rem}
 .products{margin-left:-2.4rem}
-.product{width:33.33%;margin-bottom:6.4rem;padding-left:2.4rem}
+.show-all{margin-top:5px}
+.product{margin-bottom:6.4rem;padding-left:2.4rem}
 .single-product .products{max-height:246px}
 .grid--single-prod{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
 .grid--single-prod .product__image{-webkit-box-flex:0;-webkit-flex:0 0 60%;-ms-flex:0 0 60%;flex:0 0 60%;text-align:center}
@@ -227,6 +232,7 @@ h4,.h4,.nav-prod__title,.hero__h2,.carousel__h2{font-size:133.3%}
 .nav-prod{display:block;-webkit-box-flex:1;-webkit-flex:1;-ms-flex:1;flex:1;margin-left:0}
 .nav-prod__col{padding-left:0}
 .nav-prod__show-all{margin-bottom:4.8rem}
+.nav-prod__items{display:block}
 .header{height:24rem}
 .logo{max-width:21rem;margin:4.8rem auto 0}
 .home .logo{max-width:21rem;margin:9.6rem auto 0}
@@ -265,8 +271,9 @@ h4,.h4,.nav-prod__title,.hero__h2,.carousel__h2{font-size:133.3%}
 .news__item{margin-left:6.4rem}
 .news__grid+.btn{margin-top:6.4rem}
 .grid--prod{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between}
-.products{-webkit-box-flex:3;-webkit-flex:3;-ms-flex:3;flex:3}
-.product{margin-bottom:9.6rem}
+.products-container{-webkit-box-flex:4;-webkit-flex:4;-ms-flex:4;flex:4}
+.show-all{margin-top:9px}
+.product{width:25%;margin-bottom:9.6rem}
 .footer .widget:last-child{margin-left:9.6rem}
 }@media(min-width:90em){body{font-size:2.1rem}
 h1,.h1{font-size:399.8%}
@@ -289,8 +296,10 @@ h4,.h4,.nav-prod__title,.hero__h2,.carousel__h2{font-size:141.4%}
 .news{padding-bottom:9.6rem}
 .news__item{margin-left:9.6rem}
 .news__grid+.btn{margin-top:9.6rem}
-.products{-webkit-box-flex:4;-webkit-flex:4;-ms-flex:4;flex:4;padding-left:-3.2rem}
-.product{width:25%;padding-left:3.2rem}
+.products-container{-webkit-box-flex:5;-webkit-flex:5;-ms-flex:5;flex:5;padding-left:-3.2rem}
+.products{margin-left:-3.2rem}
+.show-all{margin-top:15px}
+.product{padding-left:3.2rem}
 .single-product .products{margin-left:-3.2rem}
 .footer .widget:last-child{margin-left:14.4rem}
 }@media(max-width:63.9375em){.tax-product_category .grid--prod{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:reverse;-webkit-flex-direction:column-reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse}

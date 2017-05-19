@@ -116,3 +116,18 @@
   padding: 0;
   list-style-type: none;
 }
+
+.nav-prod__items {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  > li {
+    margin-right: $space30;
+    white-space: nowrap;
+  }
+
+  @media (min-width: $laptop) {
+    display: block;
+  }
+}

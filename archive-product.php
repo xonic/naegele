@@ -40,90 +40,71 @@ get_header() ?>
           </ul>
         </div>
       </nav>
-      <section class="products">
+      <section class="products-container">
         <?
-        // Get the queried object (in this case check if certain product category is queried)
-        $queried_object = get_queried_object();
-        $tax_query = array(
-                        array(
-                            'taxonomy' => 'product_category', //or tag or custom taxonomy
-                            'field' => 'slug',
-                            'terms' => 'unsere-produkte'
-                        )
-                    );;
 
-        // if product category is queried, setup filter for custom post query
-        if( isset($queried_object->slug)){
+        $product_category_terms = get_terms(array('taxonomy' => 'product_category', 'parent' => 0));
 
-          if($queried_object->slug != '') {
-            $tax_query = array(
-                            array(
-                                'taxonomy' => 'product_category', //or tag or custom taxonomy
-                                'field' => 'slug',
-                                'terms' => $queried_object->slug
-                            )
-                        );
-          }
-        }
+        foreach ( $product_category_terms as $product_category_term ) {
+            $product_category_query = new WP_Query( array(
+                'post_type' => 'product',
+                'posts_per_page' => 4,
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => 'product_category',
+                        'field' => 'slug',
+                        'terms' => array( $product_category_term->slug ),
+                        'operator' => 'IN'
+                    )
+                )
+            ) );
+            ?>
+            <? if($product_category_query->found_posts > 4) : ?>
+            <div class="show-all"><a href="<? echo get_term_link($product_category_term, 'product_category'); ?>"><? echo __('Alle anzeigen'); ?></a></div>
+          <? endif; ?>
+            <h3><?php echo $product_category_term->name; ?></h3>
+            <? if($product_category_term->description !== '') : ?>
 
-        // Custom post query for products
-        query_posts( array(
-          'post_type' => 'product',
-          'paged' => $paged,
-          'posts_per_page' => 12,
-          'tax_query' => $tax_query
-        ) );
+                  <p><? echo $product_category_term->description; ?></p>
 
-          if (have_posts()) :
+            <? endif; ?>
 
-            // Start the loop
-            while (have_posts()) : the_post();
+            <?php
+            if ( $product_category_query->have_posts() ) : ?>
 
+            <section class="products">
+
+          <? while ( $product_category_query->have_posts() ) : $product_category_query->the_post();
               $img = get_field('product_image');
               $quantity = get_field('product_quantity');
               $categories = get_the_terms($post->ID, 'product_category');
-              $child_cats = array();
-
-              // Get only child categories of product (Exclude Eigenmarken)
-              foreach ($categories as $cat) {
-                if (0 != $cat->parent) {
-                  $child_cats[] = $cat->name;
-                }
-              }
-
-              // print_r($child_cats);
-              // print_r($categories);
             ?>
+                  <article class="product <? echo $post->ID; ?>">
+                    <a href="<? echo get_permalink(); ?>" class="product__link" title="<? echo __('Produkt anzeigen', 'naegele'); ?>">
+                      <?
+                        if ( has_post_thumbnail() ) {
+                          the_post_thumbnail('product-thumb');
+                        }
+                      ?>
+                      <h3 class="product__name">
+                        <? echo $post->post_title; ?>
+                        <span class="product__quantity">
+                          <? echo $quantity ?>&nbsp;<span class="text--small">L</span>
+                        </span>
+                      </h3>
+                    </a>
+                  </article>
+            <?php endwhile; ?>
+          </section>
 
-              <article class="product <? echo $post->ID; ?>">
-                <a href="<? echo get_permalink(); ?>" class="product__link" title="<? echo __('Produkt anzeigen', 'naegele'); ?>">
-                  <?
-                    if ( has_post_thumbnail() ) {
-                      the_post_thumbnail('product-thumb');
-                    }
-                  ?>
-                  <h3 class="product__category">
-                    <span>
-                      <? echo array_pop($child_cats); ?>
-                    </span>
-                    <span class="product__quantity">
-                      <? echo $quantity ?>&nbsp;<span class="text--small">L</span>
-                    </span>
-                  </h3>
-                  <h4 class="product__name"><? echo $post->post_title; ?></h4>
-                </a>
-              </article>
-        <?
-            endwhile;
-
-            wp_reset_query();
-
-          else :
-
-            echo "No products found";
-
-          endif;
+          <? endif; ?>
+            <?php
+            // Reset things, for good measure
+            $product_category_query = null;
+            wp_reset_postdata();
+        }
         ?>
+
       </section>
     </div>
   </div>
