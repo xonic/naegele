@@ -44,32 +44,6 @@ get_header() ?>
             ?>
           </ul>
         </div>
-        <div class="nav-prod__col">
-          <h2 class="nav-prod__title"><? echo __('Gesamtes Sortiment', 'naegele'); ?></h2>
-          <ul class="nav-prod__items">
-            <?php
-
-              $term = get_term_by('slug', 'weitere-produkte', 'product_category');
-              $child_of = 0;
-
-              if (isset($term->term_id)) {
-                $child_of = $term->term_id;
-              }
-              $args=array(
-                'taxonomy' => 'product_category',
-                'title_li' => '',
-                'child_of' => $child_of
-              );
-              $output = 'objects'; // or names
-              $categories=wp_list_categories($args,$output);
-              if  ($categories) {
-                foreach ($categories  as $category ) {
-                  echo '<p>' . $category->name . '</p>';
-                }
-              }
-            ?>
-          </ul>
-        </div>
       </nav>
       <section class="products">
         <?
