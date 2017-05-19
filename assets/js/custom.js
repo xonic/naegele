@@ -51,7 +51,6 @@ $(document).ready(function(){
   });
 
   $("#js-scroll").on("click", function(e) {
-    console.log("hoi");
     e.preventDefault();
 
     $body.animate({
