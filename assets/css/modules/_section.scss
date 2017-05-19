@@ -73,6 +73,8 @@
 
 .section__subtitle {
   font-weight: $normal-font-weight;
+  line-height: 1.2;
+  margin-top: $space10;
 
   @media (min-width: $laptop) {
     margin-bottom: $space35;

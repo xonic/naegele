@@ -4,6 +4,17 @@
 //
 //  ----------------------------------------------------------------------------
 
+.recycling {
+
+  .section__titles {
+    color: $white;
+
+    @media (min-width: $laptop) {
+      color: $black;
+    }
+  }
+}
+
 .recycling__img {
   @media (min-width: $laptop) {
     flex: 8 0 0;

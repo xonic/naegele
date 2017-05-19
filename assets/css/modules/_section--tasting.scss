@@ -1,0 +1,48 @@
+//  ----------------------------------------------------------------------------
+//
+//  ABOUT US PAGE TASTING SECTION
+//
+//  ----------------------------------------------------------------------------
+
+.tasting__grid {
+  @media (min-width: $laptop) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.tasting__img {
+  @media (min-width: $laptop) {
+    flex: 0 0 70%;
+    margin-bottom: $space35;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: $space45;
+  }
+}
+
+.tasting__content {
+  @media (min-width: $laptop) {
+    flex: 1 0 100%;
+    display: flex;
+    margin-left: 0;
+
+    > * {
+      flex: 1 1 50%;
+
+      &:last-child {
+        margin-left: $space50;
+      }
+    }
+  }
+
+  @media (min-width: $desktop) {
+
+    > * {
+      &:last-child {
+        margin-left: $space60;
+      }
+    }
+  }
+}
