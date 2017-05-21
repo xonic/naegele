@@ -15,7 +15,6 @@ get_header() ?>
     <div class="grid--prod">
       <nav class="nav-prod">
         <div class="nav-prod__col">
-          <!-- <h2 class="nav-prod__title"><? echo __('Unsere Produkte', 'naegele'); ?></h2> -->
           <ul class="nav-prod__items">
             <?php
 
@@ -59,10 +58,8 @@ get_header() ?>
                 )
             ) );
             ?>
-            <? if($product_category_query->found_posts > 4) : ?>
-            <div class="show-all"><a href="<? echo get_term_link($product_category_term, 'product_category'); ?>"><? echo __('Alle anzeigen'); ?></a></div>
-          <? endif; ?>
-            <h3><?php echo $product_category_term->name; ?></h3>
+
+            <h3 class="product-category__name"><?php echo $product_category_term->name; ?></h3>
             <? if($product_category_term->description !== '') : ?>
 
                   <p><? echo $product_category_term->description; ?></p>
@@ -72,30 +69,40 @@ get_header() ?>
             <?php
             if ( $product_category_query->have_posts() ) : ?>
 
-            <section class="products">
+            <div class="product-row">
+              <section class="products">
 
-          <? while ( $product_category_query->have_posts() ) : $product_category_query->the_post();
-              $img = get_field('product_image');
-              $quantity = get_field('product_quantity');
-              $categories = get_the_terms($post->ID, 'product_category');
-            ?>
-                  <article class="product <? echo $post->ID; ?>">
-                    <a href="<? echo get_permalink(); ?>" class="product__link" title="<? echo __('Produkt anzeigen', 'naegele'); ?>">
-                      <?
-                        if ( has_post_thumbnail() ) {
-                          the_post_thumbnail('product-thumb');
-                        }
-                      ?>
-                      <h3 class="product__name">
-                        <? echo $post->post_title; ?>
-                        <span class="product__quantity">
-                          <? echo $quantity ?>&nbsp;<span class="text--small">L</span>
-                        </span>
-                      </h3>
-                    </a>
-                  </article>
-            <?php endwhile; ?>
-          </section>
+            <? while ( $product_category_query->have_posts() ) : $product_category_query->the_post();
+                $img = get_field('product_image');
+                $quantity = get_field('product_quantity');
+                $categories = get_the_terms($post->ID, 'product_category');
+              ?>
+                    <article class="product <? echo $post->ID; ?>">
+                      <a href="<? echo get_permalink(); ?>" class="product__link" title="<? echo __('Produkt anzeigen', 'naegele'); ?>">
+                        <?
+                          if ( has_post_thumbnail() ) {
+                            the_post_thumbnail('product-thumb');
+                          }
+                        ?>
+                        <h3 class="product__name">
+                          <? echo $post->post_title; ?>
+                          <span class="product__quantity">
+                            <? echo $quantity ?>&nbsp;<span class="text--small">L</span>
+                          </span>
+                        </h3>
+                      </a>
+                    </article>
+              <?php endwhile; ?>
+            </section>
+            <? if($product_category_query->found_posts > 4) : ?>
+              <? if(ICL_LANGUAGE_CODE == "de") : ?>
+                <div class="show-all"><a href="<? echo get_term_link($product_category_term, 'product_category'); ?>">Alle <? echo $product_category_term->name; ?> Produkte</a></div>
+              <? endif; ?>
+              <? if(ICL_LANGUAGE_CODE == "it") : ?>
+                <div class="show-all"><a href="<? echo get_term_link($product_category_term, 'product_category'); ?>">Tutti prodotti <? echo $product_category_term->name; ?></a></div>
+              <? endif; ?>
+            <? endif; ?>
+          </div>
 
           <? endif; ?>
             <?php

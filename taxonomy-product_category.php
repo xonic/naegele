@@ -9,6 +9,13 @@ get_header() ?>
           echo $queried_object->name;;
           ?>
       </h1>
+      <? if($queried_object->description !== '') : ?>
+
+        <p class="product-category__description">
+          <? echo $queried_object->description; ?>
+        </p>
+
+      <? endif; ?>
       <h2 class="hero__h2"><!--don't delete this h2--></h2>
     </div>
   </section>
@@ -17,7 +24,6 @@ get_header() ?>
     <div class="grid--prod">
       <nav class="nav-prod">
         <div class="nav-prod__col">
-          <h2 class="nav-prod__title"><? echo __('Unsere Produkte', 'naegele'); ?></h2>
           <ul class="nav-prod__items">
             <?php
 
@@ -42,10 +48,90 @@ get_header() ?>
           </ul>
         </div>
       </nav>
-      <section class="products">
+
         <?
         // Get the queried object (in this case check if certain product category is queried)
         $queried_object = get_queried_object();
+        $term_children = get_terms($queried_object->taxonomy, array('child_of' => $queried_object->term_id));
+        // var_dump($term_children);
+
+        if($term_children) : ?>
+
+          <section class="products-container">
+
+        <?  foreach ( $term_children as $term_child ) {
+              $term_children_query = new WP_Query( array(
+                  'post_type' => 'product',
+                  'posts_per_page' => 4,
+                  'tax_query' => array(
+                      array(
+                          'taxonomy' => 'product_category',
+                          'field' => 'slug',
+                          'terms' => array( $term_child->slug ),
+                          'operator' => 'IN'
+                      )
+                  )
+              ));
+          ?>
+
+              <h3 class="product-category__name"><?php echo $term_child->name; ?></h3>
+              <? if($term_child->description !== '') : ?>
+
+                <p>
+                  <? echo $term_child->description; ?>
+                </p>
+
+                <? endif;
+
+                if ( $term_children_query->have_posts() ) : ?>
+
+                        <div class="product-row">
+                          <section class="products">
+
+                            <? while ( $term_children_query->have_posts() ) : $term_children_query->the_post();
+                                $img = get_field('product_image');
+                                $quantity = get_field('product_quantity');
+                                $categories = get_the_terms($post->ID, 'product_category');
+                              ?>
+                                <article class="product <? echo $post->ID; ?>">
+                                  <a href="<? echo get_permalink(); ?>" class="product__link" title="<? echo __('Produkt anzeigen', 'naegele'); ?>">
+                                    <?
+                                if ( has_post_thumbnail() ) {
+                                  the_post_thumbnail('product-thumb');
+                                }
+                              ?>
+                                      <h3 class="product__name">
+                                        <? echo $post->post_title; ?>
+                                        <span class="product__quantity">
+                                          <? echo $quantity ?>&nbsp;<span class="text--small">L</span>
+                                        </span>
+                                      </h3>
+                                  </a>
+                                </article>
+                              <?php endwhile; ?>
+                          </section>
+                          <? if($term_children_query->found_posts > 4) : ?>
+                            <? if(ICL_LANGUAGE_CODE == "de") : ?>
+                              <div class="show-all"><a href="<? echo get_term_link($term_child, 'product_category'); ?>">Alle <? echo $term_child->name; ?> Produkte</a></div>
+                              <? endif; ?>
+                          <? if(ICL_LANGUAGE_CODE == "it") : ?>
+                            <div class="show-all"><a href="<? echo get_term_link($term_child, 'product_category'); ?>">Tutti prodotti <? echo $term_child->name; ?></a></div>
+                            <? endif; ?>
+                      <? endif; ?>
+                    <? endif; ?>
+              </div>
+
+              <?
+              // Reset things, for good measure
+              $product_category_query = null;
+              wp_reset_postdata();
+          }
+
+          else : ?>
+
+          <section class="products">
+            <?
+
         $tax_query = array(
                         array(
                             'taxonomy' => 'product_category', //or tag or custom taxonomy
@@ -90,25 +176,22 @@ get_header() ?>
               }
             ?>
 
-              <article class="product <? echo $post->ID; ?>">
-                <a href="<? echo get_permalink(); ?>" class="product__link" title="<? echo __('Produkt anzeigen', 'naegele'); ?>">
-                  <?
+                <article class="product <? echo $post->ID; ?>">
+                  <a href="<? echo get_permalink(); ?>" class="product__link" title="<? echo __('Produkt anzeigen', 'naegele'); ?>">
+                    <?
                     if ( has_post_thumbnail() ) {
                       the_post_thumbnail('product-thumb');
                     }
                   ?>
-                  <h3 class="product__category">
-                    <span>
-                      <? echo array_pop($child_cats); ?>
-                    </span>
+                  <h3 class="product__name">
+                    <? echo $post->post_title; ?>
                     <span class="product__quantity">
                       <? echo $quantity ?>&nbsp;<span class="text--small">L</span>
                     </span>
                   </h3>
-                  <h4 class="product__name"><? echo $post->post_title; ?></h4>
-                </a>
-              </article>
-        <?
+                  </a>
+                </article>
+                <?
             endwhile;
 
             wp_reset_query();
@@ -118,9 +201,10 @@ get_header() ?>
             echo "No products found";
 
           endif;
+          endif
         ?>
 
       </section>
     </div>
   </div>
-<? get_footer() ?>
+  <? get_footer() ?>
