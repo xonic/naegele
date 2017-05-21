@@ -679,7 +679,7 @@ h5, .h5, .product__category, .product__name { font-size: 100%; text-transform: u
 
 @media (min-width: 90em) { .single-product .products { margin-left: -3.2rem; } }
 
-.single-product .product { margin-bottom: 2.4rem; max-width: 150px; font-size: 75%; }
+.single-product .product { margin-bottom: 2.4rem; max-width: 200px; font-size: 75%; }
 
 .section--single-prod { padding-top: 0; }
 

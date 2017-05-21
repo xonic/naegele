@@ -173,7 +173,7 @@ h5,.h5,.product__category,.product__name{font-size:100%;text-transform:uppercase
 .single-product .hero__h1{margin-top:1.6rem}
 .single-product .hero__h2:not(:last-child){margin:0;padding:0;border:0}
 .single-product .products{max-height:492px;overflow:hidden}
-.single-product .product{margin-bottom:2.4rem;max-width:150px;font-size:75%}
+.single-product .product{margin-bottom:2.4rem;max-width:200px;font-size:75%}
 .section--single-prod{padding-top:0}
 .product__image{margin-bottom:2.4rem}
 .footer{background:whitesmoke;overflow-x:hidden}

@@ -63,7 +63,7 @@
       ?>
         <section class="section section--alt">
           <div class="wrapper">
-            <h4 class="related__title"><? echo __('Weitere Produkte', 'naegele'); ?></h4>
+            <h4 class="related__title"><? echo __('Ähnliche Produkte', 'naegele'); ?></h4>
             <div class="products">
               <?
                 foreach ( $related_posts as $post ) {
