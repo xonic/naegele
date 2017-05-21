@@ -138,7 +138,7 @@ function product_category_init() {
     'show_ui'           => true,
     'show_admin_column' => true,
     'query_var'         => true,
-    'rewrite'           => array( 'slug' => __('produkt-kategorie', 'naegele')   , 'with_front' => false ),
+    // 'rewrite'           => array( 'slug' => __('produkt-kategorie', 'naegele')   , 'with_front' => false ),
   );
 
   register_taxonomy('product_category', array('product'),$args);
@@ -235,7 +235,7 @@ function employee_init() {
 
   register_post_type( 'employee', $args );
 }
-add_action( 'init', 'employee_init');
+//add_action( 'init', 'employee_init');
 
 function add_employee_columns($columns) {
   return array_merge($columns,

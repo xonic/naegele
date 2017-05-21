@@ -35,10 +35,10 @@ get_header() ?>
       <div class="schankanlagen__content section__content">
         <? echo get_field('section_1_text'); ?>
         <? if(ICL_LANGUAGE_CODE == 'de') : ?>
-          <a href="<? echo get_site_url().'/produkt-kategorie/postmix/'; ?>" class="btn">Schankprodukte anzeigen</a>
+          <a href="<? echo get_site_url().'/product_category/postmix/'; ?>" class="btn">Schankprodukte anzeigen</a>
         <? endif; ?>
         <? if(ICL_LANGUAGE_CODE == 'it') : ?>
-          <a href="<? echo get_site_url().'/it/produkt-kategorie/postmix-it/'; ?>" class="btn">Mostra prodotti</a>
+          <a href="<? echo get_site_url().'/it/product_category/postmix-it/'; ?>" class="btn">Mostra prodotti</a>
         <? endif; ?>
       </div>
     </div>
