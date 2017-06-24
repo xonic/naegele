@@ -5,6 +5,16 @@
 //  ----------------------------------------------------------------------------
 
 .btn {
+
+  border: 0;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+
+  -webkit-user-select: none; /* for button */
+     -moz-user-select: none;
+      -ms-user-select: none;
+
   padding: $space20 $space25;
   background: $blue40;
   color: $white;
@@ -18,5 +28,6 @@
   &:focus,
   &:active {
     background: lighten($blue40, 10%);
+    outline: none;
   }
 }

@@ -228,3 +228,29 @@ h5, .h5 {
 .text--small {
 	font-size: 70.7%;
 }
+
+input[type='email'] {
+	display: block;
+	margin: 0 0 $space20;
+	padding: $space10 $space15;
+	width: 100%;
+	font: inherit;
+
+	&:focus {
+		outline: 0;
+		border-color: $blue40;
+	}
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #ccc;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #ccc;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #ccc;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #ccc;
+}
