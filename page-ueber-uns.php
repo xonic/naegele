@@ -39,13 +39,13 @@ get_header() ?>
     <div class="i--label text--small"><? echo __("Weiter"); ?></div>
   </a>
 </section>
+  <?
+    query_posts('posts_per_page=2');
+
+    if (have_posts()) : ?>
 
 <section id="news" class="section news">
   <div class="wrapper">
-    <?
-      query_posts('posts_per_page=2');
-
-      if (have_posts()) : ?>
 
       <h2 class="section__title is-hidden">
         <? echo get_field("section_2_title"); ?>
@@ -72,11 +72,11 @@ get_header() ?>
         </a>
     <? endif; ?>
 
+  </div>
+</section>
     <?
       endif;
     ?>
-  </div>
-</section>
 </section>
 <section class="video-container">
   <div class="video-container__wrapper">

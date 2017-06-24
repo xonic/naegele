@@ -15,7 +15,7 @@
       <?
       if(get_field('product_quantity') !== '') :
         ?>
-        <h2 class="hero__h2"><? the_field('product_quantity') ?> <? echo __('Liter Flasche', 'naegele'); ?></h2>
+        <h2 class="hero__h2"><? the_field('product_quantity') ?> <? echo __('Liter', 'naegele'); ?></h2>
       <? endif;?>
       <h2 class="hero__h2">
         <?
