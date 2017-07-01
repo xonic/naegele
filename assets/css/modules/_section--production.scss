@@ -1,21 +1,17 @@
 //  ----------------------------------------------------------------------------
 //
-//  GETRAENKEMARKT PAGE GETRAENKEMARKT SECTION
+//  MAIN PAGE PRODUCTION SECTION
 //
 //  ----------------------------------------------------------------------------
 
-.getraenkemarkt {
-  padding-top: 0;
-}
-
-.getraenkemarkt__grid {
+.production__grid {
   @media (min-width: $laptop) {
     flex-wrap: wrap;
     justify-content: center;
   }
 }
 
-.getraenkemarkt__img {
+.production__img {
   @media (min-width: $laptop) {
     flex: 0 0 70%;
     margin-bottom: $space35;
@@ -26,7 +22,7 @@
   }
 }
 
-.getraenkemarkt__content {
+.production__content {
   @media (min-width: $laptop) {
     flex: 1 0 100%;
     display: flex;

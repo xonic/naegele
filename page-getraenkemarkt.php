@@ -29,12 +29,11 @@ get_header() ?>
       </div>
     <? endif ?>
     <div class="section__grid getraenkemarkt__grid">
-      <div class="schankanlagen__img section__img">
+      <div class="getraenkemarkt__img section__img">
         <img src="<? the_field('section_1_image'); ?>">
       </div>
-      <div class="schankanlagen__content section__content">
+      <div class="getraenkemarkt__content section__content">
         <? echo get_field('section_1_text'); ?>
-        <!-- <a class="btn" href="<?php echo get_permalink( get_page_by_path( '360-tour' ) ); ?>"><? echo __('360° virtuellen Rundgang starten', 'naegele'); ?></a> -->
       </div>
     </div>
   </div>
