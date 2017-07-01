@@ -61,10 +61,10 @@ get_header() ?>
       <div class="festservice__content section__content">
         <? echo get_field('section_2_text'); ?>
         <? if(ICL_LANGUAGE_CODE == 'de') : ?>
-          <a href="mailto:info@naegele.it" class="btn">Mietanfrage senden</a>
+          <a href="mailto:info@naegele.it" class="btn" onclick="__gaTracker('send', 'event', 'button', 'click', 'DE--festservice--anfrage');">Mietanfrage senden</a>
         <? endif; ?>
         <? if(ICL_LANGUAGE_CODE == 'it') : ?>
-          <a href="mailto:info@naegele.it" class="btn">Manda richiesta</a>
+          <a href="mailto:info@naegele.it" class="btn" onclick="__gaTracker('send', 'event', 'button', 'click', 'IT--festservice--richiesta');">Manda richiesta</a>
         <? endif; ?>
       </div>
     </div>
